@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 24, 2019 at 05:35 AM
--- Server version: 10.1.38-MariaDB
--- PHP Version: 7.3.2
+-- Generation Time: Sep 24, 2019 at 04:15 PM
+-- Server version: 10.3.16-MariaDB
+-- PHP Version: 7.3.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -130,20 +130,6 @@ CREATE TABLE `productos` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tarjeta`
---
-
-CREATE TABLE `tarjeta` (
-  `tarjeta` bigint(20) NOT NULL,
-  `saldo` double DEFAULT NULL,
-  `vencimiento` char(5) DEFAULT NULL,
-  `cvc` tinyint(4) DEFAULT NULL,
-  `titular` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `usuario`
 --
 
@@ -166,7 +152,7 @@ CREATE TABLE `usuario` (
 --
 DROP TABLE IF EXISTS `compras`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `compras`  AS  select `compra`.`id` AS `no_compra`,`usuario`.`usuario` AS `usuario`,`productos`.`id` AS `id`,`productos`.`producto` AS `producto`,`productos`.`contenido` AS `contenido`,`productos`.`categoria` AS `categoria`,`productos`.`precio` AS `precio`,`productos`.`descripcion` AS `descripcion`,`productos`.`cantidad` AS `cantidad`,`productos`.`imagen` AS `imagen`,`productos`.`descuento` AS `descuento`,`productos`.`marca` AS `marca`,`productos`.`origen` AS `origen`,`compra`.`fecha` AS `fecha`,`compra`.`cantidad` AS `cantidad_comprada`,`compra`.`total` AS `total`,`compra`.`subtotal` AS `subtotal`,`usuario`.`tarjeta` AS `tarjeta` from ((`compra` join `usuario` on((`usuario`.`usuario` = `compra`.`usuario`))) join `productos` on((`compra`.`producto` = `productos`.`id`))) ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `compras`  AS  select `compra`.`id` AS `no_compra`,`usuario`.`usuario` AS `usuario`,`productos`.`id` AS `id`,`productos`.`producto` AS `producto`,`productos`.`contenido` AS `contenido`,`productos`.`categoria` AS `categoria`,`productos`.`precio` AS `precio`,`productos`.`descripcion` AS `descripcion`,`productos`.`cantidad` AS `cantidad`,`productos`.`imagen` AS `imagen`,`productos`.`descuento` AS `descuento`,`productos`.`marca` AS `marca`,`productos`.`origen` AS `origen`,`compra`.`fecha` AS `fecha`,`compra`.`cantidad` AS `cantidad_comprada`,`compra`.`total` AS `total`,`compra`.`subtotal` AS `subtotal`,`usuario`.`tarjeta` AS `tarjeta` from ((`compra` join `usuario` on(`usuario`.`usuario` = `compra`.`usuario`)) join `productos` on(`compra`.`producto` = `productos`.`id`)) ;
 
 -- --------------------------------------------------------
 
@@ -175,7 +161,7 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 --
 DROP TABLE IF EXISTS `productos`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `productos`  AS  select `producto`.`id` AS `id`,`producto`.`nombre` AS `producto`,`producto`.`contenido` AS `contenido`,`categoria`.`nombre` AS `categoria`,`producto`.`precio` AS `precio`,`producto`.`descripcion` AS `descripcion`,`producto`.`cantidad` AS `cantidad`,`producto`.`imagen` AS `imagen`,`producto`.`descuento` AS `descuento`,`marca`.`nombre` AS `marca`,`marca`.`origen` AS `origen` from ((`producto` join `categoria` on((`producto`.`categoria` = `categoria`.`id`))) join `marca` on((`producto`.`marca` = `marca`.`id`))) ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `productos`  AS  select `producto`.`id` AS `id`,`producto`.`nombre` AS `producto`,`producto`.`contenido` AS `contenido`,`categoria`.`nombre` AS `categoria`,`producto`.`precio` AS `precio`,`producto`.`descripcion` AS `descripcion`,`producto`.`cantidad` AS `cantidad`,`producto`.`imagen` AS `imagen`,`producto`.`descuento` AS `descuento`,`marca`.`nombre` AS `marca`,`marca`.`origen` AS `origen` from ((`producto` join `categoria` on(`producto`.`categoria` = `categoria`.`id`)) join `marca` on(`producto`.`marca` = `marca`.`id`)) ;
 
 --
 -- Indexes for dumped tables
@@ -210,17 +196,10 @@ ALTER TABLE `producto`
   ADD KEY `producto_ibfk_2` (`marca`);
 
 --
--- Indexes for table `tarjeta`
---
-ALTER TABLE `tarjeta`
-  ADD PRIMARY KEY (`tarjeta`);
-
---
 -- Indexes for table `usuario`
 --
 ALTER TABLE `usuario`
-  ADD PRIMARY KEY (`usuario`),
-  ADD KEY `usuario_ibfk_1` (`tarjeta`);
+  ADD PRIMARY KEY (`usuario`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -251,12 +230,6 @@ ALTER TABLE `producto`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tarjeta`
---
-ALTER TABLE `tarjeta`
-  MODIFY `tarjeta` bigint(20) NOT NULL AUTO_INCREMENT;
-
---
 -- Constraints for dumped tables
 --
 
@@ -273,12 +246,6 @@ ALTER TABLE `compra`
 ALTER TABLE `producto`
   ADD CONSTRAINT `producto_ibfk_1` FOREIGN KEY (`categoria`) REFERENCES `categoria` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `producto_ibfk_2` FOREIGN KEY (`marca`) REFERENCES `marca` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `usuario`
---
-ALTER TABLE `usuario`
-  ADD CONSTRAINT `usuario_ibfk_1` FOREIGN KEY (`tarjeta`) REFERENCES `tarjeta` (`tarjeta`) ON DELETE SET NULL ON UPDATE SET NULL;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
