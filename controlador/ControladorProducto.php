@@ -3,7 +3,7 @@
 class ControladorProducto extends Controlador{
 
     function __controladoProducto(){
-        setVista("VistaProducto");
+        this->setVista("VistaProducto");
         setModelo("ModeloProdcu");
         echo  
 
