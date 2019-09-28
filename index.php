@@ -1,11 +1,16 @@
 <?php
 require_once 'libs/Controlador.php';
 
-$url = $_GET['url'];
+$url = isset($_GET['url'])?$_GET['url']:null;
 $url = rtrim($url, '/');
 $url = explode('/', $url);
 
-//var_dump($url);
+if (empty($url[0])) {
+	require_once 'controlador/ControladorHome.php';
+	$controlador = new Home;
+	return;
+}
+
 $archivo = 'controlador/Controlador'.$url[0].'.php';
 
 if (file_exists($archivo)) {

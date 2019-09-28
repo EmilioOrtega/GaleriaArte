@@ -6,5 +6,9 @@ class Controlador {
 	function setVista($vista) {
 		require 'vista/'.$vista.'.php';
 	}
+
+	function setModelo($modelo) {
+		require 'modelo/'.$modelo.'.php';
+	}
 }
 ?>
