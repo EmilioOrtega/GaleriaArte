@@ -1,24 +1,8 @@
  <?php
- class Categoria{
- 	private $conn;
-	public function __construct(){
-		$this->iniciarConexion();
-	}
-	public function iniciarConexion(){
-		$servername = "localhost";
-		$username = "root";
-		$password = "";
-		$dbname = "vinateriadb";
 
-		// Create connection
-		$this->conn = new mysqli($servername, $username, $password, $dbname);
-		// Check connection
-		if ($this->conn->connect_error) {
-		    die("Connection failed: " . $this->conn->connect_error);
-		}
-	}
-	public function cerrarConexion(){
-		$this->conn->close();
+ class Categoria{
+	public function __construct(){
+
 	}
 	public function mostrarCategorias(){
 		$result=$this->getCategorias();
@@ -33,10 +17,10 @@
 		}
 	}
 	public function getCategorias(){
-		$this->iniciarConexion();
+		include 'conexion.php';
 		$sql = "SELECT nombre FROM categoria";
-		$result = $this->conn->query($sql);
-		$this->cerrarConexion();
+		$result = $conexion->query($sql);
+		$conexion->close();
 		return $result;
 	}
 }
