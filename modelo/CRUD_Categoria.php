@@ -9,17 +9,15 @@ $T = $_POST['T'];
 
 if ($T == 'Crear') {
 
-	$Tj = $_POST['Tj'];
-	$Sl = $_POST['Sl'];
-	$Vn = $_POST['Vn'];
-	$CV = $_POST['Cv'];
-	$Tl = $_POST['Tl'];
+	$Id = $_POST['Id'];
+	$Nm = $_POST['Nm'];
+
 	
-	$sql = "insert into tarjeta (`tarjeta`, `saldo`, `vencimiento`, `CVC`, `titular`) values ($Tj, $Sl, '$Vn', $CV, '$Tl')";
+	$sql = "insert into categoria (`id`, `nombre`) values ($Id, '$Nm')";
 
 	if (mysqli_query($conexion,$sql)) {
 
-        $stat="Tarjeta creada";
+        $stat="categoria creada";
 
     } else {
 
@@ -36,9 +34,9 @@ if ($T == 'Crear') {
 
 elseif ($T == 'Leer') {
 
-	$Tj = $_POST['Tj'];
+	$Id = $_POST['Id'];
 
-	$sql = "select * from tarjeta where tarjeta = $Tj";
+ 	$sql = "select * from categoria where id = $Id";
 
 	$sql = mysqli_query($conexion,$sql);
 
@@ -81,18 +79,15 @@ elseif ($T == 'Leer') {
 
 elseif ($T == 'Actualizar') {
 
-	$Tj = $_POST['Tj'];
-	$Sl = $_POST['Sl'];
-	$Vn = $_POST['Vn'];
-	$CV = $_POST['Cv'];
-	$Tl = $_POST['Tl'];
+	$Id = $_POST['Id'];
+	$Nm = $_POST['Nm'];
 
-	$ID = $Tj;
+	$IDe = $Id;
 
-	$sql = "update tarjeta set tarjeta = $Tj, saldo = $Sl, vencimiento = '$Vn', CVC = $CV, titular = '$Tl' where tarjeta = $ID";
+	$sql = "update categoria set id = $Id, nombre = '$Nm' where id = $IDe";
 
 	if (mysqli_query($conexion,$sql)) {
-        $stat="Tarjeta Actualizada";
+        $stat="Categoria Actualizada";
        echo "<form name=form action=CRUD_Receptor.php method=post>";
        echo "<input type='hidden' name='s' value= '".$stat."'' >";
        echo "<input type='hidden' name='t' value= '".$T."'' >";
@@ -106,12 +101,12 @@ elseif ($T == 'Actualizar') {
 
 elseif ($T == 'Borrar') {
 
-	$Tj = $_POST['Tj'];
+	$Id = $_POST['Id'];
 
-	$sql = "delete from tarjeta where tarjeta = $Tj";
+	$sql = "delete from categoria where id = $Id";
 	
 	if (mysqli_query($conexion,$sql)) {
-        $stat="Tarjeta Borrada";
+        $stat="Categoria Borrada";
         echo "<form name=form action=CRUD_Receptor.php method=post>";
 		echo "<input type='hidden' name='s' value= '".$stat."'' >";
 		echo "<input type='hidden' name='t' value= '".$T."'' >";

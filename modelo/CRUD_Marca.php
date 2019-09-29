@@ -9,17 +9,16 @@ $T = $_POST['T'];
 
 if ($T == 'Crear') {
 
-	$Tj = $_POST['Tj'];
-	$Sl = $_POST['Sl'];
-	$Vn = $_POST['Vn'];
-	$CV = $_POST['Cv'];
-	$Tl = $_POST['Tl'];
+	$Id = $_POST['Id'];
+	$Nm = $_POST['Nm'];
+	$Og = $_POST['Og'];
+
 	
-	$sql = "insert into tarjeta (`tarjeta`, `saldo`, `vencimiento`, `CVC`, `titular`) values ($Tj, $Sl, '$Vn', $CV, '$Tl')";
+	$sql = "insert into marca (`id`, `nombre`, `origen`) values ($Id, '$Nm', '$Og')";
 
 	if (mysqli_query($conexion,$sql)) {
 
-        $stat="Tarjeta creada";
+        $stat="Marca creada";
 
     } else {
 
@@ -36,9 +35,9 @@ if ($T == 'Crear') {
 
 elseif ($T == 'Leer') {
 
-	$Tj = $_POST['Tj'];
+	$Id = $_POST['Id'];
 
-	$sql = "select * from tarjeta where tarjeta = $Tj";
+  	$sql = "select * from marca where id = $Id";
 
 	$sql = mysqli_query($conexion,$sql);
 
@@ -81,18 +80,16 @@ elseif ($T == 'Leer') {
 
 elseif ($T == 'Actualizar') {
 
-	$Tj = $_POST['Tj'];
-	$Sl = $_POST['Sl'];
-	$Vn = $_POST['Vn'];
-	$CV = $_POST['Cv'];
-	$Tl = $_POST['Tl'];
+	$Id = $_POST['Id'];
+	$Nm = $_POST['Nm'];
+	$Og = $_POST['Og'];
 
-	$ID = $Tj;
+	$IDe = $Id;
 
-	$sql = "update tarjeta set tarjeta = $Tj, saldo = $Sl, vencimiento = '$Vn', CVC = $CV, titular = '$Tl' where tarjeta = $ID";
+	$sql = "update marca set id = $Id, nombre = '$Nm', origen = '$Og' where id = $IDe";
 
 	if (mysqli_query($conexion,$sql)) {
-        $stat="Tarjeta Actualizada";
+        $stat="Marca Actualizada";
        echo "<form name=form action=CRUD_Receptor.php method=post>";
        echo "<input type='hidden' name='s' value= '".$stat."'' >";
        echo "<input type='hidden' name='t' value= '".$T."'' >";
@@ -106,12 +103,12 @@ elseif ($T == 'Actualizar') {
 
 elseif ($T == 'Borrar') {
 
-	$Tj = $_POST['Tj'];
+	$Id = $_POST['Id'];
 
-	$sql = "delete from tarjeta where tarjeta = $Tj";
+ 	$sql = "delete from marca where id = $Id";
 	
 	if (mysqli_query($conexion,$sql)) {
-        $stat="Tarjeta Borrada";
+        $stat="Marca Borrada";
         echo "<form name=form action=CRUD_Receptor.php method=post>";
 		echo "<input type='hidden' name='s' value= '".$stat."'' >";
 		echo "<input type='hidden' name='t' value= '".$T."'' >";

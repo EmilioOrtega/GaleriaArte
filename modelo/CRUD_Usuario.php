@@ -9,17 +9,21 @@ $T = $_POST['T'];
 
 if ($T == 'Crear') {
 
+	$Us = $_POST['Us'];
+	$Cn = $_POST['Cn'];
+	$Nm = $_POST['Nm'];
+	$Ap = $_POST['Ap'];
+	$Sx = $_POST['Sx'];
+	$Tf = $_POST['Tf'];
+	$Fn = $_POST['Fn'];
+	$Tu = $_POST['Tu'];
 	$Tj = $_POST['Tj'];
-	$Sl = $_POST['Sl'];
-	$Vn = $_POST['Vn'];
-	$CV = $_POST['Cv'];
-	$Tl = $_POST['Tl'];
 	
-	$sql = "insert into tarjeta (`tarjeta`, `saldo`, `vencimiento`, `CVC`, `titular`) values ($Tj, $Sl, '$Vn', $CV, '$Tl')";
+	$sql = "insert into usuario (`usuario`, `contrasena`, `nombre`, `apellidos`,`sexo`, `telefono`, `fecha_nacimiento`, `tipo_usuario`, `tarjeta`) values ('$Us', '$Cn', '$Nm', '$Ap', '$Sx', '$Tf', '$Fn', '$Tu', $Tj)";
 
 	if (mysqli_query($conexion,$sql)) {
 
-        $stat="Tarjeta creada";
+        $stat="Usuario creado";
 
     } else {
 
@@ -36,9 +40,9 @@ if ($T == 'Crear') {
 
 elseif ($T == 'Leer') {
 
-	$Tj = $_POST['Tj'];
+	$Us = $_POST['Us'];
 
-	$sql = "select * from tarjeta where tarjeta = $Tj";
+    $sql = "select * from usuario where usuario = '$Us'";
 
 	$sql = mysqli_query($conexion,$sql);
 
@@ -81,18 +85,22 @@ elseif ($T == 'Leer') {
 
 elseif ($T == 'Actualizar') {
 
+	$Us = $_POST['Us'];
+	$Cn = $_POST['Cn'];
+	$Nm = $_POST['Nm'];
+	$Ap = $_POST['Ap'];
+	$Sx = $_POST['Sx'];
+	$Tf = $_POST['Tf'];
+	$Fn = $_POST['Fn'];
+	$Tu = $_POST['Tu'];
 	$Tj = $_POST['Tj'];
-	$Sl = $_POST['Sl'];
-	$Vn = $_POST['Vn'];
-	$CV = $_POST['Cv'];
-	$Tl = $_POST['Tl'];
 
-	$ID = $Tj;
+	$ID = $Us;
 
-	$sql = "update tarjeta set tarjeta = $Tj, saldo = $Sl, vencimiento = '$Vn', CVC = $CV, titular = '$Tl' where tarjeta = $ID";
+ 	$sql = "update usuario set usuario = '$Us', contrasena = '$Cn', nombre = '$Nm', apellidos = '$Ap', sexo = '$Sx', telefono = '$Tf', fecha_nacimiento = '$Fn', tipo_usuario = '$Tu', tarjeta = $Tj where usuario = $ID";
 
 	if (mysqli_query($conexion,$sql)) {
-        $stat="Tarjeta Actualizada";
+        $stat="Usuario Actualizado";
        echo "<form name=form action=CRUD_Receptor.php method=post>";
        echo "<input type='hidden' name='s' value= '".$stat."'' >";
        echo "<input type='hidden' name='t' value= '".$T."'' >";
@@ -106,12 +114,12 @@ elseif ($T == 'Actualizar') {
 
 elseif ($T == 'Borrar') {
 
-	$Tj = $_POST['Tj'];
+	$Us = $_POST['Us'];
 
-	$sql = "delete from tarjeta where tarjeta = $Tj";
+  $sql = "delete from usuario where usuario = '$Us'";
 	
 	if (mysqli_query($conexion,$sql)) {
-        $stat="Tarjeta Borrada";
+        $stat="Usuario Borrado";
         echo "<form name=form action=CRUD_Receptor.php method=post>";
 		echo "<input type='hidden' name='s' value= '".$stat."'' >";
 		echo "<input type='hidden' name='t' value= '".$T."'' >";
