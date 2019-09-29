@@ -1,0 +1,47 @@
+<html>
+<head>
+    <title>TarjetaVista</title>
+
+</head>
+
+<body bgcolor="DDDCDC">
+
+        <H1 align=center> Banco </H1>
+        <hr>
+        <br>
+        <FONT FACE="times new roman" SIZE=3 COLOR="black">
+                Ingrese la informacion de su tarjeta para poder comprar.</FONT>
+        <br>
+        <br>
+        <br>    
+        
+    <form>
+        
+        <label>No. de tarjeta: <input  type = "text" placeholder="Ej. 0000000000" maxlength="20" onkeypress='return event.charCode >= 48 && event.charCode <= 57' id="tarjeta">*</label><br>
+        <br>
+
+        <label>Saldo: <input type = "text" placeholder="Ej. 00000000 " onkeypress='return event.charCode >= 48 && event.charCode <= 57' id="saldo"/></label><br>
+        <br>
+        
+        <label>Vencimiento: <input type = "text"  placeholder="MM/AA" maxlength="5" onkeypress='return event.charCode >= 47 && event.charCode <= 57' id="tarjeta"/><br>
+        </label><br>
+
+        <label>Codigo CVC: <input type = "text" placeholder="Ej. XXXX" maxlength="4" onkeypress='return event.charCode >= 48 && event.charCode <= 57' id="cvc"></label><br>
+        <br>
+
+        <label>Titular de la Tarjeta: <input  type = "text" placeholder="Ej. Jose Martinez Gomez" maxlength="100" size="40" id="titular"></label><br>
+        <br>
+        <br>
+        <br>
+
+        <input type = "button" value="Crear">
+        <input type = "button" value="Leer">
+        <input type = "button" value="Actualizar">
+        <input type = "button" value="Borrar">
+
+        
+    </form>
+
+</body>
+
+</html>
