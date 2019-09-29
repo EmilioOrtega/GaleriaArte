@@ -1,0 +1,47 @@
+<html>
+<head>
+    <title>TarjetaVista</title>
+
+</head>
+
+<body bgcolor="DDDCDC">
+
+        <H1 align=center> Banco </H1>
+        <hr>
+        <br>
+        <FONT FACE="times new roman" SIZE=3 COLOR="black">
+                Ingrese la informacion de su tarjeta para poder comprar.</FONT>
+        <br>
+        <br>
+        <br>    
+        
+    <form name="Banco" method="POST" action="/Distribuidos/VinateriaWeb/modelo/CRUD_Banco.php">
+        
+        <label>No. de tarjeta: <input  type = "text" placeholder="Ej. 0000000000" maxlength="20" onkeypress='return event.charCode >= 48 && event.charCode <= 57' id="Tj" name = "Tj">*</label><br>
+        <br>
+
+        <label>Saldo: <input type = "text" placeholder="Ej. 00000000 " onkeypress='return event.charCode >= 48 && event.charCode <= 57' id="Sl" name = "Sl"/></label><br>
+        <br>
+        
+        <label>Vencimiento: <input type = "text"  placeholder="MM/AA" maxlength="5" onkeypress='return event.charCode >= 47 && event.charCode <= 57' id="Vn" name = "Vn"/><br>
+        </label><br>
+
+        <label>Codigo CVC: <input type = "text" placeholder="Ej. XXXX" maxlength="4" onkeypress='return event.charCode >= 48 && event.charCode <= 57' id="Cv" name = "Cv"></label><br>
+        <br>
+
+        <label>Titular de la Tarjeta: <input  type = "text" placeholder="Ej. Jose Martinez Gomez" maxlength="100" size="40" id="Tl" name = "Tl"></label><br>
+        <br>
+        
+        <br>
+
+        <input type = "submit" value="Crear" id = Cr name = T>
+        <input type = "submit" value="Leer" id = Le name = T>
+        <input type = "submit" value="Actualizar" id = Ac name = T >
+        <input type = "submit" value="Borrar" id = Br name = T >
+
+        
+    </form>
+
+</body>
+
+</html>
