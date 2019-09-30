@@ -1,1 +1,3 @@
-<h1>Home</h1>
+<div>
+	<!--Hacer Slider de Clasificacion de bebidas-->
+</div>

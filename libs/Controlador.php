@@ -3,6 +3,8 @@ class Controlador {
 	function __construct() {
 	}
 
+	public $pagina = "http://localhost/VinateriaWeb/";
+
 	function setFooter() {
 		require 'vista/header.php';
 	}
