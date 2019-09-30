@@ -2,8 +2,13 @@
 class Home extends Controlador{
 	function __construct() {
 		parent::__construct();
+		//$this->setModelo("ModeloHome");
+		$this->setHeader();
 		$this->setVista("Home/index");
-		$this->setModelo("ModeloHome");
+		for ($i=0; $i < 10; $i++) { 
+			echo "<p>algo</p>";
+		}
+		$this->setFooter();
 	}
 }
 ?>
