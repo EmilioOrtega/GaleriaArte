@@ -1,5 +1,4 @@
 <?php
-
 $T = $_POST['t'];
 
 if ($T == 'Leer') {
@@ -26,9 +25,4 @@ else{
 	$stat = $_POST['s'];
 	echo $stat;
 }
-
-
-
-
-
 ?>
