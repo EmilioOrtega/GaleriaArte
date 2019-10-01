@@ -1,23 +1,11 @@
-
 <?php
-class ControladorProducto extends Controlador{
-
-    function __controladoProducto(){
-        this->setVista("VistaProducto");
-        setModelo("ModeloProdcu");
-        echo  
-
-    }
-
-
-
-
-
-
+class Producto extends Controlador{
+	function __construct() {
+		parent::__construct();
+		//$this->setModelo("ModeloProducto");
+		$this->setHeader();
+		$this->setFooter();
+		//$this->setVista("Ruta de la vsta ");
+	}
 }
-
-
-
-
-
 ?>
