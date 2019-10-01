@@ -26,9 +26,6 @@ class Producto extends Controlador{
 	</div>
 			';
 		}
-		for ($i=0; $i < 100 ; $i++) { 
-			echo "<p>aaa</p>";
-		}
 	}
 }
 ?>
