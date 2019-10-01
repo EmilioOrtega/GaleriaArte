@@ -1,5 +1,6 @@
 <?php
 require_once 'libs/Controlador.php';
+require_once 'libs/Modelo.php';
 
 $url = isset($_GET['url'])?$_GET['url']:null;
 $url = rtrim($url, '/');

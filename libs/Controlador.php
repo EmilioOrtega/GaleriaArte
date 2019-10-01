@@ -1,9 +1,8 @@
 <?php
 class Controlador {
 	function __construct() {
+		$this->pagina = "http://localhost/VinateriaWeb/";
 	}
-
-	public $pagina = "http://localhost/VinateriaWeb/";
 
 	function setFooter() {
 		require 'vista/header.php';
@@ -18,7 +17,12 @@ class Controlador {
 	}
 
 	function setModelo($modelo) {
-		require 'modelo/'.$modelo.'.php';
+		$url = 'modelo/Modelo'.$modelo.'.php';
+		if(file_exists($url)){
+			require $url;
+			$nombre = 'Modelo'.$modelo;
+			$this->modelo = new $nombre();
+		}
 	}
 }
 ?>
