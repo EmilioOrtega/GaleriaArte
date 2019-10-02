@@ -14,7 +14,7 @@
 
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" >
 		<a class="navbar-brand" href="">
-			<img src="logo.png" alt="Logo" style="width:20px;">
+			<img src="vista/logo.png" alt="Logo" style="width:20px;">
 		</a>
 		<ul class="navbar-nav">
 			<li class="nav-item">
@@ -28,7 +28,7 @@
 			<ul class="navbar-nav mr-auto">
 			</ul>
 			<a class="navbar-brand" href="">
-				<img src="carshop.png" alt="Logo" style="width:30px;">
+				<img src="vista/carshop.png" alt="Logo" style="width:30px;">
 			</a>
 			<form class="form-inline my-2 my-lg-0">
 				<input class="form-control mr-sm-2" type="text" placeholder="Buscar">
@@ -167,12 +167,15 @@
 			</div>
 		</div>
 	</div>
+	
+	<div class="container">
 
-	<div class="container-fluid" style="margin-top:80px">
-		<h3>Corazón Disipa el día</h3>
-		<p>muestra a los hombres las imágenes desligadas de la apariencia</p>
-		<h1>quita a los hombres la posibilidad de distraerse,</h1>
-	</div>
+		<div class="container-fluid" style="margin-top:80px">
+			<h3>Corazón Disipa el día</h3>
+			<p>muestra a los hombres las imágenes desligadas de la apariencia</p>
+			<h1>quita a los hombres la posibilidad de distraerse,</h1>
+		</div>
+
 <!-- 
 Falta cerrar esto!
 Para continuar
