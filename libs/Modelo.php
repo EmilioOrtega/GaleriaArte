@@ -12,6 +12,16 @@ class Modelo {
 		if ($this->conexion->connect_error) {
 			die("Connection failed: " . $this->conexion->connect_error);
 		}
+        
+        $servername = "localhost";
+		$username = "root";
+		$password = "";
+		$dbname = "banco";
+        $this->conexionBanco = new mysqli($servername, $username, $password, $dbname);
+		// Check connection
+		if ($this->conexionBanco->connect_error) {
+			die("Connection failed: " . $this->conexion->connect_error);
+		}
 	}
 }
 ?>
