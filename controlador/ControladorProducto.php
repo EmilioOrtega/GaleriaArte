@@ -2,17 +2,17 @@
 class Producto extends Controlador{
 	function __construct() {
 		parent::__construct();
-		$this->setModelo("Home");
+		$this->setModelo("Producto");
 		$this->setHeader();
 		$this->setFooter();
-		
-
-		$producto = $this->modelo->getProducto();
-//		for ($i=0; $i < count($producto); $i++) { 
-  		for ($i=0; $i < 1; $i++) { 
+		$producto = $this->modelo->getProducto(1);
+	
+	for ($i=0; $i < count($producto); $i++) { 
+  //		for ($i=0; $i < 1; $i++) { 
+	  echo json_encode($producto);
     echo '	
-    
-    <div class="card" ">
+    '.$producto[$i]['id'].'
+    <div class="card">
   <div class="card-body">
     
 <div class="media">
@@ -20,11 +20,15 @@ class Producto extends Controlador{
   <div class="media-body">
   <h1 class="display-2">Whiskey Jack Daniels Honey</h1>
  <p class="card-text">Jack Daniel´s Honey en busca de romper esquemas y de agregar a la tradición un toque de originalidad, tiene para ti a través de Walmart tienda en línea la botella de 750 ml, una edición que incluye miel natural. Mézclalo con un poco de ginger o bien solo en las rocas. Encuentra las diferentes marcas de whisky que tenemos disponibles para ti, como esté whisky Jack Daniels en presentación de 700 ml. No dejes de tener diferentes tipos de vinos y disfruta cuando lo desees.</p>
-    <a href="#" class="btn btn-outline-success">$357.99</a>    
+	<a href="#" class="btn btn-outline-success">$357.99</a>  
+	  
   </div>
 
 </div>
-			
+	
+  </div>
+
+</div>		
 			';
 		}
 	}

@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 4.8.2
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Sep 24, 2019 at 04:15 PM
--- Server version: 10.3.16-MariaDB
--- PHP Version: 7.3.7
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 02-10-2019 a las 07:41:58
+-- Versión del servidor: 10.1.34-MariaDB
+-- Versión de PHP: 7.2.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `vinateria`
+-- Base de datos: `vinateria`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `categoria`
+-- Estructura de tabla para la tabla `categoria`
 --
 
 CREATE TABLE `categoria` (
@@ -33,10 +33,17 @@ CREATE TABLE `categoria` (
   `nombre` varchar(30) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Volcado de datos para la tabla `categoria`
+--
+
+INSERT INTO `categoria` (`id`, `nombre`) VALUES
+(1, 'Whiskey');
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `compra`
+-- Estructura de tabla para la tabla `compra`
 --
 
 CREATE TABLE `compra` (
@@ -52,8 +59,8 @@ CREATE TABLE `compra` (
 -- --------------------------------------------------------
 
 --
--- Stand-in structure for view `compras`
--- (See below for the actual view)
+-- Estructura Stand-in para la vista `compras`
+-- (Véase abajo para la vista actual)
 --
 CREATE TABLE `compras` (
 `no_compra` bigint(20)
@@ -79,7 +86,7 @@ CREATE TABLE `compras` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `marca`
+-- Estructura de tabla para la tabla `marca`
 --
 
 CREATE TABLE `marca` (
@@ -91,7 +98,7 @@ CREATE TABLE `marca` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `producto`
+-- Estructura de tabla para la tabla `producto`
 --
 
 CREATE TABLE `producto` (
@@ -107,11 +114,18 @@ CREATE TABLE `producto` (
   `marca` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Volcado de datos para la tabla `producto`
+--
+
+INSERT INTO `producto` (`id`, `nombre`, `contenido`, `categoria`, `precio`, `descripcion`, `cantidad`, `imagen`, `descuento`, `marca`) VALUES
+(1, 'Whiskey Jack Daniels Honey', 700, 1, 357.99, 'Jack Daniel´s Honey en busca de romper esquemas y de agregar a la tradición un toque de originalidad', 2, '1.png', NULL, NULL);
+
 -- --------------------------------------------------------
 
 --
--- Stand-in structure for view `productos`
--- (See below for the actual view)
+-- Estructura Stand-in para la vista `productos`
+-- (Véase abajo para la vista actual)
 --
 CREATE TABLE `productos` (
 `id` bigint(20)
@@ -130,7 +144,7 @@ CREATE TABLE `productos` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `usuario`
+-- Estructura de tabla para la tabla `usuario`
 --
 
 CREATE TABLE `usuario` (
@@ -148,33 +162,33 @@ CREATE TABLE `usuario` (
 -- --------------------------------------------------------
 
 --
--- Structure for view `compras`
+-- Estructura para la vista `compras`
 --
 DROP TABLE IF EXISTS `compras`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `compras`  AS  select `compra`.`id` AS `no_compra`,`usuario`.`usuario` AS `usuario`,`productos`.`id` AS `id`,`productos`.`producto` AS `producto`,`productos`.`contenido` AS `contenido`,`productos`.`categoria` AS `categoria`,`productos`.`precio` AS `precio`,`productos`.`descripcion` AS `descripcion`,`productos`.`cantidad` AS `cantidad`,`productos`.`imagen` AS `imagen`,`productos`.`descuento` AS `descuento`,`productos`.`marca` AS `marca`,`productos`.`origen` AS `origen`,`compra`.`fecha` AS `fecha`,`compra`.`cantidad` AS `cantidad_comprada`,`compra`.`total` AS `total`,`compra`.`subtotal` AS `subtotal`,`usuario`.`tarjeta` AS `tarjeta` from ((`compra` join `usuario` on(`usuario`.`usuario` = `compra`.`usuario`)) join `productos` on(`compra`.`producto` = `productos`.`id`)) ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `compras`  AS  select `compra`.`id` AS `no_compra`,`usuario`.`usuario` AS `usuario`,`productos`.`id` AS `id`,`productos`.`producto` AS `producto`,`productos`.`contenido` AS `contenido`,`productos`.`categoria` AS `categoria`,`productos`.`precio` AS `precio`,`productos`.`descripcion` AS `descripcion`,`productos`.`cantidad` AS `cantidad`,`productos`.`imagen` AS `imagen`,`productos`.`descuento` AS `descuento`,`productos`.`marca` AS `marca`,`productos`.`origen` AS `origen`,`compra`.`fecha` AS `fecha`,`compra`.`cantidad` AS `cantidad_comprada`,`compra`.`total` AS `total`,`compra`.`subtotal` AS `subtotal`,`usuario`.`tarjeta` AS `tarjeta` from ((`compra` join `usuario` on((`usuario`.`usuario` = `compra`.`usuario`))) join `productos` on((`compra`.`producto` = `productos`.`id`))) ;
 
 -- --------------------------------------------------------
 
 --
--- Structure for view `productos`
+-- Estructura para la vista `productos`
 --
 DROP TABLE IF EXISTS `productos`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `productos`  AS  select `producto`.`id` AS `id`,`producto`.`nombre` AS `producto`,`producto`.`contenido` AS `contenido`,`categoria`.`nombre` AS `categoria`,`producto`.`precio` AS `precio`,`producto`.`descripcion` AS `descripcion`,`producto`.`cantidad` AS `cantidad`,`producto`.`imagen` AS `imagen`,`producto`.`descuento` AS `descuento`,`marca`.`nombre` AS `marca`,`marca`.`origen` AS `origen` from ((`producto` join `categoria` on(`producto`.`categoria` = `categoria`.`id`)) join `marca` on(`producto`.`marca` = `marca`.`id`)) ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `productos`  AS  select `producto`.`id` AS `id`,`producto`.`nombre` AS `producto`,`producto`.`contenido` AS `contenido`,`categoria`.`nombre` AS `categoria`,`producto`.`precio` AS `precio`,`producto`.`descripcion` AS `descripcion`,`producto`.`cantidad` AS `cantidad`,`producto`.`imagen` AS `imagen`,`producto`.`descuento` AS `descuento`,`marca`.`nombre` AS `marca`,`marca`.`origen` AS `origen` from ((`producto` join `categoria` on((`producto`.`categoria` = `categoria`.`id`))) join `marca` on((`producto`.`marca` = `marca`.`id`))) ;
 
 --
--- Indexes for dumped tables
+-- Índices para tablas volcadas
 --
 
 --
--- Indexes for table `categoria`
+-- Indices de la tabla `categoria`
 --
 ALTER TABLE `categoria`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `compra`
+-- Indices de la tabla `compra`
 --
 ALTER TABLE `compra`
   ADD PRIMARY KEY (`id`),
@@ -182,13 +196,13 @@ ALTER TABLE `compra`
   ADD KEY `compra_ibfk_2` (`producto`);
 
 --
--- Indexes for table `marca`
+-- Indices de la tabla `marca`
 --
 ALTER TABLE `marca`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `producto`
+-- Indices de la tabla `producto`
 --
 ALTER TABLE `producto`
   ADD PRIMARY KEY (`id`),
@@ -196,52 +210,52 @@ ALTER TABLE `producto`
   ADD KEY `producto_ibfk_2` (`marca`);
 
 --
--- Indexes for table `usuario`
+-- Indices de la tabla `usuario`
 --
 ALTER TABLE `usuario`
   ADD PRIMARY KEY (`usuario`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
--- AUTO_INCREMENT for table `categoria`
+-- AUTO_INCREMENT de la tabla `categoria`
 --
 ALTER TABLE `categoria`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `compra`
+-- AUTO_INCREMENT de la tabla `compra`
 --
 ALTER TABLE `compra`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `marca`
+-- AUTO_INCREMENT de la tabla `marca`
 --
 ALTER TABLE `marca`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `producto`
+-- AUTO_INCREMENT de la tabla `producto`
 --
 ALTER TABLE `producto`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- Constraints for dumped tables
+-- Restricciones para tablas volcadas
 --
 
 --
--- Constraints for table `compra`
+-- Filtros para la tabla `compra`
 --
 ALTER TABLE `compra`
   ADD CONSTRAINT `compra_ibfk_1` FOREIGN KEY (`usuario`) REFERENCES `usuario` (`usuario`) ON DELETE SET NULL ON UPDATE SET NULL,
   ADD CONSTRAINT `compra_ibfk_2` FOREIGN KEY (`producto`) REFERENCES `producto` (`id`) ON DELETE SET NULL ON UPDATE SET NULL;
 
 --
--- Constraints for table `producto`
+-- Filtros para la tabla `producto`
 --
 ALTER TABLE `producto`
   ADD CONSTRAINT `producto_ibfk_1` FOREIGN KEY (`categoria`) REFERENCES `categoria` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,

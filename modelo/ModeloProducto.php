@@ -1,6 +1,4 @@
 <?php
-include '../libs/Modelo.php';
-
  class ModeloProducto extends Modelo
  {
 	public function __construct()
@@ -11,8 +9,9 @@ include '../libs/Modelo.php';
 
 	public function getProducto($id)
 	{
-		$sqsl = "SELECT * FROM productos where id=".$id."";
-		$result = $this->conexion->query($sql);
+		
+		$sql = "SELECT * FROM producto where id= '".$id."' ";
+		$result = $this->conexion->query($sql)->fetch_assoc();
 		$this->conexion->close();
 		return $result;
 	}
