@@ -167,12 +167,15 @@
 			</div>
 		</div>
 	</div>
+	
+	<div class="container">
 
-	<div class="container-fluid" style="margin-top:80px">
-		<h3>Corazón Disipa el día</h3>
-		<p>muestra a los hombres las imágenes desligadas de la apariencia</p>
-		<h1>quita a los hombres la posibilidad de distraerse,</h1>
-	</div>
+		<div class="container-fluid" style="margin-top:80px">
+			<h3>Corazón Disipa el día</h3>
+			<p>muestra a los hombres las imágenes desligadas de la apariencia</p>
+			<h1>quita a los hombres la posibilidad de distraerse,</h1>
+		</div>
+
 <!-- 
 Falta cerrar esto!
 Para continuar
