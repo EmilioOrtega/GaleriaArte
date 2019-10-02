@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Vinatería</title>
+	<title>Vinatería Cocos en la Playa</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -18,7 +18,7 @@
 		</a>
 		<ul class="navbar-nav">
 			<li class="nav-item">
-				<a class="nav-link disabled" href="#">Vinatería El Buen Trago</a>
+				<a class="nav-link disabled" href="#">Vinatería Cocos en la Playa</a>
 			</li>
 		</ul>
 		<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navb">
@@ -55,7 +55,7 @@
 				<!-- Modal body -->
 				<div class="modal-body">
 					<div class="container">
-						<h2>Vinatería el Buen Trago</h2>
+						<h2>Vinatería Cocos en la Playa</h2>
 						<p>Favor de rellenar los siguientes campos con la información requerida para iniciar sesión</p>
 						<form action="" class="was-validated">
 							<div class="form-group">
@@ -103,7 +103,7 @@
 				<!-- Modal body -->
 				<div class="modal-body">
 					<div class="container">
-						<h2>Vinatería el Buen Trago</h2>
+						<h2>Vinatería Cocos en la Playa</h2>
 						<p>Favor de rellenar los siguientes campos con la información requerida para realizar el registro de usuario</p>
 						<form action="" class="was-validated">
 							<div class="form-group">
@@ -169,12 +169,6 @@
 	</div>
 	
 	<div class="container">
-
-		<div class="container-fluid" style="margin-top:80px">
-			<h3>Corazón Disipa el día</h3>
-			<p>muestra a los hombres las imágenes desligadas de la apariencia</p>
-			<h1>quita a los hombres la posibilidad de distraerse,</h1>
-		</div>
 
 <!-- 
 Falta cerrar esto!
