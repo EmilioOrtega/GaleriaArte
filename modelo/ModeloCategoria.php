@@ -1,8 +1,8 @@
  <?php
-
+ include '../libs/Modelo.php';
  class Categoria extends Modelo{
 	public function __construct(){
-
+		parent::__construct();
 	}
 	public function mostrarCategorias(){
 		$result=$this->getCategorias();
@@ -18,8 +18,8 @@
 	}
 	public function getCategorias(){
 		$sql = "SELECT nombre FROM categoria";
-		$result = $conexion->query($sql);
-		$conexion->close();
+		$result = $this->conexion->query($sql);
+		$this->conexion->close();
 		return $result;
 	}
 }
