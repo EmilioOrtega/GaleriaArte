@@ -1,6 +1,6 @@
  <?php
 
- class Categoria{
+ class Categoria extends Modelo{
 	public function __construct(){
 
 	}
@@ -17,7 +17,6 @@
 		}
 	}
 	public function getCategorias(){
-		include 'conexion.php';
 		$sql = "SELECT nombre FROM categoria";
 		$result = $conexion->query($sql);
 		$conexion->close();
