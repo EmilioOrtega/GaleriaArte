@@ -9,7 +9,7 @@
 
 	public function registroUsuario($usuario, $contrasena,$nombre,$apellidos,$sexo,$telefono,$fecha_nacimiento,$tipo_usuario,$tarjeta){
 		$sql = "insert into usuario(usuario,contrasena,nombre,apellidos,sexo,telefono,fecha_nacimiento,tipo_usuario,tarjeta) values({$usuario},{$contrasena},{$nombre},{$apellidos},{$sexo},{$telefono},{$fecha_nacimiento},{$tipo_usuario},{$tarjeta})";
-		if($conexion->query($sql)){
+		if($result=$conexion->query($sql)){
             echo 'Se registró al usuario correctamente';
         }else{
             echo 'error';
