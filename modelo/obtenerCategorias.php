@@ -1,5 +1,5 @@
  <?php
-	include 'Categoria.php';
+	include 'ModeloCategoria.php';
 	$categoria = new Categoria();
 	$categorias=$categoria->getCategorias();
 	//Mostrar las categorias
