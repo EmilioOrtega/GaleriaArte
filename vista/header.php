@@ -13,12 +13,12 @@
 <body style="height:1500px">
 
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" >
-		<a class="navbar-brand" href="">
+		<a class="navbar-brand" href="<?php echo $this->pagina ?>home">
 			<img src="vista/logo.png" alt="Logo" style="width:20px;">
 		</a>
 		<ul class="navbar-nav">
 			<li class="nav-item">
-				<a class="nav-link disabled" href="#">Vinatería Cocos en la Playa</a>
+				<a class="nav-link disabled" href="">Vinatería Cocos en la Playa</a>
 			</li>
 		</ul>
 		<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navb">
@@ -30,9 +30,9 @@
 			<a class="navbar-brand" href="">
 				<img src="vista/carshop.png" alt="Logo" style="width:30px;">
 			</a>
-			<form class="form-inline my-2 my-lg-0">
+			<form class="form-inline my-2 my-lg-0" action="<?php echo $this->pagina ?>producto">
 				<input class="form-control mr-sm-2" type="text" placeholder="Buscar">
-				<button class="btn btn-secondary my-2 my-sm-0" type="button">Buscar</button>
+				<button class="btn btn-secondary my-2 my-sm-0" type="submit">Buscar</button>
 			</form>
 			<ul class="navbar-nav mr-sm-3">
 			</ul>
