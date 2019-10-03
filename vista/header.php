@@ -27,10 +27,13 @@
 		<div class="collapse navbar-collapse" id="navb">
 			<ul class="navbar-nav mr-auto">
 			</ul>
-			<a class="navbar-brand" href="">
-				<img src="vista/carshop.png" alt="Logo" style="width:30px;">
-			</a>
-			<form class="form-inline my-2 my-lg-0" action="<?php echo $this->pagina ?>producto">
+			<form class="form-inline my-2 my-lg-0" action="">
+			<div class="input-group">
+		      <div class="input-group-prepend">
+		        <button type="submit" class="input-group-text">Default</span>
+		      </div>
+		      <input type="text" class="form-control">
+		    </div>
 				<input class="form-control mr-sm-2" type="text" placeholder="Buscar">
 				<button class="btn btn-secondary my-2 my-sm-0" type="submit">Buscar</button>
 			</form>
@@ -39,6 +42,11 @@
 			<button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#Modal_login">
 				Iniciar sesión
 			</button>
+			<ul class="navbar-nav mr-sm-3">
+			</ul>
+			<a class="navbar-brand" href="">
+				<img src="vista/carshop.png" alt="Logo" style="width:30px;">
+			</a>
 		</div>
 	</nav>
 

@@ -6,7 +6,7 @@ class ModeloHome extends Modelo {
 
 	public function getProducto() {
 		$productos = array();
-		$sql = "SELECT nombre, descripcion, precio, contenido, imagen FROM producto";
+		$sql = "SELECT id, nombre, descripcion, precio, contenido, imagen FROM producto";
 		if($result = mysqli_query($this->conexion,$sql)){
 			while ($obj = mysqli_fetch_array($result)){
 				array_push(	$productos, $obj);

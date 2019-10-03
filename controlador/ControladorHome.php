@@ -19,7 +19,11 @@ class Home extends Controlador{
 						<p class="card-text">$'.$producto[$i]['precio'].'</p>
 					</div>
 					<div class="card-footer">
-						<a href="" class="btn btn-primary"><img src="vista/carshop.png" alt="Logo" style="width:30px;"></a>
+						<form method="post" action="'.$this->pagina.'producto" style="margin-bottom: 5px">
+							<input type="hidden" name="id" value="'.$producto[$i]['id'].'">
+							<button class="btn btn-secondary" type="submit">Ver Producto</button>
+						</form>
+						<a href="" class="btn btn-primary"><img src="vista/carshop.png" alt="Logo" style="width:20px;"> Añair al Carrito</a>
 					</div>
 				</div>
 			</div>';

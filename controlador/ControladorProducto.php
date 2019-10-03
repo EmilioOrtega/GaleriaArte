@@ -5,8 +5,11 @@ class Producto extends Controlador{
 		$this->setModelo("Producto");
 		$this->setHeader();
 		$this->setFooter();
-		$producto = $this->modelo->getProducto($_POST);
+		$producto = $this->modelo->getProducto($_POST['id']);
 		echo '
+		<br>
+		<br>
+		<br>
 		<div class="card">
 			<div class="card-body">
 				<div class="media">
