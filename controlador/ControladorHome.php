@@ -7,22 +7,24 @@ class Home extends Controlador{
 		$this->setFooter();
 		$this->setVista("Home/index");
 		$producto = $this->modelo->getProducto();
-
+		echo '<div class="row">';
 		for ($i=0; $i < count($producto); $i++) { 
 			
 			echo '
-			<div class="caja">
-			<div class=card>
-			    <img src=tequila.jpg class=center alt=Alps>
-			    <div class=w3-container w3-center>
-			      <p>'.$producto[$i]['nombre'].'</p>
-			    </div>
-			  </div>
-			  </div>
-			 
-			';
-			 
+			<div class="col-4" style="margin-top:10px">
+				<div class="card" style="height: 100%">
+					<img class="card-img-top" src="public/imagenes/'.$producto[$i]['imagen'].'" alt="Card image" style="height: 400px">
+					<div class="card-body">
+						<h4 class="card-title">'.$producto[$i]['nombre'].'</h4>
+						<p class="card-text">$'.$producto[$i]['precio'].'</p>
+					</div>
+					<div class="card-footer">
+						<a href="" class="btn btn-primary"><img src="vista/carshop.png" alt="Logo" style="width:30px;"></a>
+					</div>
+				</div>
+			</div>';
 		}
+		echo '</div>';
 	}
 }
 

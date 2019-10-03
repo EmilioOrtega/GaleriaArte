@@ -6,10 +6,14 @@ class ModeloHome extends Modelo {
 
 	public function getProducto() {
 		$productos = array();
-		for ($i=0; $i <7 ; $i++) { 
-			$producto = array('nombre' => 'hola'.$i);
-			array_push(	$productos, $producto);
+		$sql = "SELECT nombre, descripcion, precio, contenido, imagen FROM producto";
+		if($result = mysqli_query($this->conexion,$sql)){
+			while ($obj = mysqli_fetch_array($result)){
+				array_push(	$productos, $obj);
+			}
+			mysqli_free_result($result);
 		}
+		$this->conexion->close();
 		return $productos;
 	}
 }
