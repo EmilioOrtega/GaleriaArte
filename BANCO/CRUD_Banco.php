@@ -16,14 +16,14 @@ mysqli_query($conexion,"SET NAMES 'utf8'");
 
 $T = $_POST['T'];
 
-
-if ($T == 'Crear') {
+if ($T == 'CREAR') {
 
 	$Tj = $_POST['Tj'];
 	$Sl = $_POST['Sl'];
 	$Vn = $_POST['Vn'];
 	$CV = $_POST['Cv'];
 	$Tl = $_POST['Tl'];
+	$Tj = str_replace(" ", '', $Tj);
 	
 	$sql = "insert into tarjeta (`tarjeta`, `saldo`, `vencimiento`, `CVC`, `titular`) values ($Tj, $Sl, '$Vn', $CV, '$Tl')";
 
@@ -36,6 +36,7 @@ if ($T == 'Crear') {
         $stat = mysqli_error($conexion);
 
     }
+
     echo "<form name=form action=CRUD_Receptor.php method=post>";
 	echo "<input type='hidden' name='s' value= '".$stat."'' >";
 	echo "<input type='hidden' name='t' value= '".$T."'' >";
@@ -44,9 +45,10 @@ if ($T == 'Crear') {
 
 }
 
-elseif ($T == 'Leer') {
+elseif ($T == 'LEER') {
 
 	$Tj = $_POST['Tj'];
+	$Tj = str_replace(" ", '', $Tj);
 
 	$sql = "select * from tarjeta where tarjeta = $Tj";
 
@@ -89,13 +91,14 @@ elseif ($T == 'Leer') {
 
 }
 
-elseif ($T == 'Actualizar') {
+elseif ($T == 'ACTUALIZAR') {
 
 	$Tj = $_POST['Tj'];
 	$Sl = $_POST['Sl'];
 	$Vn = $_POST['Vn'];
 	$CV = $_POST['Cv'];
 	$Tl = $_POST['Tl'];
+	$Tj = str_replace(" ", '', $Tj);
 
 	$ID = $Tj;
 
@@ -114,9 +117,10 @@ elseif ($T == 'Actualizar') {
     echo $stat;
 }
 
-elseif ($T == 'Borrar') {
+elseif ($T == 'BORRAR') {
 
 	$Tj = $_POST['Tj'];
+	$Tj = str_replace(" ", '', $Tj);
 
 	$sql = "delete from tarjeta where tarjeta = $Tj";
 	
@@ -134,10 +138,12 @@ elseif ($T == 'Borrar') {
 }
 
 else{
-	echo "error";
+	echo "<form name=form action=CRUD_Receptor.php method=post>";
+       echo "<input type='hidden' name='s' value= 'Error en la opereación'' >";
+       echo "<input type='hidden' name='t' value= 'ERROR'' >";
+       echo "</form>";
+       echo "<script language=javascript>document.form.submit();</script>";
 }
-
-
 
 
 ?>
