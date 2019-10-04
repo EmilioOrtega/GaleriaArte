@@ -9,12 +9,13 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<script src="https://kit.fontawesome.com/180eab578a.js"></script>
 </head>
 <body style="height:1500px">
 
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" >
 		<a class="navbar-brand" href="<?php echo $this->pagina ?>home">
-			<img src="vista/logo.png" alt="Logo" style="width:20px;">
+			<img src='<?php echo $this->pagina ?>vista/logo.png' alt="Logo" style="width:20px;">
 		</a>
 		<ul class="navbar-nav">
 			<li class="nav-item">
@@ -28,14 +29,12 @@
 			<ul class="navbar-nav mr-auto">
 			</ul>
 			<form class="form-inline my-2 my-lg-0" action="">
-			<div class="input-group">
-		      <div class="input-group-prepend">
-		        <button type="submit" class="input-group-text">Default</span>
-		      </div>
-		      <input type="text" class="form-control">
-		    </div>
-				<input class="form-control mr-sm-2" type="text" placeholder="Buscar">
-				<button class="btn btn-secondary my-2 my-sm-0" type="submit">Buscar</button>
+				<div class="input-group">
+					<div class="input-group-prepend">
+						<button type="submit" class="btn btn-secondary input-group-text"><i class="fas fa-search"></i></button>
+					</div>
+						<input type="text" class="form-control" placeholder="Buscar Producto">
+				</div>
 			</form>
 			<ul class="navbar-nav mr-sm-3">
 			</ul>
@@ -45,7 +44,7 @@
 			<ul class="navbar-nav mr-sm-3">
 			</ul>
 			<a class="navbar-brand" href="">
-				<img src="vista/carshop.png" alt="Logo" style="width:30px;">
+				<img src="<?php echo $this->pagina ?>vista/carshop.png" alt="Logo" style="width:30px;">
 			</a>
 		</div>
 	</nav>

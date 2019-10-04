@@ -4,7 +4,7 @@ class ModeloHome extends Modelo {
 		parent::__construct();
 	}
 
-	public function getProducto() {
+	function getProducto() {
 		$productos = array();
 		$sql = "SELECT id, nombre, descripcion, precio, contenido, imagen FROM producto";
 		if($result = mysqli_query($this->conexion,$sql)){
@@ -16,5 +16,7 @@ class ModeloHome extends Modelo {
 		$this->conexion->close();
 		return $productos;
 	}
+
+
 }
 ?>

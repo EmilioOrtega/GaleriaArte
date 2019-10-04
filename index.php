@@ -20,6 +20,8 @@ if (file_exists($archivo)) {
 
 	if (isset($url[1])) {
 		$controlador->{$url[1]}();
+	}else {
+		$controlador->index();
 	}
 }else {
 	echo "La pagina no existe";
