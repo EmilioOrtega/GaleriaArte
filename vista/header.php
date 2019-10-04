@@ -38,19 +38,32 @@
 			</form>
 			<ul class="navbar-nav mr-sm-3">
 			</ul>
-			<?php 
-			if (!isset($_SESSION['user'])) {
-				echo '
+			<?php if (!isset($_SESSION['user'])) { ?>
 				<button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#Modal_login">
 					Iniciar sesión
-				</button>';
-			}else {
-				echo '
-				<button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#Modal_user">
-					'.$_SESSION['user'].'
-				</button>';
-			}
-			?>
+				</button>
+			<?php }else { ?>
+				<ul class="navbar-nav">
+				<li class="nav-item dropdown">
+					<a class="btn btn-secondary" id="navbardrop" data-toggle="dropdown">
+						<?php echo $_SESSION['user'] ?>
+					</a>
+					<div class="dropdown-menu">
+						<a class="dropdown-item" data-toggle="modal" data-target="#Modal_user">Mis Datos</a>
+						<?php if ($_SESSION['tipo_usuario'] == 'a') { ?>
+							<a class="dropdown-item" href="<?php echo $this->pagina ?>user/logout ?>">Usuarios</a>
+							<a class="dropdown-item" href="<?php echo $this->pagina ?>user/logout ?>">Productos</a>
+						<?php }else if ($_SESSION['tipo_usuario'] == 'i') { ?>
+							<a class="dropdown-item" href="<?php echo $this->pagina ?>user/logout ?>">Productos</a>
+						<?php } ?>
+						<a class="dropdown-item" href="<?php echo $this->pagina ?>user/logout ?>">Cerrar Sesion</a>
+					</div>
+				</li>
+			</ul>
+			<?php } ?>
+
+			<ul class="navbar-nav mr-sm-3">
+			</ul>
 			<ul class="navbar-nav mr-sm-3">
 			</ul>
 			<a class="navbar-brand" href="">
@@ -72,27 +85,34 @@
 				<!-- Modal body -->
 				<div class="modal-body">
 					<div class="container">
-						<h2>Vinatería Cocos en la Playa</h2>
-						<p>Favor de rellenar los siguientes campos con la información requerida para iniciar sesión</p>
-						<form method="post" action="<?php echo $this->pagina ?>user/logout" class="was-validated">
+						<form method="post" action="<?php echo $this->pagina ?>user/update" class="was-validated">
 							<div class="form-group">
-								<label for="uname">Nombre:</label>
-								<input type="text" class="form-control" id="uname" placeholder="Enter username" name="user" required>
+								<label for="name">Nombre:</label>
+								<input type="text" class="form-control" id="name" placeholder="Enter name" name="nombre" value="<?php echo $_SESSION['nombre'] ?>" required>
 								<div class="valid-feedback">Ingresado</div>
 								<div class="invalid-feedback">Favor de llenar este campo</div>
 							</div>
 							<div class="form-group">
-								<label for="pwd">Contraseña:</label>
-								<input type="password" class="form-control" id="pwd" placeholder="Enter password" name="password" required>
+								<label for="apellidos">Apellidos:</label>
+								<input type="text" class="form-control" id="apellidos" placeholder="Enter last names" name="apellidos" value="<?php echo $_SESSION['apellidos'] ?>" required>
 								<div class="valid-feedback">Ingresado</div>
 								<div class="invalid-feedback">Favor de llenar este campo</div>
 							</div>
-							<div class="form-group form-check">
-
+							<div class="form-group">
+								<label for="telefono">Telefono:</label>
+								<input type="text" class="form-control" id="telefono" placeholder="Enter phone number" name="telefono" value="<?php echo $_SESSION['telefono'] ?>" required>
+								<div class="valid-feedback">Ingresado</div>
+								<div class="invalid-feedback">Favor de llenar este campo</div>
 							</div>
-							<button type="submit" class="btn btn-danger btn-block">Cerrar Sesion</button>
-
-							<button type="button" class="btn btn-outline-secondary btn-block" data-toggle="modal" data-target="#Modal_user">Actualizar</button>
+							<?php if (isset($_SESSION['tarjeta'])) { ?>
+								<div class="form-group">
+									<label for="tarjeta">Tarjeta:</label>
+									<input type="text" class="form-control" id="tarjeta" placeholder="Enter card number" name="tarjeta" value="<?php echo $_SESSION['tarjeta'] ?>" required>
+									<div class="valid-feedback">Ingresado</div>
+									<div class="invalid-feedback">Favor de llenar este campo</div>
+								</div>
+							<?php } ?>
+							<button type="submit" class="btn btn-secondary btn-block">Actualizar datos</button>
 						</form>
 					</div>
 				</div>

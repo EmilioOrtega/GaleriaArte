@@ -24,13 +24,15 @@
 	}
 
 	public function login($usuario,$contrasena){
-		$sql = "select *from usuario where usuario='{$usuario}' and contrasena = '{$contrasena}'";
-		$result = $this->conexion->query($sql);
-		if ($result->num_rows > 0) {
-			echo "login exitoso";
-			return $result;
+		$productos = array();
+		$sql = "select nombre, apellidos, telefono, tarjeta, tipo_usuario from usuario where usuario='{$usuario}' and contrasena = '{$contrasena}'";
+		if ($result = mysqli_query($this->conexion,$sql)) {
+			while ($obj = mysqli_fetch_array($result)){
+				array_push(	$productos, $obj);
+			}
+			mysqli_free_result($result);
+			return $productos;
 		}else{
-			echo "Contraseña o usuario incorrectos";
 			return null;
 		}
 	}
