@@ -58,5 +58,6 @@ class Users extends Controlador{
         </table>';
 	}
 }
+}
 ?>
 
