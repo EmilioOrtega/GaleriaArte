@@ -9,16 +9,8 @@ class Users extends Controlador{
 
 	function index() {
         $users = $this->modelo->getUsers();
-        echo "<br>";
-        echo "<br>";
-        echo "<br>";
-        echo "<br>";
-        echo "<br>";
-        echo json_encode($users);
         echo '
-        
-
-		<br>
+        <br>
 		<br>
 		<br>
 		 <table class="table table-bordered table-dark">
@@ -49,9 +41,9 @@ class Users extends Controlador{
          
                     <td><button class='btn btn-warning' data-toggle=modal onclick=editar('".$users[$i]['usuario']."') >Editar</button></td>
                     <td><button class='btn btn-danger' data-toggle=modal  >Eliminar</button></td>
-                </tr>
-        </table>";
+                </tr>";
 	}
+  echo "</table>";
 }
 }
 ?>

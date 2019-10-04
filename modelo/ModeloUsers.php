@@ -9,12 +9,16 @@
 
 	public function getUsers()
 	{
+		$usuario = array();
 		$sql = "SELECT * FROM usuario";
-
-		$result = $this->conexion->query($sql)->fetch_assoc();
-		
+		if($result = mysqli_query($this->conexion,$sql)){
+			while ($obj = mysqli_fetch_array($result)){
+				array_push(	$usuario, $obj);
+			}
+			mysqli_free_result($result);
+		}
 		$this->conexion->close();
-		return $result;
+		return $usuario;
 	}
 }
 ?>
