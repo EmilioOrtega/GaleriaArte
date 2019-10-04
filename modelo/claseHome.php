@@ -1,6 +1,6 @@
 <?php
 
-class ModeloHome
+class ModeloHome extends Modelo
 
 
 	public function _construct(){
@@ -34,7 +34,7 @@ class ModeloHome
 	{
 		include 'conexion.php';
 
-		$sql       = 'SELECT nombre, contenido, categoria, precio, descripcion, cantidad, descuento FROM producto';
+		$sql = 'SELECT nombre, contenido, categoria, precio, descripcion, cantidad, descuento FROM producto';
 		$result = $conexion->query($sql);
 
 		$conexion->close();
