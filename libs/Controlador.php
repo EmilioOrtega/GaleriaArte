@@ -2,7 +2,7 @@
 class Controlador {
 	function __construct() {
 		session_start();
-		$this->pagina = "http://localhost/VinateriaWeb/";
+		$this->pagina = "http://192.168.84.49/VinateriaWeb/";
 	}
 
 	function setFooter() {

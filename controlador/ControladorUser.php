@@ -32,5 +32,4 @@ class User extends Controlador{
 		header('Location: '.$this->pagina.'user/login');
 	}
 }
-
 ?>
