@@ -1,13 +1,13 @@
  <?php
  class ModeloUsuario extends Modelo{
-	public function __construct(){
+	function __construct(){
 		parent::__construct();
 	}
      //registro
      //login
      //conxionbanco
 
-	public function registrarUsuario($usuario,$contrasena,$nombre,$apellidos,$sexo,$telefono,$fecha_nacimiento,$tipo_usuario){
+	function registrarUsuario($usuario,$contrasena,$nombre,$apellidos,$sexo,$telefono,$fecha_nacimiento,$tipo_usuario){
 		$sql = "insert into usuario(usuario,contrasena,nombre,apellidos,sexo,telefono,fecha_nacimiento,tipo_usuario) values('{$usuario}','{$contrasena}','{$nombre}','{$apellidos}','{$sexo}','{$telefono}','{$fecha_nacimiento}','{$tipo_usuario}')";
 
 		echo $sql;
@@ -25,7 +25,7 @@
 		return $result;
 	}
 
-	public function login($usuario,$contrasena){
+	function login($usuario,$contrasena){
 		$productos = array();
 		$sql = "select nombre, apellidos, telefono, tarjeta, tipo_usuario from usuario where usuario='{$usuario}' and contrasena = '{$contrasena}'";
 		if ($result = mysqli_query($this->conexion,$sql)) {
@@ -37,6 +37,19 @@
 		}else{
 			return null;
 		}
+	}
+
+	function getUsers(){
+		$usuario = array();
+		$sql = "SELECT * FROM usuario";
+		if($result = mysqli_query($this->conexion,$sql)){
+			while ($obj = mysqli_fetch_array($result)){
+				array_push(	$usuario, $obj);
+			}
+			mysqli_free_result($result);
+		}
+		$this->conexion->close();
+		return $usuario;
 	}
 }
 
