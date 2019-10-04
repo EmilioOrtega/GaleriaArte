@@ -15,17 +15,17 @@ class Users extends Controlador{
 		<br>
 		<br>
 		 <table class="table table-bordered table-dark">
-
-
             <tr>
-                <td>Usuario</td>
+                <td>User</td>
                 <td>Nombres</td>
-                <td>Apellidos</td>
-                <td>Sexo</td>
-                <td>Telefono</td>
-                <td>Fecha nacimiento</td>
-                <td>Tipo de usuario</td>
-                <td>Tarjeta</td>
+                <td>Apellidos P</td>
+                <td>Apellidos M</td>
+                <td>Celular</td>
+                <td>Domicilio</td>
+                <td>Municipio</td>
+                <td>Colonia</td>
+                <td>Registro</td>
+                <td>Carrera</td>
                 <td>Editar</td>
                 <td>Eliminar</td>
             </tr>
@@ -55,13 +55,7 @@ class Users extends Controlador{
                     <td><button class="btn btn-warning" data-toggle="modal" data-target="#modelEditarA" >Editar</button></td>
                     <td><button class="btn btn-danger" data-toggle="modal" data-target="#modelEliminarA" >Eliminar</button></td>
                 </tr>
-                
-                ';
-        }
-        echo ' </table>';
-
-
-        
+        </table>';
 	}
 }
 ?>
