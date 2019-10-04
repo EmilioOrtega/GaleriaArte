@@ -16,30 +16,18 @@ class Users extends Controlador{
 		<br>
 		 <table class="table table-bordered table-dark">
             <tr>
-                <td>User</td>
+                <td>Usuario</td>
                 <td>Nombres</td>
-                <td>Apellidos P</td>
-                <td>Apellidos M</td>
-                <td>Celular</td>
-                <td>Domicilio</td>
-                <td>Municipio</td>
-                <td>Colonia</td>
-                <td>Registro</td>
-                <td>Carrera</td>
+                <td>Apellidos </td>
+                <td>Sexo</td>
+                <td>Telefono</td>
+                <td>Fecha de nacimiento</td>
+                <td>Tipo de usuario</td>
+                <td>Tarjeta</td>
+             
                 <td>Editar</td>
                 <td>Eliminar</td>
             </tr>
-
-                
-
-
-            
-
-
-
-
-        
-
        ';
 	for ($i=0; $i < count($users); $i++) { 
 			echo '<tr>
@@ -57,6 +45,6 @@ class Users extends Controlador{
                 </tr>
         </table>';
 	}
-}
+}}
 ?>
 
