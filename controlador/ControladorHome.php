@@ -25,7 +25,7 @@ class Home extends Controlador{
 							<input type="hidden" name="id" value="'.$producto[$i]['id'].'">
 							<button class="btn btn-secondary" type="submit">Ver Producto</button>
 						</form>
-						<a href="" class="btn btn-primary"><img src="'.$this->pagina.'vista/carshop.png" alt="Logo" style="width:20px;"> Añair al Carrito</a>
+						<a href="" class="btn btn-primary"><img src="'.$this->pagina.'vista/carshop.png" alt="Logo" style="width:20px;"> Añadir al Carrito</a>
 					</div>
 				</div>
 			</div>';
