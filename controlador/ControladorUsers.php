@@ -8,7 +8,13 @@ class Users extends Controlador{
 	}
 
 	function index() {
-		$users = $this->modelo->getUsers();
+        $users = $this->modelo->getUsers();
+        echo "<br>";
+        echo "<br>";
+        echo "<br>";
+        echo "<br>";
+        echo "<br>";
+        echo json_encode($users);
         echo '
         
 
@@ -25,8 +31,7 @@ class Users extends Controlador{
                 <td>Fecha de nacimiento</td>
                 <td>Tipo de usuario</td>
                 <td>Tarjeta</td>
-             
-                <td>Editar</td>
+             <td>Editar</td>
                 <td>Eliminar</td>
             </tr>
        ';
@@ -47,6 +52,7 @@ class Users extends Controlador{
                 </tr>
         </table>";
 	}
-}}
+}
+}
 ?>
 

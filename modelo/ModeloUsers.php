@@ -10,7 +10,9 @@
 	public function getUsers()
 	{
 		$sql = "SELECT * FROM usuario";
-		$result[] = $this->conexion->query($sql)->fetch_assoc();
+
+		$result = $this->conexion->query($sql)->fetch_assoc();
+		
 		$this->conexion->close();
 		return $result;
 	}
