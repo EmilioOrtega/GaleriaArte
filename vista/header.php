@@ -15,7 +15,7 @@
 
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" >
 		<a class="navbar-brand" href="<?php echo $this->pagina ?>home">
-			<img src='<?php echo $this->pagina ?>vista/logo.png' alt="Logo" style="width:20px;">
+			<img src="<?php echo $this->pagina ?>vista/logo.png" alt="Logo" style="width:20px;">
 		</a>
 		<ul class="navbar-nav">
 			<li class="nav-item">
@@ -28,12 +28,12 @@
 		<div class="collapse navbar-collapse" id="navb">
 			<ul class="navbar-nav mr-auto">
 			</ul>
-			<form class="form-inline my-2 my-lg-0" action="">
+			<form method="post" class="form-inline my-2 my-lg-0" action="<?php echo $this->pagina ?>home/buscar">
 				<div class="input-group">
 					<div class="input-group-prepend">
 						<button type="submit" class="btn btn-secondary input-group-text"><i class="fas fa-search"></i></button>
 					</div>
-						<input type="text" class="form-control" placeholder="Buscar Producto">
+						<input type="text" class="form-control" placeholder="Buscar Producto" name="buscar">
 				</div>
 			</form>
 			<ul class="navbar-nav mr-sm-3">
@@ -113,6 +113,12 @@
 						<h2>Vinatería Cocos en la Playa</h2>
 						<p>Favor de rellenar los siguientes campos con la información requerida para realizar el registro de usuario</p>
 						<form action="" class="was-validated">
+							<div class="form-group">
+								<label for="name">Usuario:</label>
+								<input type="text" class="form-control" id="user" placeholder="Enter user" name="user" required>
+								<div class="valid-feedback">Ingresado</div>
+								<div class="invalid-feedback">Favor de llenar este campo</div>
+							</div>
 							<div class="form-group">
 								<label for="name">Nombre:</label>
 								<input type="text" class="form-control" id="name" placeholder="Enter name" name="name" required>
