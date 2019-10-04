@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Vinatería Cocos en la Playa</title>
+	<title>Cocos en la Playa</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -153,17 +153,12 @@
 							</div>
 							<button type="submit" class="btn btn-secondary btn-block">Continuar</button>
 
-							<button type="button" class="btn btn-outline-secondary btn-block" data-toggle="modal" data-target="#Modal_Signup">
+							<button type="button" class="btn btn-outline-info btn-block" data-toggle="modal" data-target="#Modal_Signup">
 								Registrarse
 							</button>
 						</form>
 					</div>
-				</div>        
-				<!-- Modal footer -->
-				<div class="modal-footer">
-					<button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
 				</div>
-
 			</div>
 		</div>
 	</div>
@@ -183,7 +178,7 @@
 					<div class="container">
 						<h2>Vinatería Cocos en la Playa</h2>
 						<p>Favor de rellenar los siguientes campos con la información requerida para realizar el registro de usuario</p>
-						<form action="" class="was-validated">
+						<form method="post" action="<?php echo $this->pagina ?>user/registrar" class="was-validated">
 							<div class="form-group">
 								<label for="name">Usuario:</label>
 								<input type="text" class="form-control" id="user" placeholder="Enter user" name="user" required>
@@ -192,13 +187,13 @@
 							</div>
 							<div class="form-group">
 								<label for="name">Nombre:</label>
-								<input type="text" class="form-control" id="name" placeholder="Enter name" name="name" required>
+								<input type="text" class="form-control" id="name" placeholder="Enter name" name="nombre" required>
 								<div class="valid-feedback">Ingresado</div>
 								<div class="invalid-feedback">Favor de llenar este campo</div>
 							</div>
 							<div class="form-group">
 								<label for="last_name">Apellidos:</label>
-								<input type="text" class="form-control" id="last_name" placeholder="Enter last name" name="last_name" required>
+								<input type="text" class="form-control" id="last_name" placeholder="Enter last name" name="apellidos" required>
 								<div class="valid-feedback">Ingresado</div>
 								<div class="invalid-feedback">Favor de llenar este campo</div>
 							</div>
@@ -206,12 +201,12 @@
 							<div class="form-group">
 								<div class="form-check-inline">
 									<label class="form-check-label" for="femenino">
-										<input type="radio" class="form-check-input" id="femenino" name="optradio" value="Femenino" checked>Femenino
+										<input type="radio" class="form-check-input" id="femenino" name="sexo" value="F" checked>Femenino
 									</label>
 								</div>
 								<div class="form-check-inline">
 									<label class="form-check-label" for="masculino">
-										<input type="radio" class="form-check-input" id="masculino" name="optradio" value="Masculino">Masculino
+										<input type="radio" class="form-check-input" id="masculino" name="sexo" value="M">Masculino
 									</label>
 								</div>
 							</div>
@@ -220,34 +215,29 @@
 									<div class="input-group-prepend">
 										<span class="input-group-text">Fecha de nacimiento</span>
 									</div>
-									<input type="number" class="form-control" id="month" placeholder="mm" name="month" required>
-									<input type="number" class="form-control" id="day" placeholder="dd" name="day" required>
-									<input type="number" class="form-control" id="year" placeholder="aaaa" name="year" required>
+									<input type="number" class="form-control" id="day" placeholder="dd" name="mes" required>
+									<input type="number" class="form-control" id="month" placeholder="mm" name="dia" required>
+									<input type="number" class="form-control" id="year" placeholder="aaaa" name="año" required>
 								</div>
 							</div>
 							<div class="form-group">
 								<label for="number">Número telefónico:</label>
-								<input type="number" class="form-control" id="number" placeholder="Enter number" name="number" required>
+								<input type="number" class="form-control" id="number" placeholder="Enter number" name="telefono" required>
 								<div class="valid-feedback">Ingresado</div>
 								<div class="invalid-feedback">Favor de llenar este campo</div>
 							</div>
 							<div class="form-group">
 								<label for="pwd">Contraseña:</label>
-								<input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required>
+								<input type="password" class="form-control" id="pwd" placeholder="Enter password" name="password" required>
 								<div class="valid-feedback">Ingresado</div>
 								<div class="invalid-feedback">Favor de llenar este campo</div>
 							</div>
 							<div class="form-group form-check">    	
 							</div>
 							<button type="submit" class="btn btn-secondary btn-block">Registrarse</button>
-
 						</form>
 					</div>
-				</div>        
-				<div class="modal-footer">
-					<button type="button" class="btn btn-danger" data-dismiss="modal">Regresar</button>
 				</div>
-
 			</div>
 		</div>
 	</div>
