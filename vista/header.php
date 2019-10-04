@@ -53,12 +53,12 @@
 					<div class="dropdown-menu">
 						<a class="dropdown-item" data-toggle="modal" data-target="#Modal_user">Mis Datos</a>
 						<?php if ($_SESSION['tipo_usuario'] == 'a') { ?>
-							<a class="dropdown-item" href="<?php echo $this->pagina ?>users/index ?>">Usuarios</a>
-							<a class="dropdown-item" href="<?php echo $this->pagina ?>productos/index ?>">Productos</a>
+							<a class="dropdown-item" href="<?php echo $this->pagina ?>users/index">Usuarios</a>
+							<a class="dropdown-item" href="<?php echo $this->pagina ?>productos/index">Productos</a>
 						<?php }else if ($_SESSION['tipo_usuario'] == 'i') { ?>
-							<a class="dropdown-item" href="<?php echo $this->pagina ?>productos/index ?>">Productos</a>
+							<a class="dropdown-item" href="<?php echo $this->pagina ?>productos/index">Productos</a>
 						<?php } ?>
-						<a class="dropdown-item" href="<?php echo $this->pagina ?>user/logout ?>">Cerrar Sesion</a>
+						<a class="dropdown-item" href="<?php echo $this->pagina ?>user/logout">Cerrar Sesion</a>
 					</div>
 				</li>
 			</ul>

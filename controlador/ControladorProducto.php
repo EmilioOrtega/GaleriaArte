@@ -18,7 +18,7 @@ class Producto extends Controlador{
 				<div class="media">
 					<img src="public/imagenes/'.$producto['imagen'].'"  width="225" height="300">
 					<div class="media-body">
-						<h1 class="display-2">'.$producto['nombre'].' '.$producto['contenido'].'ml</h1>
+						<h1 class="display-2">'.htmlentities($producto['nombre'], ENT_COMPAT, 'ISO-8859-1', true).' '.$producto['contenido'].'ml</h1>
 						<p class="card-text">'.htmlentities($producto['descripcion'], ENT_COMPAT, 'ISO-8859-1', true).'</p>
 						<p class="card-text">$'.$producto['precio'].' MXN</p>
 					</div>

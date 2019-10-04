@@ -17,7 +17,7 @@ class Home extends Controlador{
 				<div class="card" style="height: 100%">
 					<img class="card-img-top" src="'.$this->pagina.'public/imagenes/'.$producto[$i]['imagen'].'" alt="Card image" style="height: 400px">
 					<div class="card-body">
-						<h4 class="card-title">'.$producto[$i]['nombre'].'</h4>
+						<h4 class="card-title">'.htmlentities($producto[$i]['nombre'], ENT_COMPAT, 'ISO-8859-1', true).'</h4>
 						<p class="card-text">$'.$producto[$i]['precio'].'</p>
 					</div>
 					<div class="card-footer">
@@ -31,7 +31,6 @@ class Home extends Controlador{
 			</div>';
 		}
 		echo '</div>';
-		var_dump($_SESSION);
 	}
 
 	function buscar() {
@@ -67,5 +66,4 @@ class Home extends Controlador{
 		echo '</div>';
 	}
 }
-
 ?>

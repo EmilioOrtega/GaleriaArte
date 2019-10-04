@@ -37,7 +37,7 @@ class Users extends Controlador{
 					<td>".$users[$i]["fecha_nacimiento"]."</td>
 					<td>".$users[$i]["tipo_usuario"]."</td>
 					<td>".$users[$i]["tarjeta"]."</td>
-					<td><button class='btn btn-outline-warning' data-toggle=modal onclick=editar('".$users[$i]['usuario']."') >Editar</button></td>
+					<td><button class='btn btn-outline-warning' data-toggle=modal>Editar</button></td>
 					<td><button class='btn btn-outline-danger' data-toggle=modal  >Eliminar</button></td>
 				</tr>";
 			}
