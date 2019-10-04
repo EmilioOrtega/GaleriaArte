@@ -9,6 +9,7 @@ $url = explode('/', $url);
 if (empty($url[0])) {
 	require_once 'controlador/ControladorHome.php';
 	$controlador = new Home;
+	$controlador->index();
 	return;
 }
 
