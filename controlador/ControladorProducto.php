@@ -5,6 +5,9 @@ class Producto extends Controlador{
 		$this->setModelo("Producto");
 		$this->setHeader();
 		$this->setFooter();
+	}
+
+	function index() {
 		$producto = $this->modelo->getProducto($_POST['id']);
 		echo '
 		<br>
