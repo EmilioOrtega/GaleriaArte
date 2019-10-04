@@ -14,8 +14,6 @@ class Users extends Controlador{
 		<br>
 		<br>
 		 <table class="table table-bordered table-dark">
-
-
             <tr>
                 <td>User</td>
                 <td>Nombres</td>
@@ -49,16 +47,6 @@ class Users extends Controlador{
                     <td><button class="btn btn-warning" data-toggle="modal" data-target="#modelEditarA" >Editar</button></td>
                     <td><button class="btn btn-danger" data-toggle="modal" data-target="#modelEliminarA" >Eliminar</button></td>
                 </tr>
-
-           
-
-            
-
-
-
-
-        
-
         </table>';
 	}
 }
