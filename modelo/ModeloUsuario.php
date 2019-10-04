@@ -1,6 +1,5 @@
  <?php
- include '../libs/Modelo.php';
- class Usuario extends Modelo{
+ class ModeloUsuario extends Modelo{
 	public function __construct(){
 		parent::__construct();
 	}

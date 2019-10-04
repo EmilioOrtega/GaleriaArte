@@ -1,6 +1,7 @@
 <?php
 class Controlador {
 	function __construct() {
+		session_start();
 		$this->pagina = "http://localhost/VinateriaWeb/";
 	}
 

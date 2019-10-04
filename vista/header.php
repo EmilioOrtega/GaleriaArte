@@ -11,7 +11,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 	<script src="https://kit.fontawesome.com/180eab578a.js"></script>
 </head>
-<body style="height:1500px">
+<body>
 
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" >
 		<a class="navbar-brand" href="<?php echo $this->pagina ?>home">
@@ -38,9 +38,19 @@
 			</form>
 			<ul class="navbar-nav mr-sm-3">
 			</ul>
-			<button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#Modal_login">
-				Iniciar sesión
-			</button>
+			<?php 
+			if (!isset($_SESSION['user'])) {
+				echo '
+				<button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#Modal_login">
+					Iniciar sesión
+				</button>';
+			}else {
+				echo '
+				<button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#Modal_user">
+					'.$_SESSION['user'].'
+				</button>';
+			}
+			?>
 			<ul class="navbar-nav mr-sm-3">
 			</ul>
 			<a class="navbar-brand" href="">
@@ -48,6 +58,47 @@
 			</a>
 		</div>
 	</nav>
+
+	<div class="modal fade" id="Modal_user">
+		<div class="modal-dialog">
+			<div class="modal-content">
+
+				<!-- Modal Header -->
+				<div class="modal-header">
+					<h4 class="modal-title">Bienvenido <?php echo $_SESSION['user']; ?></h4>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+
+				<!-- Modal body -->
+				<div class="modal-body">
+					<div class="container">
+						<h2>Vinatería Cocos en la Playa</h2>
+						<p>Favor de rellenar los siguientes campos con la información requerida para iniciar sesión</p>
+						<form method="post" action="<?php echo $this->pagina ?>user/logout" class="was-validated">
+							<div class="form-group">
+								<label for="uname">Nombre:</label>
+								<input type="text" class="form-control" id="uname" placeholder="Enter username" name="user" required>
+								<div class="valid-feedback">Ingresado</div>
+								<div class="invalid-feedback">Favor de llenar este campo</div>
+							</div>
+							<div class="form-group">
+								<label for="pwd">Contraseña:</label>
+								<input type="password" class="form-control" id="pwd" placeholder="Enter password" name="password" required>
+								<div class="valid-feedback">Ingresado</div>
+								<div class="invalid-feedback">Favor de llenar este campo</div>
+							</div>
+							<div class="form-group form-check">
+
+							</div>
+							<button type="submit" class="btn btn-danger btn-block">Cerrar Sesion</button>
+
+							<button type="button" class="btn btn-outline-secondary btn-block" data-toggle="modal" data-target="#Modal_user">Actualizar</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<div class="modal fade" id="Modal_login">
 		<div class="modal-dialog">
@@ -64,16 +115,16 @@
 					<div class="container">
 						<h2>Vinatería Cocos en la Playa</h2>
 						<p>Favor de rellenar los siguientes campos con la información requerida para iniciar sesión</p>
-						<form action="" class="was-validated">
+						<form method="post" action="<?php echo $this->pagina ?>user/login" class="was-validated">
 							<div class="form-group">
 								<label for="uname">Usuario:</label>
-								<input type="text" class="form-control" id="uname" placeholder="Enter username" name="uname" required>
+								<input type="text" class="form-control" id="uname" placeholder="Enter username" name="user" required>
 								<div class="valid-feedback">Ingresado</div>
 								<div class="invalid-feedback">Favor de llenar este campo</div>
 							</div>
 							<div class="form-group">
 								<label for="pwd">Contraseña:</label>
-								<input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required>
+								<input type="password" class="form-control" id="pwd" placeholder="Enter password" name="password" required>
 								<div class="valid-feedback">Ingresado</div>
 								<div class="invalid-feedback">Favor de llenar este campo</div>
 							</div>
@@ -95,7 +146,7 @@
 
 			</div>
 		</div>
-	</div>  
+	</div>
 
 	<div class="modal fade" id="Modal_Signup">
 		<div class="modal-dialog">
