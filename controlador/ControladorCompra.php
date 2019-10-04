@@ -1,14 +1,27 @@
 <?php
-class User extends Controlador{
+class Compra extends Controlador{
 	function __construct() {
 		parent::__construct();
-		$this->setModelo("Usuario");
+		$this->setModelo("Compra");
 	}
+
+
+function comprar(){
+$idUser=$_POST['id'];
+
+$carrito = $this->modelo->getCarrito($idUser);
+ 
+$this->modelo->addCompra($carrito);
+
+
+
+}
+
 
 	function login() {
 		$usuario = $this->modelo->login(trim($_POST['user']),trim($_POST['password']));
+        $_SESSION['user'] = trim($_POST['user']);
 		if (!empty($usuario)) {
-			$_SESSION['user'] = trim($_POST['user']);
 			$_SESSION['nombre'] = trim($usuario[0]['nombre']);
 			$_SESSION['apellidos'] = trim($usuario[0]['apellidos']);
 			$_SESSION['telefono'] = trim($usuario[0]['telefono']);
@@ -32,4 +45,5 @@ class User extends Controlador{
 		header('Location: '.$this->pagina.'user/login');
 	}
 }
+
 ?>
