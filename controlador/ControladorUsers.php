@@ -10,7 +10,8 @@ class Users extends Controlador{
 	function index() {
 		$users = $this->modelo->getUsers();
         echo '
-          <script src="libs/funciones.js"></script>
+        
+
 		<br>
 		<br>
 		<br>
@@ -30,20 +31,21 @@ class Users extends Controlador{
             </tr>
        ';
 	for ($i=0; $i < count($users); $i++) { 
-			echo '<tr>
-                    <td>'.$users[$i]["usuario"].'</td>
-                      <td>'.$users[$i]["nombre"].'</td>
-                    <td>'.$users[$i]["apellidos"].'</td>
-                     <td>'.$users[$i]["sexo"].'</td>
-                      <td>'.$users[$i]["telefono"].'</td>
-                       <td>'.$users[$i]["fecha_nacimiento"].'</td>
-                        <td>'.$users[$i]["tipo_usuario"].'</td>
-                         <td>'.$users[$i]["tarjeta"].'</td>
+        $id=$users[$i]["usuario"];
+			echo "<tr>
+                    <td>".$users[$i]["usuario"]."</td>
+                      <td>".$users[$i]["nombre"]."</td>
+                    <td>".$users[$i]["apellidos"]."</td>
+                     <td>".$users[$i]["sexo"]."</td>
+                      <td>".$users[$i]["telefono"]."</td>
+                       <td>".$users[$i]["fecha_nacimiento"]."</td>
+                        <td>".$users[$i]["tipo_usuario"]."</td>
+                         <td>".$users[$i]["tarjeta"]."</td>
          
-                    <td><button class="btn btn-warning" data-toggle="modal" data-target="#modelEditarA" >Editar</button></td>
-                    <td><button class="btn btn-danger" data-toggle="modal" data-target="#modelEliminarA" >Eliminar</button></td>
+                    <td><button class='btn btn-warning' data-toggle=modal onclick=editar('".$users[$i]['usuario']."') >Editar</button></td>
+                    <td><button class='btn btn-danger' data-toggle=modal  >Eliminar</button></td>
                 </tr>
-        </table>';
+        </table>";
 	}
 }}
 ?>

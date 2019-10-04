@@ -11,6 +11,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 	<script src="https://kit.fontawesome.com/180eab578a.js"></script>
 	<script src="jquery-3.4.1.min.js"></script>
+	  <script src="libs/funciones.js"></script>
 </head>
 <body>
 
