@@ -25,7 +25,11 @@ class Home extends Controlador{
 							<input type="hidden" name="id" value="'.$producto[$i]['id'].'">
 							<button class="btn btn-secondary" type="submit">Ver Producto</button>
 						</form>
-						<a href="" class="btn btn-primary"><img src="'.$this->pagina.'vista/carshop.png" alt="Logo" style="width:20px;"> Añadir al Carrito</a>
+						<form method="post" action="'.$this->pagina.'carrito/insertarCarrito" style="margin-bottom: 5px">
+							<input type="hidden" name="producto" value="'.$producto[$i]['id'].'">
+							<input type="hidden" name="precio" value="'.$producto[$i]['precio'].'">
+							<button type="submit" class="btn btn-primary"><img src="'.$this->pagina.'vista/carshop.png" alt="Logo" style="width:20px;">Añadir al Carrito</button>
+						</form>
 					</div>
 				</div>
 			</div>';
@@ -55,7 +59,7 @@ class Home extends Controlador{
 								<input type="hidden" name="id" value="'.$producto[$i]['id'].'">
 								<button class="btn btn-secondary" type="submit">Ver Producto</button>
 							</form>
-							<a href="" class="btn btn-primary"><img src="'.$this->pagina.'vista/carshop.png" alt="Logo" style="width:20px;"> Añair al Carrito</a>
+							<a href="'.$this->pagina.'carrito" class="btn btn-primary"><img src="'.$this->pagina.'vista/carshop.png" alt="Logo" style="width:20px;"> Añair al Carrito</a>
 						</div>
 					</div>
 				</div>';

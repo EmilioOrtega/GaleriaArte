@@ -68,7 +68,7 @@
 			</ul>
 			<ul class="navbar-nav mr-sm-3">
 			</ul>
-			<a class="navbar-brand" href="">
+			<a class="navbar-brand" href="<?php echo $this->pagina ?>carrito">
 				<img src="<?php echo $this->pagina ?>vista/carshop.png" alt="Logo" style="width:30px;">
 			</a>
 		</div>
