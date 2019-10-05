@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 24-09-2019 a las 16:16:01
--- Versión del servidor: 10.3.16-MariaDB
--- Versión de PHP: 7.3.7
+-- Host: 127.0.0.1
+-- Generation Time: Oct 05, 2019 at 07:26 PM
+-- Server version: 10.1.36-MariaDB
+-- PHP Version: 7.2.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,29 +19,40 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `banco`
+-- Database: `banco`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tarjeta`
+-- Table structure for table `tarjeta`
 --
 
 CREATE TABLE `tarjeta` (
   `tarjeta` bigint(20) NOT NULL,
-  `saldo` double DEFAULT NULL,
+  `saldo` double DEFAULT '0',
   `vencimiento` char(5) DEFAULT NULL,
   `CVC` tinyint(4) DEFAULT NULL,
   `titular` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Índices para tablas volcadas
+-- Dumping data for table `tarjeta`
+--
+
+INSERT INTO `tarjeta` (`tarjeta`, `saldo`, `vencimiento`, `CVC`, `titular`) VALUES
+(878786787980078, 0, '71/10', 127, 'Álvaro Eduardo Palomera'),
+(4512356435465421, 0, '20/20', 127, '?lvaro Misael Pintor Alcantar'),
+(5676543567543567, 100, '20/10', 127, 'Sydney Alejandro Ayala Perez'),
+(7384457359785487, 9999999, '14/50', 127, 'Emilio Alejandro Ortega Delgado'),
+(9898484584579845, 0, '12/15', 127, 'Roberto Corona Criollo');
+
+--
+-- Indexes for dumped tables
 --
 
 --
--- Indices de la tabla `tarjeta`
+-- Indexes for table `tarjeta`
 --
 ALTER TABLE `tarjeta`
   ADD PRIMARY KEY (`tarjeta`);

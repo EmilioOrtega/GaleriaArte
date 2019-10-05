@@ -23,6 +23,8 @@ if ($T == 'CREAR') {
 	$Vn = $_POST['Vn'];
 	$CV = $_POST['Cv'];
 	$Tl = $_POST['Tl'];
+
+	//$Tl = htmlentities($Tl, ENT_COMPAT,'ISO-8859-1', true);
 	$Tj = str_replace(" ", '', $Tj);
 	
 	$sql = "insert into tarjeta (`tarjeta`, `saldo`, `vencimiento`, `CVC`, `titular`) values ($Tj, $Sl, '$Vn', $CV, '$Tl')";
@@ -37,7 +39,7 @@ if ($T == 'CREAR') {
 
     }
 
-    echo "<form name=form action=CRUD_Receptor.php method=post>";
+    echo "<form name=form action=CRUD_Receptor_Banco.php method=post>";
 	echo "<input type='hidden' name='s' value= '".$stat."'' >";
 	echo "<input type='hidden' name='t' value= '".$T."'' >";
 	echo "</form>";
@@ -57,7 +59,7 @@ elseif ($T == 'LEER') {
 	if(!$sql){
 			$stat = mysqli_error($conexion);
 			$T = 'error';
-			echo "<form name=form action=CRUD_Receptor.php method=post>";
+			echo "<form name=form action=CRUD_Receptor_Banco.php method=post>";
 			echo "string"; "<input type='hidden' name='s' value= '".$stat."'' >";
 			echo "<input type='hidden' name='t' value= '".$T."'' >";
 			echo "</form>";
@@ -67,7 +69,7 @@ elseif ($T == 'LEER') {
 
 			$stat = "Sin Registros";
 			$T = 'error';
-			echo "<form name=form action=CRUD_Receptor.php method=post>";
+			echo "<form name=form action=CRUD_Receptor_Banco.php method=post>";
 			echo "<input type='hidden' name='s' value= '".$stat."'' >";
 			echo "<input type='hidden' name='t' value= '".$T."'' >";
 			echo "</form>";
@@ -79,7 +81,7 @@ elseif ($T == 'LEER') {
  
 	$row = mysqli_fetch_array($sql);
 
- 	echo "<form name=form action=CRUD_Receptor.php method=post>";
+ 	echo "<form name=form action=CRUD_Receptor_Banco.php method=post>";
 	echo "<input type='hidden' name='t' value= '".$T."'' >";
 	echo "<input type='hidden' name='sql' value= '".serialize($row). "'>";
 	echo "</form>";
@@ -98,6 +100,8 @@ elseif ($T == 'ACTUALIZAR') {
 	$Vn = $_POST['Vn'];
 	$CV = $_POST['Cv'];
 	$Tl = $_POST['Tl'];
+
+	//$Tl = htmlentities($Tl, ENT_COMPAT,'ISO-8859-1', true);
 	$Tj = str_replace(" ", '', $Tj);
 
 	$ID = $Tj;
@@ -106,7 +110,7 @@ elseif ($T == 'ACTUALIZAR') {
 
 	if (mysqli_query($conexion,$sql)) {
         $stat="Tarjeta Actualizada";
-       echo "<form name=form action=CRUD_Receptor.php method=post>";
+       echo "<form name=form action=CRUD_Receptor_Banco.php method=post>";
        echo "<input type='hidden' name='s' value= '".$stat."'' >";
        echo "<input type='hidden' name='t' value= '".$T."'' >";
        echo "</form>";
@@ -126,7 +130,7 @@ elseif ($T == 'BORRAR') {
 	
 	if (mysqli_query($conexion,$sql)) {
         $stat="Tarjeta Borrada";
-        echo "<form name=form action=CRUD_Receptor.php method=post>";
+        echo "<form name=form action=CRUD_Receptor_Banco.php method=post>";
 		echo "<input type='hidden' name='s' value= '".$stat."'' >";
 		echo "<input type='hidden' name='t' value= '".$T."'' >";
 		echo "</form>";
@@ -138,7 +142,7 @@ elseif ($T == 'BORRAR') {
 }
 
 else{
-	echo "<form name=form action=CRUD_Receptor.php method=post>";
+	echo "<form name=form action=CRUD_Receptor_Banco.php method=post>";
        echo "<input type='hidden' name='s' value= 'Error en la opereación'' >";
        echo "<input type='hidden' name='t' value= 'ERROR'' >";
        echo "</form>";
