@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 05, 2019 at 07:26 PM
+-- Generation Time: Oct 05, 2019 at 09:39 PM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.10
 
@@ -32,7 +32,7 @@ CREATE TABLE `tarjeta` (
   `tarjeta` bigint(20) NOT NULL,
   `saldo` double DEFAULT '0',
   `vencimiento` char(5) DEFAULT NULL,
-  `CVC` tinyint(4) DEFAULT NULL,
+  `CVC` smallint(3) DEFAULT NULL,
   `titular` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -41,11 +41,12 @@ CREATE TABLE `tarjeta` (
 --
 
 INSERT INTO `tarjeta` (`tarjeta`, `saldo`, `vencimiento`, `CVC`, `titular`) VALUES
-(878786787980078, 0, '71/10', 127, 'Álvaro Eduardo Palomera'),
-(4512356435465421, 0, '20/20', 127, '?lvaro Misael Pintor Alcantar'),
-(5676543567543567, 100, '20/10', 127, 'Sydney Alejandro Ayala Perez'),
+(878786787980078, 0, '71/10', 432, 'Álvaro Eduardo Palomera'),
+(4512356435465421, 0, '20/20', 312, '?lvaro Misael Pintor Alcantar'),
+(5676543567543567, 100, '20/10', 651, 'Sydney Alejandro Ayala Perez'),
 (7384457359785487, 9999999, '14/50', 127, 'Emilio Alejandro Ortega Delgado'),
-(9898484584579845, 0, '12/15', 127, 'Roberto Corona Criollo');
+(9898484584579845, 0, '20/20', 852, 'Roberto Corona Criollo'),
+(9987907907987869, 0, '20/70', 785, 'Test');
 
 --
 -- Indexes for dumped tables

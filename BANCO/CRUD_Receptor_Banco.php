@@ -71,23 +71,23 @@ var clicksound=createsoundbite("click.ogg", "click.mp3")
                      ";
                      echo "
                      <tr>
-                     <td style='background: #515a79; font-family: BurBigConBold; font-size: 30px; padding: 10px'>Tarjeta</td>
-                     <td style='background: #515a79; font-family: BurBigConBold; font-size: 30px; padding: 10px'>" . $row["tarjeta"]. "</td>
+                     <td style='background: #515a79; font-family: BurSmlBold; font-size: 30px; padding: 10px'>Tarjeta</td>
+                     <td style='background: #515a79; font-family: BurSmlMed; font-size: 30px; padding: 10px'>" . $row["tarjeta"]. "</td>
                      </tr>
 
                      <tr>
-                     <td style='background: #515a79; font-family: BurBigConBold; font-size: 30px; padding: 10px'>Saldo</td>
-                     <td style='background: #515a79; font-family: BurBigConBold; font-size: 30px; padding: 10px'>" . $row["saldo"]. "</td>
+                     <td style='background: #515a79; font-family: BurSmlBold; font-size: 30px; padding: 10px'>Saldo</td>
+                     <td style='background: #515a79; font-family: BurSmlMed; font-size: 30px; padding: 10px'>" . $row["saldo"]. "</td>
                      </tr>
 
                      <tr>
-                     <td style='background: #515a79; font-family: BurBigConBold; font-size: 30px; padding: 10px'>CVC</td>
-                     <td style='background: #515a79; font-family: BurBigConBold; font-size: 30px; padding: 10px'>" . $row["CVC"]. "</td>
+                     <td style='background: #515a79; font-family: BurSmlBold; font-size: 30px; padding: 10px'>CVC</td>
+                     <td style='background: #515a79; font-family: BurSmlMed; font-size: 30px; padding: 10px'>" . $row["CVC"]. "</td>
                      </tr>
 
                      <tr>
-                     <td style='background: #515a79; font-family: BurBigConBold; font-size: 30px; padding: 10px'>Titular</td>
-                     <td style='background: #515a79; font-family: BurBigConBold; font-size: 30px; padding: 10px'>"  . htmlentities($row["titular"], ENT_COMPAT,'ISO-8859-1', true) .  "</td>
+                     <td style='background: #515a79; font-family: BurSmlBold; font-size: 30px; padding: 10px'>Titular</td>
+                     <td style='background: #515a79; font-family: BurSmlMed; font-size: 30px; padding: 10px'>"  . htmlentities($row["titular"], ENT_COMPAT,'ISO-8859-1', true) .  "</td>
                      </tr>
                      ";
                   }
