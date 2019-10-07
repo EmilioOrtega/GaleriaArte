@@ -3,10 +3,12 @@ class Modelo {
 	protected $conexion;
 	protected $conexionBanco;
 	public function __construct() {
-		$servername = "192.168.84.70";
-		//$servername = "localhost";
+		$servername = "localhost";
+		$username = "root";
+		$password = "";
+		/*$servername = "192.168.84.70";
 		$username = "rafa";
-		$password = "password";
+		$password = "password";*/
 		$dbname = "vinateria";
 		// Create connection
 		$this->conexion = new mysqli($servername, $username, $password, $dbname);
