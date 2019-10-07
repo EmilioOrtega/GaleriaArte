@@ -15,7 +15,6 @@ $carrito = $this->modelo->getCarrito($idUser);
 $this->modelo->addCompra($carrito);
 	
 
-}
 
 
 }

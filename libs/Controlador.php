@@ -3,6 +3,13 @@ class Controlador {
 	function __construct() {
 		session_start();
 		$this->pagina = "http://localhost/VinateriaWeb/";
+
+
+
+		if (empty($_SESSION['user'])) {
+			$_SESSION['user'] = uniqid();
+			$_SESSION['tipo_usuario'] = "t";
+		}
 	}
 
 	function setFooter() {

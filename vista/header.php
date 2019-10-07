@@ -40,7 +40,7 @@
 			</form>
 			<ul class="navbar-nav mr-sm-3">
 			</ul>
-			<?php if (!isset($_SESSION['user'])) { ?>
+			<?php if (!isset($_SESSION['user'])||$_SESSION['tipo_usuario']=='t') { ?>
 				<button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#Modal_login">
 					Iniciar sesión
 				</button>

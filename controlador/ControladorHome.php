@@ -26,6 +26,7 @@ class Home extends Controlador{
 							<button class="btn btn-secondary" type="submit">Ver Producto</button>
 						</form>
 						<form method="post" action="'.$this->pagina.'carrito/insertarCarrito" style="margin-bottom: 5px">
+							<input type="hidden" name="user" value="'.$_SESSION['user'].'">
 							<input type="hidden" name="producto" value="'.$producto[$i]['id'].'">
 							<input type="hidden" name="precio" value="'.$producto[$i]['precio'].'">
 							<button type="submit" class="btn btn-primary"><img src="'.$this->pagina.'vista/carshop.png" alt="Logo" style="width:20px;">Añadir al Carrito</button>
@@ -65,7 +66,7 @@ class Home extends Controlador{
 				</div>';
 			}
 		}else {
-			echo '<h4>No har resultados para "'.$_POST['buscar'].'"</h4>';
+			echo '<h4>No hay resultados para "'.$_POST['buscar'].'"</h4>';
 		}
 		echo '</div>';
 	}

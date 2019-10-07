@@ -13,49 +13,56 @@ class Carrito extends Controlador{
 		echo '
 		<br>
 		<br>
-		<br>
-		<form method="post" action="'.$this->pagina.'compra/comprar" style="margin-bottom: 5px">';
+		<br>';
 		for ($i=0; $i < count($carrito); $i++) { 
-			echo '
-			<div class="card">
-				<div class="card-body">											
-					<div class="row">
-						<div class="col">
-							<div class="container">
-								<img src="'.$this->pagina.'public/imagenes/'.$carrito[$i]['imagen'].'" class="rounded" alt="Img" width="50px"> 
+			echo "
+			<div class='card mb-2'>
+				<div class='card-body'>
+					<div class='row'>
+						<div class='col-2'>
+							<img src='{$this->pagina}public/imagenes/{$carrito[$i]['imagen']}' class='rounded' alt='Img' height='100px'>
+						</div>
+						<div class='col-8'>
+							<div class='row'>
+								<div class='col-4'>
+									<label for='name' class='card-title'>Nombre: {$carrito[$i][8]}</label>
+								</div>
+								<div class='col-4'></div>
+								<div class='col-4'>
+									<label for='precio' class='card-text'>Precio: $ {$carrito[$i]['precio']}</label>
+								</div>
+							</div>
+							<div class='row'>
+								<div class='col-4'>Cantidad: 1</div>
+								<div class='col-4'></div>
+								<div class='col-4'>Total:   $ {$carrito[$i]['precio']}</div>
 							</div>
 						</div>
-						<div class="col">
-							<label for="name" class="card-title">Nombre: '.$carrito[$i]['producto'].'</label>
-						</div>
-						<div class="col">
-							<label for="cant" class="card-text">Cantidad: 1</label>
-						</div>
-						<div class="col">
-							<label for="precio" class="card-text">Precio: '.$carrito[$i]['precio'].'</label>
-							
+						<div class='col-2'>
+							<form method='post' action='{$this->pagina}carrito/eliminarCarrito'>
+								<button class='btn btn-danger' type='submit'>Eliminar</button>
+								<input type='hidden' name='producto' value='{$carrito[$i]['producto']}'>
+								<input type='hidden' name='usuario' value='{$carrito[$i]['usuario']}'>
+							</form>
 						</div>
 					</div>
-					<div class="row">
-						<div class="col"></div>
-						<div class="col">Descuento: 0%</div>
-						<div class="col"></div>
-						<div class="col">Total: '.$carrito[$i]['precio'].'</div>
-						<div class="col"></div>
-					</div>								
 				</div>
-			</div>
-			<input type="hidden" name="id" value="'.$carrito[$i]['producto'].'">
-			<input type="hidden" name="id" value="'.$carrito[$i]['usuario'].'">';
+			</div>";
 		}
-		echo '
-			<button class="btn btn-secondary" type="submit">Comprar Carrito</button>
-		</form>';
+		echo "
+		<form method='post' action='{$this->pagina}compra/comprar'>
+			<button class='btn btn-secondary' type='submit'>Comprar Carrito</button>
+		</form>";
 	}
 
 	function insertarCarrito(){
-		$this->modelo->addCarrito(trim($_SESSION['user']),trim($_POST['producto']),trim($_POST['precio']));
-		header('Location: '.$this->pagina.'home');
+		$this->modelo->addCarrito($_SESSION['user'],$_POST['producto'],$_POST['precio']);
+		header("Location: {$this->pagina}home");
+	}
+
+	function eliminarCarrito(){
+		$this->modelo->deleteCarrito($_SESSION['user'],$_POST['producto']);
+		header("Location: {$this->pagina}carrito");
 	}
 }
 ?>
