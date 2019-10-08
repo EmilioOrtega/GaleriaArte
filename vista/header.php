@@ -53,7 +53,7 @@
 					<div class="dropdown-menu">
 						<a class="dropdown-item" data-toggle="modal" data-target="#Modal_user">Mis Datos</a>
 						<?php if ($_SESSION['tipo_usuario'] == 'a') { ?>
-							<a class="dropdown-item" href="<?php echo $this->pagina ?>users/index">Usuarios</a>
+							<a class="dropdown-item" href="<?php echo $this->pagina ?>user">Usuarios</a>
 							<a class="dropdown-item" href="<?php echo $this->pagina ?>productos/index">Productos</a>
 						<?php }else if ($_SESSION['tipo_usuario'] == 'i') { ?>
 							<a class="dropdown-item" href="<?php echo $this->pagina ?>productos/index">Productos</a>
@@ -106,14 +106,12 @@
 								<div class="valid-feedback">Ingresado</div>
 								<div class="invalid-feedback">Favor de llenar este campo</div>
 							</div>
-							<?php if (isset($_SESSION['tarjeta'])) { ?>
 								<div class="form-group">
 									<label for="tarjeta">Tarjeta:</label>
 									<input type="text" class="form-control" id="tarjeta" placeholder="Enter card number" name="tarjeta" value="<?php echo $_SESSION['tarjeta'] ?>" required>
 									<div class="valid-feedback">Ingresado</div>
 									<div class="invalid-feedback">Favor de llenar este campo</div>
 								</div>
-							<?php } ?>
 							<button type="submit" class="btn btn-secondary btn-block">Actualizar datos</button>
 						</form>
 					</div>

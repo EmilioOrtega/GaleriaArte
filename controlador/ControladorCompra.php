@@ -5,21 +5,14 @@ class Compra extends Controlador{
 		$this->setModelo("Compra");
 	}
 
-
-function comprar(){
-	if(isset($_POST['usuario']) && isset($_POST['producto'])){
-$idUsuario=$_POST['usuario'];
-$idProducto=$_POST['producto'];
-$carrito = $this->modelo->getCarrito($idUser);
- 
-$this->modelo->addCompra($carrito);
-}
-}
-
-	
-
-
+	function comprar(){
+		if(isset($_POST['usuario']) && isset($_POST['producto'])){
+			$idUsuario=$_POST['usuario'];
+			$idProducto=$_POST['producto'];
+			$carrito = $this->modelo->getCarrito($idUser);
+			$this->modelo->addCompra($carrito);
+		}
+	}
 
 }
-
 ?>

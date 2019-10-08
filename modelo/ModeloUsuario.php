@@ -51,6 +51,12 @@
 		$this->conexion->close();
 		return $usuario;
 	}
+
+	function updateUser($usuario,$nombre,$apellidos,$telefono,$tarjeta){
+		$sql = "update usuario set nombre='$nombre', apellidos='$apellidos', telefono=$telefono, tarjeta=$tarjeta where usuario='$usuario'";
+		$this->conexion->query($sql);
+		$this->conexion->close();
+	}
 }
 
 ?> 
