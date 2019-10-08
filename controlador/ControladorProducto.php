@@ -25,8 +25,13 @@ class Producto extends Controlador{
 				</div>
 			</div>
 			<div class="card-footer">
-					<a href="#" class="btn btn-outline-success">Comprar</a>
-					<a href="#" class="btn btn-primary"><img src="'.$this->pagina.'vista/carshop.png" alt="Logo" style="width:20px;"> Agregar al carrito</a>
+					
+					<form method="post" action="'.$this->pagina.'carrito/insertarCarrito" style="margin-bottom: 5px">
+						<input type="hidden" name="user" value="'.$_SESSION['user'].'">
+						<input type="hidden" name="producto" value="'.$producto['id'].'">
+						<input type="hidden" name="precio" value="'.$producto['precio'].'">
+						<button type="submit" class="btn btn-primary"><img src="'.$this->pagina.'vista/carshop.png" alt="Logo" style="width:20px;">Añadir al Carrito</button>
+					</form>
 			</div>
 		</div>';
 	}

@@ -18,10 +18,10 @@
 	}
 
 	function updateSaldo($tarjeta, $total){
-		$sql = "update tarjeta set saldo=saldo-$total from tarjeta where tarjeta={$tarjeta}";
+		$sql = "update tarjeta set saldo=(saldo-{$total}) where tarjeta={$tarjeta}";
 
 		echo $sql;
-		if($result=$this->conexion->query($sql)){
+		if($result=$this->conexionBanco->query($sql)){
 			echo 'Se agregó el producto al carrito correctamente';
 		}else{
 			echo 'error';
