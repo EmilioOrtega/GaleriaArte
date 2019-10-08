@@ -2,16 +2,19 @@
 class Compra extends Controlador{
 	function __construct() {
 		parent::__construct();
-		$this->setModelo("Compra");
 	}
 
 	function comprar(){
-		if(isset($_POST['usuario']) && isset($_POST['producto'])){
-			$idUsuario=$_POST['usuario'];
-			$idProducto=$_POST['producto'];
-			$carrito = $this->modelo->getCarrito($idUser);
-			$this->modelo->addCompra($carrito);
+		$this->setModelo("Tarjeta");
+		$saldo = $this->modelo->getSaldo($_SESSION['tarjeta']);
+		if (($saldo['saldo']-$total)>0) {
+			$this->modelo->updateSaldo($_SESSION['tarjeta'],$_POST['total']);
+			$this->setModelo("Compra");
+			$this->modelo->addCompra($_SESSION['user'],$_POST['total']);
+			$this->setModelo("Carrito");
+			$this->modelo->deleteAllCarrito($_SESSION['user']);
 		}
+		header("Location: {$this->pagina}home");
 	}
 
 }

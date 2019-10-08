@@ -3,9 +3,6 @@
 	function __construct(){
 		parent::__construct();
 	}
-     //registro
-     //login
-     //conxionbanco
 
 	function registrarUsuario($usuario,$contrasena,$nombre,$apellidos,$sexo,$telefono,$fecha_nacimiento,$tipo_usuario){
 		$sql = "insert into usuario(usuario,contrasena,nombre,apellidos,sexo,telefono,fecha_nacimiento,tipo_usuario) values('{$usuario}','{$contrasena}','{$nombre}','{$apellidos}','{$sexo}','{$telefono}','{$fecha_nacimiento}','{$tipo_usuario}')";
@@ -54,6 +51,12 @@
 
 	function updateUser($usuario,$nombre,$apellidos,$telefono,$tarjeta){
 		$sql = "update usuario set nombre='$nombre', apellidos='$apellidos', telefono=$telefono, tarjeta=$tarjeta where usuario='$usuario'";
+		$this->conexion->query($sql);
+		$this->conexion->close();
+	}
+
+	function deleteUser($usuario){
+		$sql = "delete from usuario where usuario='{$usuario}'";
 		$this->conexion->query($sql);
 		$this->conexion->close();
 	}

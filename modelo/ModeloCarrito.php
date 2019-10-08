@@ -25,7 +25,7 @@
 		echo $sql;
 		$this->conexion->query($sql);
 		$this->conexion->close();
-	 }
+	}
 
 	function getCarrito($usuario){
 		$carrito = array();
@@ -38,7 +38,14 @@
 		}
 		$this->conexion->close();
 		return $carrito;
-	 }
+	}
+
+	function deleteAllCarrito($id){
+		$sql = "delete from carrito where usuario='{$id}'";
+		echo $sql;
+		$this->conexion->query($sql);
+		$this->conexion->close();
+	}
 }
 
 ?> 

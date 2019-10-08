@@ -132,14 +132,7 @@ class User extends Controlador{
 	}
 
 	function delete() {
-		if (!isset($_POST['tarjeta'])) {
-			$_POST['tarjeta'] = $_SESSION['tarjeta'];
-		}
-		$this->modelo->updateUser($_SESSION['user'],$_POST['nombre'],$_POST['apellidos'],$_POST['telefono'],$_POST['tarjeta']);
-		$_SESSION['nombre'] = $_POST['nombre'];
-		$_SESSION['apellidos'] = $_POST['apellidos'];
-		$_SESSION['telefono'] = $_POST['telefono'];
-		$_SESSION['tarjeta'] = $_POST['tarjeta'];
+		$this->modelo->deleteUser($_POST['user']);
 		header('Location: '.$this->pagina.'user');
 	}
 }
