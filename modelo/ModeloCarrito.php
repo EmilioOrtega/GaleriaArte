@@ -5,7 +5,7 @@
 	}
 	 
 	function addCarrito($usuario,$producto,$total){
-		$sql = "insert into carrito(usuario,producto,fecha,cantidad,total) values('{$usuario}','{$producto}',NOW(),1,{$total})";
+		$sql = "insert into carrito(usuario,producto) values('{$usuario}','{$producto}')";
 
 		if($result=$this->conexion->query($sql)){
 			echo 'Se agregó el producto al carrito correctamente';
@@ -21,14 +21,15 @@
 	}
 
 	function deleteCarrito($id,$producto){
-		$sql = "delete from carrito where id='{$id}' and producto={$producto}";	
+		$sql = "delete from carrito where usuario='{$id}' and producto={$producto}";
+		echo $sql;
 		$this->conexion->query($sql);
-		$this->conexion->close();   
+		$this->conexion->close();
 	 }
 
 	function getCarrito($usuario){
 		$carrito = array();
-		$sql = "SELECT * FROM carrito inner join producto on carrito.producto = producto.id where usuario = '{$usuario}'";
+		$sql = "SELECT producto.imagen, producto.nombre as producto, producto.precio, carrito.producto as clave_producto,  count(*) as cantidad FROM carrito inner join producto on carrito.producto = producto.id where usuario = '{$usuario}' group by producto";
 		if($result = mysqli_query($this->conexion,$sql)){
 			while ($obj = mysqli_fetch_array($result)){
 				array_push(	$carrito, $obj);

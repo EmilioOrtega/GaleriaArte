@@ -13,6 +13,9 @@ $idProducto=$_POST['producto'];
 $carrito = $this->modelo->getCarrito($idUser);
  
 $this->modelo->addCompra($carrito);
+}
+}
+
 	
 
 

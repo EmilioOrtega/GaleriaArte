@@ -6,26 +6,29 @@ class Carrito extends Controlador{
 	}
 
 	function index() {
-
 		$this->setHeader();
 		$this->setFooter();
 		$carrito = $this->modelo->getCarrito($_SESSION['user']);
+		$total = 0;
 		echo '
 		<br>
 		<br>
 		<br>';
-		for ($i=0; $i < count($carrito); $i++) { 
+		for ($i=0; $i < count($carrito); $i++) {
+			$subtotal = $carrito[$i]['cantidad']*$carrito[$i]['precio'];
+			$total = $total + $subtotal;
+			$carrito[$i]['producto'] = htmlentities($carrito[$i]['producto'], ENT_COMPAT, 'ISO-8859-1', true);
 			echo "
 			<div class='card mb-2'>
 				<div class='card-body'>
-					<div class='row'>
+					<div class='row align-items-center'>
 						<div class='col-2'>
 							<img src='{$this->pagina}public/imagenes/{$carrito[$i]['imagen']}' class='rounded' alt='Img' height='100px'>
 						</div>
 						<div class='col-8'>
 							<div class='row'>
 								<div class='col-4'>
-									<label for='name' class='card-title'>Nombre: {$carrito[$i][8]}</label>
+									<label for='name' class='card-title'>Nombre: {$carrito[$i]['producto']}</label>
 								</div>
 								<div class='col-4'></div>
 								<div class='col-4'>
@@ -33,16 +36,16 @@ class Carrito extends Controlador{
 								</div>
 							</div>
 							<div class='row'>
-								<div class='col-4'>Cantidad: 1</div>
+								<div class='col-4'>Cantidad: {$carrito[$i]['cantidad']}</div>
 								<div class='col-4'></div>
-								<div class='col-4'>Total:   $ {$carrito[$i]['precio']}</div>
+								<div class='col-4'>Subtotal:   $$subtotal</div>
 							</div>
 						</div>
 						<div class='col-2'>
 							<form method='post' action='{$this->pagina}carrito/eliminarCarrito'>
 								<button class='btn btn-danger' type='submit'>Eliminar</button>
-								<input type='hidden' name='producto' value='{$carrito[$i]['producto']}'>
-								<input type='hidden' name='usuario' value='{$carrito[$i]['usuario']}'>
+								<input type='hidden' name='producto' value='{$carrito[$i]['clave_producto']}'>
+								<input type='hidden' name='usuario' value='{$_SESSION['user']}'>
 							</form>
 						</div>
 					</div>
@@ -50,6 +53,17 @@ class Carrito extends Controlador{
 			</div>";
 		}
 		echo "
+		<div class='card mb-2'>
+			<div class='card-footer'>
+				<div class='row'>
+					<div class='col-10'>
+					</div>
+					<div class='col-2'>
+						Total : $$total
+					</div>
+				</div>
+			</div>
+		</div>
 		<form method='post' action='{$this->pagina}compra/comprar'>
 			<button class='btn btn-secondary' type='submit'>Comprar Carrito</button>
 		</form>";
