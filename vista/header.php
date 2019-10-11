@@ -102,7 +102,7 @@
 							</div>
 							<div class="form-group">
 								<label for="telefono">Telefono:</label>
-								<input type="text" class="form-control" id="telefono" placeholder="Enter phone number" name="telefono" value="<?php echo $_SESSION['telefono'] ?>" required>
+								<input type="text" min = "1" class="form-control" id="telefono" placeholder="Enter phone number" name="telefono" value="<?php echo $_SESSION['telefono'] ?>" required>
 								<div class="valid-feedback">Ingresado</div>
 								<div class="invalid-feedback">Favor de llenar este campo</div>
 							</div>
