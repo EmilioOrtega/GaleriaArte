@@ -6,7 +6,7 @@
 	 
 	function addCarrito($usuario,$producto,$total){
 		$sql = "insert into carrito(usuario,producto) values('{$usuario}','{$producto}')";
-
+		echo $sql;
 		if($result=$this->conexion->query($sql)){
 			echo 'Se agregó el producto al carrito correctamente';
 		}else{

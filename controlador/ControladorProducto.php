@@ -25,7 +25,6 @@ class Producto extends Controlador{
 				</div>
 			</div>
 			<div class="card-footer">
-					
 					<form method="post" action="'.$this->pagina.'carrito/insertarCarrito" style="margin-bottom: 5px">
 						<input type="hidden" name="user" value="'.$_SESSION['user'].'">
 						<input type="hidden" name="producto" value="'.$producto['id'].'">

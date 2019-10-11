@@ -1,11 +1,10 @@
 <?php
-/*servername = "192.168.84.144";
-$username = "gabo";
+$servername = "192.168.84.71";
+$username = "eddy";
 $password = "contrasena";
-$dbname = "vinateria";*/
-$servername = "localhost";
+/*$servername = "localhost";
 $username = "root";
-$password = "";
+$password = "";*/
 $dbname = "banco";
 
 $conexion = new mysqli($servername, $username, $password, $dbname);
