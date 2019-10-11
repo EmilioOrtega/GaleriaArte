@@ -102,13 +102,13 @@
 							</div>
 							<div class="form-group">
 								<label for="telefono">Telefono:</label>
-								<input type="text" min = "1" class="form-control" id="telefono" placeholder="Enter phone number" name="telefono" value="<?php echo $_SESSION['telefono'] ?>" required>
+								<input type="number" min = "1" class="form-control" id="telefono" placeholder="Enter phone number" name="telefono" value="<?php echo $_SESSION['telefono'] ?>" required>
 								<div class="valid-feedback">Ingresado</div>
 								<div class="invalid-feedback">Favor de llenar este campo</div>
 							</div>
 								<div class="form-group">
 									<label for="tarjeta">Tarjeta:</label>
-									<input type="text" class="form-control" id="tarjeta" placeholder="Enter card number" name="tarjeta" value="<?php echo $_SESSION['tarjeta'] ?>" required>
+									<input type="number" min = "1" class="form-control" id="tarjeta" placeholder="Enter card number" name="tarjeta" value="<?php echo $_SESSION['tarjeta'] ?>" required>
 									<div class="valid-feedback">Ingresado</div>
 									<div class="invalid-feedback">Favor de llenar este campo</div>
 								</div>
@@ -222,7 +222,7 @@
 							</div>
 							<div class="form-group">
 								<label for="number">Número telefónico:</label>
-								<input type="number" class="form-control" id="number" placeholder="Enter number" name="telefono" required>
+								<input type="number" min = "1" class="form-control" id="number" placeholder="Enter number" name="telefono" required>
 								<div class="valid-feedback">Ingresado</div>
 								<div class="invalid-feedback">Favor de llenar este campo</div>
 							</div>
