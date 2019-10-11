@@ -222,7 +222,7 @@
 							</div>
 							<div class="form-group">
 								<label for="number">Número telefónico:</label>
-								<input type="number" min = "1" class="form-control" id="number" placeholder="Enter number" name="telefono" required>
+								<input type="number" class="form-control" id="number"  min = "1" placeholder="Enter number" name="telefono" required>
 								<div class="valid-feedback">Ingresado</div>
 								<div class="invalid-feedback">Favor de llenar este campo</div>
 							</div>
