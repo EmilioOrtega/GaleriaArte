@@ -2,7 +2,7 @@
 class Controlador {
 	function __construct() {
 		session_start();
-		$this->pagina = "http://192.168.84.49/VinateriaWeb/";
+		$this->pagina = "http://localhost/VinateriaWeb/";
 		if (empty($_SESSION['user'])) {
 			$_SESSION['user'] = uniqid();
 			$_SESSION['tipo_usuario'] = "t";
