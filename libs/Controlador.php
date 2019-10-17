@@ -29,5 +29,12 @@ class Controlador {
 			$this->modelo = new $nombre();
 		}
 	}
+
+	function setJs($JS) {
+		$url = 'public/JS/'.$JS.'.js';
+		if(file_exists($url)){
+			require $url;
+		}
+	}
 }
 ?>

@@ -5,6 +5,7 @@ class Home extends Controlador{
 		$this->setModelo("Home");
 		$this->setHeader();
 		$this->setFooter();
+		$this->setJs("home");
 	}
 
 	function index() {
@@ -29,7 +30,7 @@ class Home extends Controlador{
 							<input type="hidden" name="user" value="'.$_SESSION['user'].'">
 							<input type="hidden" name="producto" value="'.$producto[$i]['id'].'">
 							<input type="hidden" name="precio" value="'.$producto[$i]['precio'].'">
-							<button type="submit" class="btn btn-primary"><img src="'.$this->pagina.'vista/carshop.png" alt="Logo" style="width:20px;">Añadir al Carrito</button>
+							<button id="carrito" type="button" class="btn btn-primary"><img src="'.$this->pagina.'vista/carshop.png" alt="Logo" style="width:20px;">Añadir al Carrito</button>
 						</form>
 					</div>
 				</div>
