@@ -22,7 +22,7 @@ class Ajax {
 		if($result=$this->conexion->query($sql)){
 			echo 'Se agregó el producto al carrito correctamente';
 		}else{
-			$sql = "select *from carrito where producto= '{producto}'";
+			$sql = "select * from carrito where producto= '{producto}'";
 			if($this->conexion->query($sql)){
 				echo 'El producto ya está en el carrito';
 			}else{

@@ -19,7 +19,7 @@ class ModeloHome extends Modelo {
 
 	function searchProducto($busqueda) {
 		$productos = array();
-		$sql = "SELECT id, nombre, descripcion, precio, contenido, imagen FROM producto where nombre like '%".$busqueda."%'";
+		$sql = "SELECT id, nombre, descripcion, precio, contenido, imagen FROM producto where nombre like '".$busqueda."%'";
 		if($result = mysqli_query($this->conexion,$sql)){
 			while ($obj = mysqli_fetch_array($result)){
 				array_push(	$productos, $obj);
