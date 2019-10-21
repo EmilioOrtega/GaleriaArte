@@ -1,6 +1,6 @@
 <?php
 class Controlador {
-	function __construct() {
+	public function __construct() {
 		session_start();
 		$this->pagina = "http://localhost/VinateriaWeb/";
 		if (empty($_SESSION['user'])) {
@@ -31,10 +31,7 @@ class Controlador {
 	}
 
 	function setJs($JS) {
-		$url = 'public/JS/'.$JS.'.js';
-		if(file_exists($url)){
-			require $url;
-		}
+		echo "<script src='public/JS/$JS.js'></script>";
 	}
 }
 ?>
