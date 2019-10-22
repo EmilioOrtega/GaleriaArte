@@ -23,7 +23,7 @@ class Carrito extends Controlador{
 				<div class='card-body'>
 					<div class='row align-items-center'>
 						<div class='col-2'>
-							<img src='{$this->pagina}public/imagenes/{$carrito[$i]['imagen']}' class='rounded' alt='Img' height='100px'>
+							<img src='public/imagenes/{$carrito[$i]['imagen']}' class='rounded' alt='Img' height='100px'>
 						</div>
 						<div class='col-8'>
 							<div class='row'>
@@ -42,7 +42,7 @@ class Carrito extends Controlador{
 							</div>
 						</div>
 						<div class='col-2'>
-							<form method='post' action='{$this->pagina}carrito/eliminarCarrito'>
+							<form method='post' action='".URL."carrito/eliminarCarrito'>
 								<button class='btn btn-danger' type='submit'>Eliminar</button>
 								<input type='hidden' name='producto' value='{$carrito[$i]['clave_producto']}'>
 								<input type='hidden' name='usuario' value='{$_SESSION['user']}'>
@@ -64,7 +64,7 @@ class Carrito extends Controlador{
 				</div>
 			</div>
 		</div>
-		<form method='post' action='{$this->pagina}compra/comprar'>
+		<form method='post' action='".URL."compra/comprar'>
 			<input type='hidden' name='total' value='$total'>
 			<button class='btn btn-secondary' type='submit'>Comprar Carrito</button>
 		</form>";
@@ -72,12 +72,12 @@ class Carrito extends Controlador{
 
 	function insertarCarrito(){
 		$this->modelo->addCarrito($_SESSION['user'],$_POST['producto'],$_POST['precio']);
-		header("Location: {$this->pagina}home");
+		header("Location: ".URL."home");
 	}
 
 	function eliminarCarrito(){
 		$this->modelo->deleteCarrito($_SESSION['user'],$_POST['producto']);
-		header("Location: {$this->pagina}carrito");
+		header("Location: ".URL."carrito");
 	}
 }
 ?>

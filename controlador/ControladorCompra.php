@@ -14,7 +14,7 @@ class Compra extends Controlador{
 			$this->setModelo("Carrito");
 			$this->modelo->deleteAllCarrito($_SESSION['user']);
 		}
-		header("Location: {$this->pagina}home");
+		header("Location: ".URL."home");
 	}
 
 }

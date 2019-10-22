@@ -3,24 +3,18 @@ class Modelo {
 	protected $conexion;
 	protected $conexionBanco;
 	public function __construct() {
-		$servername = "localhost";
-		$username = "root";
-		$password = "";
-		/*$servername = "192.168.84.71";
-		$username = "eddy";
-		$password = "contrasena";*/
+		$servername = SERVER;
+		$username = USER;
+		$password = PASS;
 		$dbname = "vinateria";
 		$this->conexion = new mysqli($servername, $username, $password, $dbname);
 		if ($this->conexion->connect_error) {
 			die("Connection failed: " . $this->conexion->connect_error);
 		}
         
-        $servername = "localhost";
-		$username = "root";
-		$password = "";
-        /*$servername = "192.168.84.71";
-		$username = "eddy";
-		$password = "contrasena";*/
+        $servername = SERVER;
+		$username = USER;
+		$password = PASS;
 		$dbname = "banco";
         $this->conexionBanco = new mysqli($servername, $username, $password, $dbname);
 		if ($this->conexionBanco->connect_error) {

@@ -29,7 +29,7 @@ class User extends Controlador{
 			for ($i=0; $i < count($users); $i++) {
 				echo "
 				<tr>
-					<form method='post' action='{$this->pagina}user/actualizar'>
+					<form method='post' action='".URL."user/actualizar'>
 						<td>".$users[$i]["usuario"]."</td>
 						<td>
 							<input style='width:100%; background-color: transparent; color:fff' type='text' name='nombre' value='{$users[$i]['nombre']}'>
@@ -83,7 +83,7 @@ class User extends Controlador{
 						</td>
 					</form>
 					<td><button class='btn btn-outline-warning'>Actualizar</button></td>
-					<form method='post' action='{$this->pagina}user/delete'>
+					<form method='post' action='".URL."user/delete'>
 						<input type='hidden' name='user' value='{$users[$i]['usuario']}'>
 						<td><button class='btn btn-outline-danger' type='submit'>Eliminar</button></td>
 					</form>
@@ -101,22 +101,22 @@ class User extends Controlador{
 			$_SESSION['telefono'] = $usuario[0]['telefono'];
 			$_SESSION['tipo_usuario'] = $usuario[0]['tipo_usuario'];
 			$_SESSION['tarjeta'] = $usuario[0]['tarjeta'];
-			header('Location: '.$this->pagina.'home');
+			header('Location: '.URL.'home');
 		}else {
-			header('Location: '.$this->pagina.'home');
+			header('Location: '.URL.'home');
 		}
 	}
 
 	function logout() {
 		session_destroy();
 		unset($_SESSION);
-		header('Location: '.$this->pagina.'home');
+		header('Location: '.URL.'home');
 	}
 
 	function registrar() {
 		$fecha = $_POST['año'].'-'.$_POST['mes'].'-'.$_POST['dia'];
 		$this->modelo->registrarUsuario($_POST['user'],$_POST['password'],$_POST['nombre'],$_POST['apellidos'],$_POST['sexo'],$_POST['telefono'],$fecha,"u");
-		header('Location: '.$this->pagina.'user/login');
+		header('Location: '.URL.'user/login');
 	}
 
 	function update() {
@@ -128,12 +128,12 @@ class User extends Controlador{
 		$_SESSION['apellidos'] = $_POST['apellidos'];
 		$_SESSION['telefono'] = $_POST['telefono'];
 		$_SESSION['tarjeta'] = $_POST['tarjeta'];
-		header('Location: '.$this->pagina.'home');
+		header('Location: '.URL.'home');
 	}
 
 	function delete() {
 		$this->modelo->deleteUser($_POST['user']);
-		header('Location: '.$this->pagina.'user');
+		header('Location: '.URL.'user');
 	}
 }
 ?>

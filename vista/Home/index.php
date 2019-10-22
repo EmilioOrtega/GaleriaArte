@@ -3,13 +3,13 @@
 <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
 	<div class="carousel-inner">
 		<div class="carousel-item active">
-			<img src="<?php echo $this->pagina ?>public/imagenes/promo1.jpg" alt="" width="100%" height="500" srcset="">
+			<img src="<?php echo URL ?>public/imagenes/promo1.jpg" alt="" width="100%" height="500" srcset="">
 		</div>
 		<div class="carousel-item">
-			<img src="<?php echo $this->pagina ?>public/imagenes/promo2.jpg" alt="" width="100%" height="500" srcset="">
+			<img src="<?php echo URL ?>public/imagenes/promo2.jpg" alt="" width="100%" height="500" srcset="">
 		</div>
 		<div class="carousel-item">
-			<img src="<?php echo $this->pagina ?>public/imagenes/promo3.jpg" alt="" width="100%" height="500" srcset="">
+			<img src="<?php echo URL ?>public/imagenes/promo3.jpg" alt="" width="100%" height="500" srcset="">
 		</div>
 	</div>
 	<a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">

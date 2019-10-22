@@ -14,11 +14,17 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 	<!-- Icons -->
 	<script src="https://kit.fontawesome.com/180eab578a.js"></script>
+	<!-- Alertify -->
+	<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.12.0/build/alertify.min.js"></script>
+	<!-- CSS -->
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.12.0/build/css/alertify.min.css"/>
+	<!-- Default theme -->
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.12.0/build/css/themes/default.min.css"/>
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" >
-		<a class="navbar-brand" href="<?php echo $this->pagina ?>home">
-			<img src="<?php echo $this->pagina ?>vista/logo.png" alt="Logo" style="width:20px;">
+		<a class="navbar-brand" href="<?php echo URL ?>home">
+			<img src="vista/logo.png" alt="Logo" style="width:20px;">
 		</a>
 		<ul class="navbar-nav">
 			<li class="nav-item">
@@ -31,12 +37,12 @@
 		<div class="collapse navbar-collapse" id="navb">
 			<ul class="navbar-nav mr-auto">
 			</ul>
-			<form method="post" class="form-inline my-2 my-lg-0" action="<?php echo $this->pagina ?>home/buscar">
+			<form method="post" class="form-inline my-2 my-lg-0" action="<?php echo URL ?>home/buscar">
 				<div class="input-group">
 					<div class="input-group-prepend">
 						<button type="submit" class="btn btn-secondary input-group-text"><i class="fas fa-search"></i></button>
 					</div>
-						<input type="text" class="form-control" placeholder="Buscar Producto" name="buscar">
+						<input type="text" class="form-control" placeholder="Buscar Producto" name="buscar" required>
 				</div>
 			</form>
 			<ul class="navbar-nav mr-sm-3">
@@ -54,12 +60,12 @@
 					<div class="dropdown-menu">
 						<a class="dropdown-item" data-toggle="modal" data-target="#Modal_user">Mis Datos</a>
 						<?php if ($_SESSION['tipo_usuario'] == 'a') { ?>
-							<a class="dropdown-item" href="<?php echo $this->pagina ?>user">Usuarios</a>
-							<a class="dropdown-item" href="<?php echo $this->pagina ?>productos/index">Productos</a>
+							<a class="dropdown-item" href="<?php echo URL ?>user">Usuarios</a>
+							<a class="dropdown-item" href="<?php echo URL ?>productos/index">Productos</a>
 						<?php }else if ($_SESSION['tipo_usuario'] == 'i') { ?>
-							<a class="dropdown-item" href="<?php echo $this->pagina ?>productos/index">Productos</a>
+							<a class="dropdown-item" href="<?php echo URL ?>productos/index">Productos</a>
 						<?php } ?>
-						<a class="dropdown-item" href="<?php echo $this->pagina ?>user/logout">Cerrar Sesion</a>
+						<a class="dropdown-item" href="<?php echo URL ?>user/logout">Cerrar Sesion</a>
 					</div>
 				</li>
 			</ul>
@@ -69,8 +75,8 @@
 			</ul>
 			<ul class="navbar-nav mr-sm-3">
 			</ul>
-			<a class="navbar-brand" href="<?php echo $this->pagina ?>carrito">
-				<img src="<?php echo $this->pagina ?>vista/carshop.png" alt="Logo" style="width:30px;">
+			<a class="navbar-brand" href="<?php echo URL ?>carrito">
+				<img src="vista/carshop.png" alt="Logo" style="width:30px;">
 			</a>
 		</div>
 	</nav>
@@ -88,7 +94,7 @@
 				<!-- Modal body -->
 				<div class="modal-body">
 					<div class="container">
-						<form method="post" action="<?php echo $this->pagina ?>user/update" class="was-validated">
+						<form method="post" action="<?php echo URL ?>user/update" class="was-validated">
 							<div class="form-group">
 								<label for="name">Nombre:</label>
 								<input type="text" class="form-control" id="name" placeholder="Enter name" name="nombre" value="<?php echo $_SESSION['nombre'] ?>" required>
@@ -109,7 +115,7 @@
 							</div>
 								<div class="form-group">
 									<label for="tarjeta">Tarjeta:</label>
-									<input type="number" min = "1" class="form-control" id="tarjeta" placeholder="Enter card number" name="tarjeta" value="<?php echo $_SESSION['tarjeta'] ?>" required>
+									<input type="number" min = "1000000000000000" max="9999999999999999" class="form-control" id="tarjeta" placeholder="Enter card number" name="tarjeta" value="<?php echo $_SESSION['tarjeta'] ?>" required>
 									<div class="valid-feedback">Ingresado</div>
 									<div class="invalid-feedback">Favor de llenar este campo</div>
 								</div>
@@ -136,7 +142,7 @@
 					<div class="container">
 						<h2>Vinatería Cocos en la Playa</h2>
 						<p>Favor de rellenar los siguientes campos con la información requerida para iniciar sesión</p>
-						<form method="post" action="<?php echo $this->pagina ?>user/login" class="was-validated">
+						<form method="post" action="<?php echo URL ?>user/login" class="was-validated">
 							<div class="form-group">
 								<label for="uname">Usuario:</label>
 								<input type="text" class="form-control" id="uname" placeholder="Enter username" name="user" required>
@@ -179,7 +185,7 @@
 					<div class="container">
 						<h2>Vinatería Cocos en la Playa</h2>
 						<p>Favor de rellenar los siguientes campos con la información requerida para realizar el registro de usuario</p>
-						<form method="post" action="<?php echo $this->pagina ?>user/registrar" class="was-validated">
+						<form method="post" action="<?php echo URL ?>user/registrar" class="was-validated">
 							<div class="form-group">
 								<label for="name">Usuario:</label>
 								<input type="text" class="form-control" placeholder="Enter user" name="user" required>
@@ -216,14 +222,14 @@
 									<div class="input-group-prepend">
 										<span class="input-group-text">Fecha de nacimiento</span>
 									</div>
-									<input type="number" class="form-control" id="day" placeholder="dd" name="mes" required>
-									<input type="number" class="form-control" id="month" placeholder="mm" name="dia" required>
-									<input type="number" class="form-control" id="year" placeholder="aaaa" name="año" required>
+									<input type="number" min="1" max="31" class="form-control" id="day" placeholder="dd" name="mes" required>
+									<input type="number" min="1" max="12" class="form-control" id="month" placeholder="mm" name="dia" required>
+									<input type="number" min="1900" max="2001" class="form-control" id="year" placeholder="aaaa" name="año" required>
 								</div>
 							</div>
 							<div class="form-group">
 								<label for="number">Número telefónico:</label>
-								<input type="number" class="form-control" id="number"  min = "1" placeholder="Enter number" name="telefono" required>
+								<input type="number" min="1000000000" max="9999999999" class="form-control" id="number"  min = "1" placeholder="Enter number" name="telefono" required>
 								<div class="valid-feedback">Ingresado</div>
 								<div class="invalid-feedback">Favor de llenar este campo</div>
 							</div>
@@ -242,6 +248,8 @@
 			</div>
 		</div>
 	</div>
+
+	<input type="hidden" id="user" value="<?php echo $_SESSION['user'] ?>">
 	
 	<div class="container">
 

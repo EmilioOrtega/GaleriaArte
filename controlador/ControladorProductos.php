@@ -28,7 +28,7 @@ class Productos extends Controlador{
 				echo "
 				<tr>
 					<td>".$productos[$i]["id"]."</td>
-					<td><img src=".$this->pagina."public/imagenes/".$productos[$i]["imagen"]." style='height: 100px'</td>
+					<td><img src=public/imagenes/".$productos[$i]["imagen"]." style='height: 100px'</td>
 					<td>".htmlentities($productos[$i]['nombre'], ENT_COMPAT, 'ISO-8859-1', true)."</td>
 					<td>".htmlentities($productos[$i]['descripcion'], ENT_COMPAT, 'ISO-8859-1', true)."</td>
 					<td>".$productos[$i]["contenido"]." ml</td>

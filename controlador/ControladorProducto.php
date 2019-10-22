@@ -25,11 +25,11 @@ class Producto extends Controlador{
 				</div>
 			</div>
 			<div class="card-footer">
-					<form method="post" action="'.$this->pagina.'carrito/insertarCarrito" style="margin-bottom: 5px">
+					<form method="post" action="'.URL.'carrito/insertarCarrito" style="margin-bottom: 5px">
 						<input type="hidden" name="user" value="'.$_SESSION['user'].'">
 						<input type="hidden" name="producto" value="'.$producto['id'].'">
 						<input type="hidden" name="precio" value="'.$producto['precio'].'">
-						<button type="submit" class="btn btn-primary"><img src="'.$this->pagina.'vista/carshop.png" alt="Logo" style="width:20px;">Añadir al Carrito</button>
+						<button type="submit" class="btn btn-primary"><img src="'.URL.'vista/carshop.png" alt="Logo" style="width:20px;">Añadir al Carrito</button>
 					</form>
 			</div>
 		</div>';
