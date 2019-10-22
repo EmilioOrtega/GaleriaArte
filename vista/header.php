@@ -20,6 +20,8 @@
 	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.12.0/build/css/alertify.min.css"/>
 	<!-- Default theme -->
 	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.12.0/build/css/themes/default.min.css"/>
+	<!-- JS general -->
+	<script src='public/JS/general.js'></script>
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" >
@@ -127,39 +129,32 @@
 		</div>
 	</div>
 
+	<!-- Modal del Login -->
 	<div class="modal fade" id="Modal_login">
 		<div class="modal-dialog">
 			<div class="modal-content">
-
-				<!-- Modal Header -->
 				<div class="modal-header">
-					<h4 class="modal-title">Inicio de sesión</h4>
+					<h4 class="modal-title">Iniciar sesión</h4>
 					<button type="button" class="close" data-dismiss="modal">&times;</button>
 				</div>
-
-				<!-- Modal body -->
 				<div class="modal-body">
 					<div class="container">
 						<h2>Vinatería Cocos en la Playa</h2>
 						<p>Favor de rellenar los siguientes campos con la información requerida para iniciar sesión</p>
-						<form method="post" action="<?php echo URL ?>user/login" class="was-validated">
+						<form method="post" id="log_form" action="<?php echo URL ?>user/login" class="was-validated">
 							<div class="form-group">
-								<label for="uname">Usuario:</label>
-								<input type="text" class="form-control" id="uname" placeholder="Enter username" name="user" required>
+								<label for="log_user">Usuario:</label>
+								<input type="text" class="form-control" id="log_user" placeholder="Enter username" name="user" required>
 								<div class="valid-feedback">Ingresado</div>
 								<div class="invalid-feedback">Favor de llenar este campo</div>
 							</div>
 							<div class="form-group">
-								<label for="pwd">Contraseña:</label>
-								<input type="password" class="form-control" id="pwd" placeholder="Enter password" name="password" required>
+								<label for="log_pass">Contraseña:</label>
+								<input type="password" id="log_pass" class="form-control" placeholder="Contraseña" name="password" required>
 								<div class="valid-feedback">Ingresado</div>
 								<div class="invalid-feedback">Favor de llenar este campo</div>
 							</div>
-							<div class="form-group form-check">
-
-							</div>
-							<button type="submit" class="btn btn-secondary btn-block">Continuar</button>
-
+							<button type="button" id="log" class="btn btn-secondary btn-block">Continuar</button>
 							<button type="button" class="btn btn-outline-info btn-block" data-toggle="modal" data-target="#Modal_Signup">
 								Registrarse
 							</button>
@@ -170,37 +165,34 @@
 		</div>
 	</div>
 
+	<!-- Modal del Registro -->
 	<div class="modal fade" id="Modal_Signup">
 		<div class="modal-dialog">
 			<div class="modal-content">
-
-				<!-- Modal Header -->
 				<div class="modal-header">
 					<h4 class="modal-title">Registro</h4>
 					<button type="button" class="close" data-dismiss="modal">&times;</button>
 				</div>
-
-				<!-- Modal body -->
 				<div class="modal-body">
 					<div class="container">
 						<h2>Vinatería Cocos en la Playa</h2>
 						<p>Favor de rellenar los siguientes campos con la información requerida para realizar el registro de usuario</p>
-						<form method="post" action="<?php echo URL ?>user/registrar" class="was-validated">
+						<form method="post" id="sign_form" action="<?php echo URL ?>user/registrar" class="was-validated">
 							<div class="form-group">
-								<label for="name">Usuario:</label>
-								<input type="text" class="form-control" placeholder="Enter user" name="user" required>
+								<label for="sign_user">Usuario:</label>
+								<input type="text" id="sign_user" class="form-control" placeholder="Enter user" name="user" required>
 								<div class="valid-feedback">Ingresado</div>
 								<div class="invalid-feedback">Favor de llenar este campo</div>
 							</div>
 							<div class="form-group">
-								<label for="name">Nombre:</label>
-								<input type="text" class="form-control" id="name" placeholder="Enter name" name="nombre" required>
+								<label for="sign_name">Nombre:</label>
+								<input type="text" class="form-control" id="sign_name" placeholder="Enter name" name="nombre" required>
 								<div class="valid-feedback">Ingresado</div>
 								<div class="invalid-feedback">Favor de llenar este campo</div>
 							</div>
 							<div class="form-group">
-								<label for="last_name">Apellidos:</label>
-								<input type="text" class="form-control" id="last_name" placeholder="Enter last name" name="apellidos" required>
+								<label for="sign_last">Apellidos:</label>
+								<input type="text" class="form-control" id="sign_last" placeholder="Enter last name" name="apellidos" required>
 								<div class="valid-feedback">Ingresado</div>
 								<div class="invalid-feedback">Favor de llenar este campo</div>
 							</div>
@@ -234,14 +226,14 @@
 								<div class="invalid-feedback">Favor de llenar este campo</div>
 							</div>
 							<div class="form-group">
-								<label for="pwd">Contraseña:</label>
-								<input type="password" class="form-control" id="pwd" placeholder="Enter password" name="password" required>
+								<label for="sign_pass">Contraseña:</label>
+								<input type="password" class="form-control" id="sign_pass" placeholder="Enter password" maxlength="16" name="password" required>
 								<div class="valid-feedback">Ingresado</div>
 								<div class="invalid-feedback">Favor de llenar este campo</div>
 							</div>
 							<div class="form-group form-check">    	
 							</div>
-							<button type="submit" class="btn btn-secondary btn-block">Registrarse</button>
+							<button type="button" id="sign" class="btn btn-secondary btn-block">Registrarse</button>
 						</form>
 					</div>
 				</div>

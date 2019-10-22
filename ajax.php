@@ -1,7 +1,7 @@
 <?php
 require_once 'libs/config.php';
 class Ajax {	
-	protected $conexion;
+	private $conexion;
 	function __construct() {
 		$servername = SERVER;
 		$username = USER;
@@ -25,7 +25,30 @@ class Ajax {
 		$this->conexion->close();
 	}
 
+	public function checarUsuario() {
+		$usuario = $_POST['user'];
+		$contrasena = $_POST['pass'];
+		$sql = "select usuario from usuario where usuario='{$usuario}' and contrasena = '{$contrasena}'";
+		$result = $this->conexion->query($sql);
+		if ($result->num_rows > 0) {
+			echo "ok";
+		}else{
+			echo "error";
+		}
+		$this->conexion->close();
+	}
 
+	public function checarDisponible() {
+		$usuario = $_POST['user'];
+		$sql = "select usuario from usuario where usuario='{$usuario}'";
+		$result = $this->conexion->query($sql);
+		if ($result->num_rows > 0) {
+			echo "error";
+		}else{
+			echo "ok";
+		}
+		$this->conexion->close();
+	}
 }
 $ajax = new Ajax();
 $ajax->{$_POST['funcion']}();
