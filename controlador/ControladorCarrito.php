@@ -8,12 +8,15 @@ class Carrito extends Controlador{
 	function index() {
 		$this->setHeader();
 		$this->setFooter();
+		$this->setJs("carrito");
 		$carrito = $this->modelo->getCarrito($_SESSION['user']);
 		$total = 0;
-		echo '
+		echo "
+		<input type='hidden' name='usuario' value='{$_SESSION['user']}'>
+		<input type='hidden' id='tipo' value='{$_SESSION['tipo_usuario']}'>
 		<br>
 		<br>
-		<br>';
+		<br>";
 		for ($i=0; $i < count($carrito); $i++) {
 			$subtotal = $carrito[$i]['cantidad']*$carrito[$i]['precio'];
 			$total = $total + $subtotal;

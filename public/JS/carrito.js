@@ -1,6 +1,9 @@
 $(document).ready(function(){
 	$('#comprar').click(function(){
-		alertify.alert("algo");
+		if ($("#tipo").val() == 't') {
+			alertify.alert("Error", "Se necesita iniciar sesion para poder comprar");
+			return;
+		}
 		/*var configuracion = { 
 			funcion: "checarUsuario",
 			user: $("#log_user").val(),
