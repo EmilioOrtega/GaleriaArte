@@ -96,7 +96,7 @@ class Ajax {
 
 			$sql = "insert into compra(usuario,fecha,total) values('$usuario',NOW(),$total)";
 			if($result=$this->conexion->query($sql)){
-				echo 'La compra se realizo correctaente';
+				echo 'La compra se realizo correctamente';
 			}
 
 			$this->conexion->commit();

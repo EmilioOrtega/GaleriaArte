@@ -1,7 +1,9 @@
 <?php
-$servername = '192.168.84.26';
-$username = 'eddy';
-$password = 'contra';
+require_once '../libs/config.php';
+
+$servername = SERVER;
+$username = USER;
+$password = PASS;
 $dbname = "banco";
 
 $conexion = new mysqli($servername, $username, $password, $dbname);

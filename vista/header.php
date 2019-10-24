@@ -26,7 +26,7 @@
 <body>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" >
 		<a class="navbar-brand" href="<?php echo URL ?>home">
-			<img src="vista/logo.png" alt="Logo" style="width:20px;">
+			<img src="<?php echo URL ?>vista/logo.png" alt="Logo" style="width:20px;">
 		</a>
 		<ul class="navbar-nav">
 			<li class="nav-item">
@@ -78,7 +78,7 @@
 			<ul class="navbar-nav mr-sm-3">
 			</ul>
 			<a class="navbar-brand" href="<?php echo URL ?>carrito">
-				<img src="vista/carshop.png" alt="Logo" style="width:30px;">
+				<img src="<?php echo URL ?>vista/carshop.png" alt="Logo" style="width:30px;">
 			</a>
 		</div>
 	</nav>

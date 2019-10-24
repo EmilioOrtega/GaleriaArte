@@ -26,7 +26,7 @@ class Carrito extends Controlador{
 				<div class='card-body'>
 					<div class='row align-items-center'>
 						<div class='col-2'>
-							<img src='public/imagenes/{$carrito[$i]['imagen']}' class='rounded' alt='Img' height='100px'>
+							<img src='".URL."public/imagenes/{$carrito[$i]['imagen']}' class='rounded' alt='Img' height='100px'>
 						</div>
 						<div class='col-8'>
 							<div class='row'>
@@ -67,7 +67,7 @@ class Carrito extends Controlador{
 				</div>
 			</div>
 		</div>
-		<form method='post' action='".URL."compra/comprar'>
+		<form method='post' id='comprar' action='".URL."home'>
 			<input type='hidden' id='total' name='total' value='$total'>
 			<button class='btn btn-secondary' id='comprar' type='button'>Comprar Carrito</button>
 		</form>";

@@ -25,7 +25,7 @@ $(document).ready(function(){
 					success: function(response)
 					{
 						alertify.alert('Alerta !', response, 
-					function(){ location.href='http://192.168.84.49/VinateriaWeb/home'; });
+					function(){ $("#comprar").submit(); });
 					}
 				});
 			}, 

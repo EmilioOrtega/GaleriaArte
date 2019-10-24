@@ -31,7 +31,7 @@ class Controlador {
 	}
 
 	function setJs($JS) {
-		echo "<script src='public/JS/$JS.js'></script>";
+		echo "<script src='".URL."public/JS/$JS.js'></script>";
 	}
 }
 ?>
