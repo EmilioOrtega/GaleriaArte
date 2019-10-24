@@ -55,7 +55,60 @@ class Ajax {
 		$this->conexion->close();
 	}
 
+	public function comprarCarrito() {
+		$usuario = $_POST['user'];
+		$total = $_POST['total'];
+		$tarjeta = $_POST['tarjeta'];
+		$this->conexion->begin_transaction();
+		$this->conexionBanco->begin_transaction();
+		try {
+			$sql = "select saldo from tarjeta where tarjeta={$tarjeta}";
+			$result = $this->conexionBanco->query($sql);
+			if ($result->num_rows > 0) {
+				$obj = mysqli_fetch_array($result);
+			}else{
+				throw new Exception('La tarjeta registrada no existe.');
+			}
+
 			if ($obj['saldo']<$total) {
+				throw new Exception('El saldo de la tarjeta no es suficiente.');
+			}
+
+			$sql = "select producto, count(producto) as cantidad from carrito where usuario='{$usuario}' group by producto";
+			$result = $this->conexion->query($sql);
+			while ($obj = mysqli_fetch_array($result)){
+				$sql = "select id, nombre, cantidad from producto where id={$obj['producto']}";
+				$result1 = $this->conexion->query($sql);
+				$obj1 = mysqli_fetch_array($result1);
+				if ($obj1['cantidad']<$obj['cantidad']) {
+					throw new Exception('No hay suficientes '.$obj1['nombre'].' en el inventario.');
+				}else {
+					$sql = "update producto set cantidad=cantidad-{$obj['cantidad']} where id={$obj['producto']}";
+					$result1 = $this->conexion->query($sql);
+				}
+			}
+
+			$sql = "update tarjeta set saldo=saldo-{$total} where tarjeta={$tarjeta}";
+			$this->conexionBanco->query($sql);
+
+			$sql = "delete from carrito where usuario='{$usuario}'";
+			$this->conexion->query($sql);
+
+			$sql = "insert into compra(usuario,fecha,total) values('$usuario',NOW(),$total)";
+			if($result=$this->conexion->query($sql)){
+				echo 'La compra se realizo correctaente';
+			}
+
+			$this->conexion->commit();
+			$this->conexionBanco->commit();
+			$this->conexion->close();
+			$this->conexionBanco->close();
+		} catch (Exception $e) {
+			$this->conexion->rollback();
+			$this->conexionBanco->rollback();
+			echo $e->getMessage();
+		}
+	}
 }
 $ajax = new Ajax();
 $ajax->{$_POST['funcion']}();
