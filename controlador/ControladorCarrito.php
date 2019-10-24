@@ -68,7 +68,7 @@ class Carrito extends Controlador{
 			</div>
 		</div>
 		<form method='post' action='".URL."compra/comprar'>
-			<input type='hidden' name='total' value='$total'>
+			<input type='hidden' id='total' name='total' value='$total'>
 			<button class='btn btn-secondary' id='comprar' type='button'>Comprar Carrito</button>
 		</form>";
 	}

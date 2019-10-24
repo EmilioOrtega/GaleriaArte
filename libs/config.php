@@ -1,7 +1,7 @@
 <?php
-define('URL', 'http://localhost/VinateriaWeb/');
+define('URL', 'http://192.168.84.49/VinateriaWeb/');
 
-define('SERVER', 'localhost');
-define('USER', 'root');
-define('PASS', '');
+define('SERVER', '192.168.84.26');
+define('USER', 'eddy');
+define('PASS', 'contra');
 ?>

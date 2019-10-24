@@ -16,7 +16,7 @@ class Home extends Controlador{
 			echo '
 			<div class="col-12 col-sm-6 col-md-4" style="margin-top:10px">
 				<div class="card" style="height: 100%">
-					<img class="card-img-top" src="'.URL.'public/imagenes/'.$producto[$i]['imagen'].'" alt="Card image" style="height: 400px">
+					<img class="card-img-top" src="public/imagenes/'.$producto[$i]['imagen'].'" alt="Card image" style="height: 400px">
 					<div class="card-body">
 						<h4 class="card-title">'.htmlentities($producto[$i]['nombre'], ENT_COMPAT, 'ISO-8859-1', true).'</h4>
 						<p class="card-text">$'.$producto[$i]['precio'].'</p>

@@ -12,7 +12,7 @@ $(document).ready(function(){
 			data: configuracion,
 			success: function(response)
 			{
-				alertify.alert("Carrito", "Se agrego al carrito correctamente");
+				alertify.success('Agregado correctamente');
 			}
 		});
 	});

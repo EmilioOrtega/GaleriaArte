@@ -11,6 +11,11 @@ class Ajax {
 		if ($this->conexion->connect_error) {
 			die("Connection failed: " . $this->conexion->connect_error);
 		}
+		$dbname = "banco";
+		$this->conexionBanco = new mysqli($servername, $username, $password, $dbname);
+		if ($this->conexionBanco->connect_error) {
+			die("Connection failed: " . $this->conexionbanco->connect_error);
+		}
 	}
 
 	public function agregarCarrito() {
@@ -49,6 +54,8 @@ class Ajax {
 		}
 		$this->conexion->close();
 	}
+
+			if ($obj['saldo']<$total) {
 }
 $ajax = new Ajax();
 $ajax->{$_POST['funcion']}();
