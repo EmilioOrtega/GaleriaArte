@@ -50,7 +50,7 @@ class Home extends Controlador{
 		if (!empty($producto)) {
 			for ($i=0; $i < count($producto); $i++) { 
 				echo '
-				<div class="col-4" style="margin-top:10px">
+				<div class="col-12 col-sm-6 col-md-4" style="margin-top:10px">
 					<div class="card" style="height: 100%">
 						<img class="card-img-top" src="'.URL.'public/imagenes/'.$producto[$i]['imagen'].'" alt="Card image" style="height: 400px">
 						<div class="card-body">

@@ -25,26 +25,26 @@ class Carrito extends Controlador{
 			<div class='card mb-2'>
 				<div class='card-body'>
 					<div class='row align-items-center'>
-						<div class='col-2'>
-							<img src='".URL."public/imagenes/{$carrito[$i]['imagen']}' class='rounded' alt='Img' height='100px'>
+						<div class='col-12 col-sm-6 col-md-2'>
+							<img src='".URL."public/imagenes/{$carrito[$i]['imagen']}' class='rounded mx-auto d-block' alt='Img' height='100px'>
 						</div>
-						<div class='col-8'>
+						<div class='col-12 col-sm-6 col-md-8'>
 							<div class='row'>
-								<div class='col-4'>
-									<label for='name' class='card-title'>Nombre: {$carrito[$i]['producto']}</label>
+								<div class='col-12 col-sm-6 col-md-4'>
+									<label for='name' class='card-title'>Producto: {$carrito[$i]['producto']}.</label>
 								</div>
-								<div class='col-4'></div>
-								<div class='col-4'>
+								<div class='col-0 col-sm-0 col-md-4'></div>
+								<div class='col-6 col-sm-6 col-md-4'>
 									<label for='precio' class='card-text'>Precio: $ {$carrito[$i]['precio']}</label>
 								</div>
 							</div>
 							<div class='row'>
-								<div class='col-4'>Cantidad: {$carrito[$i]['cantidad']}</div>
-								<div class='col-4'></div>
-								<div class='col-4'>Subtotal:   $$subtotal</div>
+								<div class='col-5 col-sm-5 col-md-4'>Cantidad: {$carrito[$i]['cantidad']}</div>
+								<div class='col-1 col-sm-1 col-md-4'></div>
+								<div class='col-5 col-sm-5 col-md-4'>Subtotal:   $$subtotal</div>
 							</div>
 						</div>
-						<div class='col-2'>
+						<div class='col-12 col-sm-12 col-md-2 mt-2'>
 							<form method='post' action='".URL."carrito/eliminarCarrito'>
 								<button class='btn btn-danger' type='submit'>Eliminar</button>
 								<input type='hidden' name='producto' value='{$carrito[$i]['clave_producto']}'>
@@ -59,9 +59,9 @@ class Carrito extends Controlador{
 		<div class='card mb-2'>
 			<div class='card-footer'>
 				<div class='row'>
-					<div class='col-10'>
+					<div class='col-7 col-sm-7 col-md-10'>
 					</div>
-					<div class='col-2'>
+					<div class='col-5 col-sm-5 col-md-2'>
 						Total : $$total
 					</div>
 				</div>

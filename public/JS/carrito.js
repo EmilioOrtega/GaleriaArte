@@ -6,6 +6,7 @@ $(document).ready(function(){
 		}
 
 		if ($("#tarjeta").val().length<16) {
+			console.log($("#tarjeta").val());
 			alertify.alert("Error", "Se necesita tener una tarjeta registrada para realizar la compra");
 			return;
 		}
@@ -28,7 +29,7 @@ $(document).ready(function(){
 					function(){ $("#comprar").submit(); });
 					}
 				});
-			}, 
+			},
 			function(){});
 
 		/*var configuracion = { 

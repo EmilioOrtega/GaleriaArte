@@ -22,6 +22,8 @@
 	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.12.0/build/css/themes/default.min.css"/>
 	<!-- JS general -->
 	<script src='public/JS/general.js'></script>
+	<!-- icono -->
+	<link rel="icon" type="image/png" href="<?php echo URL ?>vista/logo_sm.png" sizes="32x32">
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" >
@@ -111,16 +113,26 @@
 							</div>
 							<div class="form-group">
 								<label for="telefono">Telefono:</label>
-								<input type="number" min = "1" class="form-control" id="telefono" placeholder="Enter phone number" name="telefono" value="<?php echo $_SESSION['telefono'] ?>" required>
+								<input type="number" min="1000000000" max="9999999999" class="form-control" id="telefono" placeholder="Enter phone number" name="telefono" value="<?php echo $_SESSION['telefono'] ?>" required>
 								<div class="valid-feedback">Ingresado</div>
 								<div class="invalid-feedback">Favor de llenar este campo</div>
 							</div>
+							<?php if (!isset($_SESSION['tarjeta'])) { ?>
+								<label for="tarjeta">Tarjeta:</label>
+								<button type="button" class="btn btn-outline-info btn-block" data-toggle="modal" data-target="#Modal_Card">
+									Agregar Tarjeta
+								</button>
+								<input type="hidden" id="tarjeta"value="<?php echo $_SESSION['tarjeta'] ?>">
+							<?php }else { ?>
 								<div class="form-group">
 									<label for="tarjeta">Tarjeta:</label>
-									<input type="number" min = "1000000000000000" max="9999999999999999" class="form-control" id="tarjeta" placeholder="Enter card number" name="tarjeta" value="<?php echo $_SESSION['tarjeta'] ?>" required>
+									<input type="text" disabled class="form-control" id="tarjeta" placeholder="Enter card number" name="tarjeta" value="<?php echo $_SESSION['tarjeta'] ?>" required>
 									<div class="valid-feedback">Ingresado</div>
 									<div class="invalid-feedback">Favor de llenar este campo</div>
 								</div>
+							<?php } ?>
+							<div class="form-group form-check">    	
+							</div>
 							<button type="submit" class="btn btn-secondary btn-block">Actualizar datos</button>
 						</form>
 					</div>
@@ -221,7 +233,7 @@
 							</div>
 							<div class="form-group">
 								<label for="number">Número telefónico:</label>
-								<input type="number" min="1000000000" max="9999999999" class="form-control" id="number"  min = "1" placeholder="Enter number" name="telefono" required>
+								<input type="number" min="1000000000" max="9999999999" class="form-control" id="number" placeholder="Enter number" name="telefono" required>
 								<div class="valid-feedback">Ingresado</div>
 								<div class="invalid-feedback">Favor de llenar este campo</div>
 							</div>
@@ -241,9 +253,45 @@
 		</div>
 	</div>
 
+	<!-- Modal Tarjeta -->
+	<div class="modal fade" id="Modal_Card">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">Agregar Tarjeta Bancoco</h4>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+				<div class="modal-body">
+					<div class="container">
+						<h2>Vinatería Cocos en la Playa</h2>
+						<p>Favor de rellenar los siguientes campos con la información requerida para realizar el registro de su tarjeta</p>
+						<form method="post" id="card_form" class="was-validated">
+							<div class="form-group">
+								<label for="card_card">Tarjeta:</label>
+								<input type="number" min="1000000000000000" max="9999999999999999" id="card_card" class="form-control" placeholder="Ingresar Tarjeta" required>
+								<div class="valid-feedback">Correcto</div>
+								<div class="invalid-feedback">Tarjeta Bancoco</div>
+							</div>
+							<div class="form-group">
+								<label for="card_cvv">CVV:</label>
+								<input type="number" min="100" max="999" class="form-control" id="card_cvv" placeholder="Ingresar CVV" required>
+								<div class="valid-feedback">Correcto</div>
+								<div class="invalid-feedback">Card Verification value</div>
+							</div>
+							<div class="form-group form-check">    	
+							</div>
+							<button type="button" id="card" class="btn btn-secondary btn-block">Ingresar Tarjeta</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<input type="hidden" id="user" value="<?php echo $_SESSION['user'] ?>">
 	
 	<div class="container">
+		
 
 <!-- 
 Falta cerrar esto!

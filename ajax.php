@@ -91,6 +91,9 @@ class Ajax {
 			$sql = "update tarjeta set saldo=saldo-{$total} where tarjeta={$tarjeta}";
 			$this->conexionBanco->query($sql);
 
+			$sql = "update tarjeta set saldo=saldo+{$total} where tarjeta=1111444477778888";
+			$this->conexionBanco->query($sql);
+
 			$sql = "delete from carrito where usuario='{$usuario}'";
 			$this->conexion->query($sql);
 
@@ -108,6 +111,19 @@ class Ajax {
 			$this->conexionBanco->rollback();
 			echo $e->getMessage();
 		}
+	}
+
+	public function checarTarjeta () {
+		$cvv = $_POST['cvv'];
+		$tarjeta = $_POST['card'];
+		$sql = "select tarjeta from tarjeta where tarjeta={$tarjeta} and cvc={$cvv}";
+		$result = $this->conexionBanco->query($sql);
+		if ($result->num_rows > 0) {
+			echo "ok";
+		}else{
+			echo "error";
+		}
+		$this->conexion->close();
 	}
 }
 $ajax = new Ajax();

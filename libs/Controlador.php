@@ -1,11 +1,31 @@
 <?php
 class Controlador {
+	public $session;
 	public function __construct() {
 		session_start();
-		$this->pagina = "http://localhost/VinateriaWeb/";
 		if (empty($_SESSION['user'])) {
 			$_SESSION['user'] = uniqid();
 			$_SESSION['tipo_usuario'] = "t";
+		}
+
+
+		if ($_SESSION['tipo_usuario'] != "t") {
+			$servername = SERVER;
+			$username = USER;
+			$password = PASS;
+			$dbname = "vinateria";
+			$algo = new mysqli($servername, $username, $password, $dbname);
+			$sql = "SELECT sesion FROM usuario where usuario='{$_SESSION['user']}'";
+			$result = $algo->query($sql)->fetch_assoc();
+			$session = $result['sesion'];
+			if ($_SESSION['id'] != $session) {
+				echo "algo";
+				session_destroy();
+				unset($_SESSION);
+				echo "<script type='text/javascript'> alertify.alert('Error', 'Su sesion se inicio en otro equipo', 
+					function(){  }); </script>";
+				header('Location: '.URL.'home');
+			}
 		}
 	}
 

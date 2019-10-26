@@ -21,7 +21,10 @@
 	}
 
 	function deleteCarrito($id,$producto){
-		$sql = "delete from carrito where usuario='{$id}' and producto={$producto}";
+		$sql = "SELECT id FROM carrito where usuario='{$id}' and producto={$producto} ORDER BY id DESC LIMIT 1";
+		$result = $this->conexion->query($sql)->fetch_assoc();
+		var_dump($result);
+		$sql = "delete from carrito where id='{$result['id']}'";
 		echo $sql;
 		$this->conexion->query($sql);
 		$this->conexion->close();

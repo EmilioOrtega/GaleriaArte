@@ -24,8 +24,8 @@
 
 	function login($usuario,$contrasena){
 		$productos = array();
-		$sql = "select nombre, apellidos, telefono, tarjeta, tipo_usuario from usuario where usuario='{$usuario}' and contrasena = '{$contrasena}'";
-		if ($result = mysqli_query($this->conexion,$sql)) {
+		$sql = "select nombre, apellidos, telefono, tarjeta, tipo_usuario, sesion from usuario where usuario='{$usuario}' and contrasena = '{$contrasena}'";
+		if ($result = $this->conexion->query($sql)) {
 			while ($obj = mysqli_fetch_array($result)){
 				array_push(	$productos, $obj);
 			}
@@ -49,8 +49,8 @@
 		return $usuario;
 	}
 
-	function updateUser($usuario,$nombre,$apellidos,$telefono,$tarjeta){
-		$sql = "update usuario set nombre='$nombre', apellidos='$apellidos', telefono=$telefono, tarjeta=$tarjeta where usuario='$usuario'";
+	function updateUser($usuario,$nombre,$apellidos,$telefono){
+		$sql = "update usuario set nombre='$nombre', apellidos='$apellidos', telefono=$telefono where usuario='$usuario'";
 		$this->conexion->query($sql);
 		$this->conexion->close();
 	}
@@ -60,6 +60,11 @@
 		$this->conexion->query($sql);
 		$this->conexion->close();
 	}
-}
 
+	function setSession($usuario) {
+		$session = uniqid();
+		$sql = "update usuario set sesion ='{$session}' where usuario='{$usuario}'";
+		$this->conexion->query($sql);
+	}
+}
 ?> 

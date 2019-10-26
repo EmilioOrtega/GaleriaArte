@@ -93,14 +93,18 @@ class User extends Controlador{
 	}
 
 	function login() {
+		$this->modelo->setSession($_POST['user']);
 		$usuario = $this->modelo->login($_POST['user'],$_POST['password']);
 		if (!empty($usuario)) {
+			var_dump($usuario);
 			$_SESSION['user'] = $_POST['user'];
 			$_SESSION['nombre'] = $usuario[0]['nombre'];
 			$_SESSION['apellidos'] = $usuario[0]['apellidos'];
 			$_SESSION['telefono'] = $usuario[0]['telefono'];
 			$_SESSION['tipo_usuario'] = $usuario[0]['tipo_usuario'];
 			$_SESSION['tarjeta'] = $usuario[0]['tarjeta'];
+			$_SESSION['id'] = $usuario[0]['sesion'];
+			var_dump($_SESSION);
 			header('Location: '.URL.'home');
 		}else {
 			header('Location: '.URL.'home');
