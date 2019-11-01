@@ -125,6 +125,19 @@ class Ajax {
 		}
 		$this->conexion->close();
 	}
+
+	public function moverCarrito () {
+		$cvv = $_POST['cvv'];
+		$tarjeta = $_POST['card'];
+		$sql = "select tarjeta from tarjeta where tarjeta={$tarjeta} and cvc={$cvv}";
+		$result = $this->conexionBanco->query($sql);
+		if ($result->num_rows > 0) {
+			echo "ok";
+		}else{
+			echo "error";
+		}
+		$this->conexion->close();
+	}
 }
 $ajax = new Ajax();
 $ajax->{$_POST['funcion']}();

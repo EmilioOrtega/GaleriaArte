@@ -46,6 +46,8 @@ class Home extends Controlador{
 		<br>
 		<br>
 		<br>
+		<h4>Resultados para "'.$_POST['buscar'].'"</h4>
+		<br>
 		<div class="row">';
 		if (!empty($producto)) {
 			for ($i=0; $i < count($producto); $i++) { 
