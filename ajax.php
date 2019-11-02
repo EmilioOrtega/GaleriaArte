@@ -2,6 +2,21 @@
 require_once 'libs/config.php';
 class Ajax {	
 	private $conexion;
+	
+	public function moverCarrito ($usuario) {
+		$carrito = array();
+		$sql = "SELECT producto, count(*) as cantidad FROM carrito where usuario = '{$usuario}' group by producto";
+		if($result = mysqli_query($this->conexion,$sql)){
+			while ($obj = mysqli_fetch_array($result)){
+				array_push(	$carrito, $obj);
+			}
+		}
+		foreach ($carrito as $key => $value) {
+			$sql = "insert into historial (producto,cantidad,ticket) values({$value['producto']}, {$value['cantidad']},(select max(id) from compra))";
+			$this->conexion->query($sql);
+		}
+	}
+
 	function __construct() {
 		$servername = SERVER;
 		$username = USER;
@@ -94,6 +109,19 @@ class Ajax {
 			$sql = "update tarjeta set saldo=saldo+{$total} where tarjeta=1111444477778888";
 			$this->conexionBanco->query($sql);
 
+			
+			$carrito = array();
+			$sql = "SELECT producto, count(*) as cantidad FROM carrito where usuario = '{$usuario}' group by producto";
+			if($result = mysqli_query($this->conexion,$sql)){
+				while ($obj = mysqli_fetch_array($result)){
+					array_push(	$carrito, $obj);
+				}
+			}
+			foreach ($carrito as $key => $value) {
+				$sql = "insert into historial (producto,cantidad,ticket) values({$value['producto']}, {$value['cantidad']},(select max(id) from compra))";
+				$this->conexion->query($sql);
+			}
+
 			$sql = "delete from carrito where usuario='{$usuario}'";
 			$this->conexion->query($sql);
 
@@ -126,18 +154,6 @@ class Ajax {
 		$this->conexion->close();
 	}
 
-	public function moverCarrito () {
-		$cvv = $_POST['cvv'];
-		$tarjeta = $_POST['card'];
-		$sql = "select tarjeta from tarjeta where tarjeta={$tarjeta} and cvc={$cvv}";
-		$result = $this->conexionBanco->query($sql);
-		if ($result->num_rows > 0) {
-			echo "ok";
-		}else{
-			echo "error";
-		}
-		$this->conexion->close();
-	}
 }
 $ajax = new Ajax();
 $ajax->{$_POST['funcion']}();

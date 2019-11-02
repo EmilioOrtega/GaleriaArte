@@ -16,18 +16,15 @@
 		$this->conexion->close();
 	}
 
-	function getCompras($usuario,$total){
+	function getCompras($usuario){
 		$compra = array();
-		$sql = "SELECT producto.imagen, producto.nombre as producto, producto.precio, historial.producto as clave_producto,  count(*) as cantidad FROM carrito inner join producto on historial.producto = producto.id where usuario = '{$usuario}' group by ticket";
-		
-		$productos = array();
-		$sql = "select nombre, apellidos, telefono, tarjeta, tipo_usuario, sesion from usuario where usuario='{$usuario}' and contrasena = '{$contrasena}'";
+		$sql = "SELECT producto.imagen, producto.nombre as producto, producto.precio, historial.cantidad FROM historial RIGHT join compra on compra.id = historial.ticket inner join producto on historial.producto = producto.id where usuario = '{$usuario}'";
 		if ($result = $this->conexion->query($sql)) {
 			while ($obj = mysqli_fetch_array($result)){
-				array_push(	$productos, $obj);
+				array_push(	$compra, $obj);
 			}
 			mysqli_free_result($result);
-			return $productos;
+			return $compra;
 		}else{
 			return null;
 		}

@@ -1,8 +1,8 @@
 <?php
-define('URL', 'http://localhost/VinateriaWeb/');
-define('FRONT', 'http://192.168.84.220/VinateriaWeb/');
+define('URL', 'http://192.168.84.49/VinateriaWeb/');
+define('BACK', 'http://192.168.84.190/VinateriaWeb/');
 
-define('SERVER', 'localhost');
-define('USER', 'root');
+define('SERVER', '192.168.84.68');
+define('USER', 'eddy');
 define('PASS', '');
 ?>
