@@ -1,0 +1,30 @@
+<?php
+class ModeloTienda extends Modelo {
+	function __construct() {
+		parent::__construct();
+	}
+
+	function getProducto($id) {
+		$producto = array();
+		$sql = "SELECT nombre, tipo, precio FROM tienda WHERE id={'$id'}";
+		if($result = mysqli_query($this->conexion,$sql)){
+			mysqli_free_result($result);
+		}
+		$this->conexion->close();
+		return $producto;
+	}
+
+	function getProductos() {
+		$productos = array();
+		$sql = "SELECT id, nombre, tipo, precio FROM tienda";
+		if($result = mysqli_query($this->conexion,$sql)){
+			while ($obj = mysqli_fetch_array($result)){
+				array_push(	$productos, $obj);
+			}
+			mysqli_free_result($result);
+		}
+		$this->conexion->close();
+		return $productos;
+	}
+}
+?>
