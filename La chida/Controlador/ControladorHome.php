@@ -6,7 +6,7 @@ class Home extends Controlador{
 	}
 	
 	function index() {
-		$this->cuadros = $this->modelo->getCuadros();
+		$this->cuadros = $this->modelo->getObras();
 		$this->setHeader();
 		$this->setFooter();
 		$this->setVista('home/galeriaArte');	
