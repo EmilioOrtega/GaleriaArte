@@ -8,7 +8,7 @@
   border-bottom-left-radius: 0;
 }
 
-/* Remove border and add padding to thumbnails */
+/* Se remueve el borde, y se añade padding a los thumbnails */
 .thumbnail {
   padding: 0 0 15px 0;
   border: none;
@@ -20,7 +20,7 @@
   color: #555;
 }
 
-/* Black buttons with extra padding and without rounded borders */
+/* Botones negros con extra padding y sin bordes redondeados */
 .btn {
   padding: 10px 20px;
   background-color: #333;
@@ -29,7 +29,7 @@
   transition: .2s;
 }
 
-/* On hover, the color of .btn will transition to white with black text */
+/* En el evento hover, El color de la clase .btn cambiará el color de fondo a blanco con letras negras */
 .btn:hover, .btn:focus {
   border: 1px solid #333;
   background-color: #fff;
