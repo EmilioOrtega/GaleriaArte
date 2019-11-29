@@ -5,7 +5,7 @@ class Modelo {
 		$servername = SERVER;
 		$username = USER;
 		$password = PASS;
-		$dbname = "review";
+		$dbname = "galeriaarte";
 		$this->conexion = new mysqli($servername, $username, $password, $dbname);
 		if ($this->conexion->connect_error) {
 			die("Connection failed: " . $this->conexion->connect_error);
