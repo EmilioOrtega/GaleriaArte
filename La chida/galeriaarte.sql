@@ -2,10 +2,10 @@
 -- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Nov 20, 2019 at 05:21 PM
--- Server version: 10.3.16-MariaDB
--- PHP Version: 7.3.7
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 02-12-2019 a las 20:04:01
+-- Versión del servidor: 10.4.6-MariaDB
+-- Versión de PHP: 7.1.32
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `galeriaarte`
+-- Base de datos: `galeriaarte`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `artista`
+-- Estructura de tabla para la tabla `artista`
 --
 
 CREATE TABLE `artista` (
@@ -37,7 +37,7 @@ CREATE TABLE `artista` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `compra`
+-- Estructura de tabla para la tabla `compra`
 --
 
 CREATE TABLE `compra` (
@@ -50,7 +50,7 @@ CREATE TABLE `compra` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `galerias`
+-- Estructura de tabla para la tabla `galerias`
 --
 
 CREATE TABLE `galerias` (
@@ -65,7 +65,7 @@ CREATE TABLE `galerias` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `obra`
+-- Estructura de tabla para la tabla `obra`
 --
 
 CREATE TABLE `obra` (
@@ -78,7 +78,7 @@ CREATE TABLE `obra` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tienda`
+-- Estructura de tabla para la tabla `tienda`
 --
 
 CREATE TABLE `tienda` (
@@ -91,7 +91,7 @@ CREATE TABLE `tienda` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `usuario`
+-- Estructura de tabla para la tabla `usuario`
 --
 
 CREATE TABLE `usuario` (
@@ -101,17 +101,17 @@ CREATE TABLE `usuario` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Indexes for dumped tables
+-- Índices para tablas volcadas
 --
 
 --
--- Indexes for table `artista`
+-- Indices de la tabla `artista`
 --
 ALTER TABLE `artista`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `compra`
+-- Indices de la tabla `compra`
 --
 ALTER TABLE `compra`
   ADD PRIMARY KEY (`id`),
@@ -119,13 +119,13 @@ ALTER TABLE `compra`
   ADD KEY `id_usuario` (`id_usuario`);
 
 --
--- Indexes for table `galerias`
+-- Indices de la tabla `galerias`
 --
 ALTER TABLE `galerias`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `obra`
+-- Indices de la tabla `obra`
 --
 ALTER TABLE `obra`
   ADD PRIMARY KEY (`id`),
@@ -133,61 +133,56 @@ ALTER TABLE `obra`
   ADD KEY `id_galeria` (`id_galeria`);
 
 --
--- Indexes for table `tienda`
+-- Indices de la tabla `tienda`
 --
 ALTER TABLE `tienda`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `usuario`
+-- Indices de la tabla `usuario`
 --
 ALTER TABLE `usuario`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
--- AUTO_INCREMENT for table `artista`
+-- AUTO_INCREMENT de la tabla `artista`
 --
 ALTER TABLE `artista`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `galerias`
+-- AUTO_INCREMENT de la tabla `compra`
+--
+ALTER TABLE `compra`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `galerias`
 --
 ALTER TABLE `galerias`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tienda`
+-- AUTO_INCREMENT de la tabla `obra`
+--
+ALTER TABLE `obra`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `tienda`
 --
 ALTER TABLE `tienda`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- Constraints for dumped tables
+-- AUTO_INCREMENT de la tabla `usuario`
 --
-
---
--- Constraints for table `artista`
---
-ALTER TABLE `artista`
-  ADD CONSTRAINT `artista_ibfk_1` FOREIGN KEY (`id`) REFERENCES `obra` (`id_artista`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `compra`
---
-ALTER TABLE `compra`
-  ADD CONSTRAINT `compra_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `usuario` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `compra_ibfk_2` FOREIGN KEY (`id_producto`) REFERENCES `tienda` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `obra`
---
-ALTER TABLE `obra`
-  ADD CONSTRAINT `obra_ibfk_1` FOREIGN KEY (`id_galeria`) REFERENCES `galerias` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `usuario`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
