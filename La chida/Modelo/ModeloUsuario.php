@@ -29,7 +29,7 @@ class ModeloUsuario extends Modelo {
 	function login($usuario,$contrasena){
 		$productos = array();
 		$sql = "SELECT id FROM usuario WHERE usuario ='{$usuario}' and contra = '{$contrasena}'";
-		if ($result = $this->conexion->query($sql)) {
+		if($result = $this->conexion->query($sql)) {
 			while ($obj = mysqli_fetch_array($result)){
 				array_push(	$productos, $obj);
 				var_dump($result);
