@@ -43,7 +43,7 @@ class Ajax {
 	public function checarUsuario() {
 		$usuario = $_POST['user'];
 		$contrasena = $_POST['pass'];
-		$sql = "select id from usuario where id='{$usuario}' and contra = '{$contrasena}'";
+		$sql = "select id from usuario where nombre='{$usuario}' and contra = '{$contrasena}'";
 		$result = $this->conexion->query($sql);
 		if ($result->num_rows > 0) {
 			echo "ok";

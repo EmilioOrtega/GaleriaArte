@@ -13,7 +13,7 @@ $(document).ready(function(){
 			success: function(response)
 			{
 				if (response == "ok") {
-					alertify.alert('Exito', 'Bienvenido a la Vinatería Cocos en la Playa', 
+					alertify.alert('Exito', 'Bienvenido a la Galeria Brothers', 
 					function(){ $('#log_form').submit(); });
 				}else {
 					alertify.alert("Error", "El usuario o la contraseña no son correctos");
@@ -42,28 +42,6 @@ $(document).ready(function(){
 					function(){ $('#sign_form').submit(); });
 				}else {
 					alertify.alert("Error", "El usuario elegido ya existe");
-				}
-			}
-		});
-	});
-
-	$('#card').click(function(){
-		var configuracion = { 
-			funcion: "checarTarjeta",
-			card: $("#card_card").val(),
-			cvv: $("#card_cvv").val()
-		};
-		$.ajax({
-			type: "POST",
-			url: '/La chida/ajax.php',
-			data: configuracion,
-			success: function(response)
-			{
-				if (response == "ok") {
-					alertify.alert('Exito', 'Tarjeta introducida exitosamente', 
-					function(){ location.reload(); });
-				}else {
-					alertify.alert("Error", "La tarjeta o su codigo no son correctos");
 				}
 			}
 		});
