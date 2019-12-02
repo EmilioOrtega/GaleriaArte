@@ -17,9 +17,9 @@ class ModeloUsuario extends Modelo {
 		return $usuario;
 	}
 
-	function addUsuario($usuario, $nombre, $password){
-		$sql = "INSERT INTO usuario (id, nombre, contra) 
-		VALUES ('$usuario','{$nombre}', '{$password}')";
+	function addUsuario($nombre, $password){
+		$sql = "INSERT INTO usuario (nombre, contra) 
+		VALUES ('{$nombre}', '{$password}')";
 		mysqli_query($this->conexion,$sql);
 		$this->conexion->close();
 

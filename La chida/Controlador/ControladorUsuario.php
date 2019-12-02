@@ -8,23 +8,23 @@ class Usuario extends Controlador{
 	function index() {
 		$this->setHeader();
 		$this->setFooter();
-		$this->setVista('forms/login');	
+		$this->setVista('LoginPrin');	
 	}
 
 	function registrar() {
-		$this->setHeader();
-		$this->setFooter();
-		$this->setVista('forms/registrar');	
+		$this->modelo->addUsuario($_POST['name'], $_POST['password']);
+		header('location'.URL);
+
 	}
 
 	function reg() {
-		$this->libros = $this->modelo->addUsuario($_POST['User'], $_POST['Nombre'], $_POST['Passr']);
+		$this->usuario = $this->modelo->addUsuario($_POST['Nombre'], $_POST['Passr']);
 	}
 
 	function login() {
 		$this->setHeader();
 		$this->setFooter();
-		$this->setVista('forms/login');	
+		$this->setVista('LoginPrin');	
 	}
 
 	function log() {

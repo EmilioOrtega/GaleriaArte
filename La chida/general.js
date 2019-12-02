@@ -29,7 +29,7 @@ $(document).ready(function(){
 		}
 		var configuracion = { 
 			funcion: "checarDisponible",
-			user: $("#sign_user").val()
+			user: $("#sign_name").val()
 		};
 		$.ajax({
 			type: "POST",
