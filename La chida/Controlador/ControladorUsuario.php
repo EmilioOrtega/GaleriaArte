@@ -12,8 +12,8 @@ class Usuario extends Controlador{
 	}
 
 	function registrar() {
-		$this->modelo->addUsuario($_POST['name'], $_POST['password']);
-		header('location'.URL);
+		$this->modelo->addUsuario($_POST['nombre'], $_POST['password']);
+		header('Location: '.URL.'home');
 
 	}
 

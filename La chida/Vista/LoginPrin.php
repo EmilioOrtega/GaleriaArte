@@ -430,7 +430,7 @@ footer a:hover {
 					<div class="container">
 						<h2>Galería Brothers</h2>
 						<p>Favor de rellenar los siguientes campos con la información requerida para realizar el registro de usuario</p>
-						<form method="post" id="sign_form" action="<?php echo URL ?>user/registrar" class="was-validated">
+						<form method="post" id="sign_form" action="<?php echo URL ?>usuario/registrar" class="was-validated">
 							<div class="form-group">
 								<label for="sign_name">Nombre de Usuario:</label>
 								<input type="text" class="form-control" id="sign_name" placeholder="Enter username" name="nombre" required>

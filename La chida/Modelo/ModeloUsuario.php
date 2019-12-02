@@ -20,6 +20,7 @@ class ModeloUsuario extends Modelo {
 	function addUsuario($nombre, $password){
 		$sql = "INSERT INTO usuario (nombre, contra) 
 		VALUES ('{$nombre}', '{$password}')";
+		echo $sql;
 		mysqli_query($this->conexion,$sql);
 		$this->conexion->close();
 
@@ -30,7 +31,7 @@ class ModeloUsuario extends Modelo {
 		$sql = "SELECT id FROM usuario WHERE usuario ='{$usuario}' and contra = '{$contrasena}'";
 		if ($result = $this->conexion->query($sql)) {
 			while ($obj = mysqli_fetch_array($result)){
-				array_push(	$productos, $obj);}
+				array_push(	$productos, $obj);
 				var_dump($result);
 			}
 			mysqli_free_result($result);
