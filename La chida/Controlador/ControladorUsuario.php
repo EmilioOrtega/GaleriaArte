@@ -29,11 +29,13 @@ class Usuario extends Controlador{
 
 	function log() {
 		$this->user = $this->modelo->login($_POST['user'], $_POST['password']);
+		header('Location: '.URL.'home');
 		//var_dump($this->user);
 		if (!empty($this->user)) {
 			echo "Hola".$this->user[0]['id'];
 		}
-		$this->setVista('LoginPrin');
 	}
+		
+
 }
 ?>

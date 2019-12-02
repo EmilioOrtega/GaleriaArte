@@ -394,7 +394,7 @@ footer a:hover {
 					<div class="container">
 						<h2>Galería Brothers</h2>
 						<p>Favor de rellenar los siguientes campos con la información requerida para iniciar sesión</p>
-						<form method="post" id="log_form" action="<?php echo URL ?>user/login" class="was-validated">
+						<form method="post" id="log_form" action="<?php echo URL ?>usuario/log" class="was-validated">
 							<div class="form-group">
 								<label for="log_user">Usuario:</label>
 								<input type="text" class="form-control" id="log_user" placeholder="Enter username" name="user" required>
