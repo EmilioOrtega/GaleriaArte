@@ -219,36 +219,6 @@
 <div id="QhdN" class="container-fluid" style="margin-top:10px">
 <h1> Tienda</h1>
 
-
-<div class="container">
-  <h3 class="text-center">¡Contactanos!</h3>
-  <p class="text-center"><em>¿Tienes algina sugerencia?</em></p>
-  <div class="row test">
-    <div class="col-md-4">
-      <p>¡Deja un Comentario!</p>
-      <p><span class="glyphicon glyphicon-map-marker"></span>Tonalá, Mexico</p>
-      <p><span class="glyphicon glyphicon-phone"></span>Teléfono: +55 33 1213 1813</p>
-      <p><span class="glyphicon glyphicon-envelope"></span>Email: GaleriaBrothers@gmail.com</p>
-    </div>
-    <div class="col-md-8">
-      <div class="row">
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
-        </div>
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
-        </div>
-      </div>
-      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
-      <div class="row">
-        <div class="col-md-12 form-group">
-          <button class="btn" type="submit">Enviar</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
 <!-- FOOTER -->
 <style>
 /* Add a dark background color to the footer */
@@ -267,6 +237,221 @@ footer a:hover {
   text-decoration: none;
 }
 </style>
+
+
+<h3>Posters</h3>
+<img src="Poster.jpg" class="img-circle person" alt="Random Name">
+<style>
+/* Add a dark gray background color to the modal header and center text */
+.modal-header, h4, .close {
+  background-color: #333;
+  color: #fff !important;
+  text-align: center;
+  font-size: 30px;
+}
+
+.modal-header, .modal-body {
+  padding: 40px 50px;
+}
+</style>
+
+<!-- Used to open the Modal -->
+<button class="btn" data-toggle="modal" data-target="#myModal">Posters</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4><span class="glyphicon glyphicon-lock"></span> </h4>
+      </div>
+      <div class="modal-body">
+        <form role="form">
+          <div class="form-group">
+            <label for="psw"><span class="glyphicon glyphicon-shopping-cart"></span> $250 por poster</label>
+            <input type="number" class="form-control" id="psw" placeholder="">
+          </div>
+          <div class="form-group">
+            <label for="usrname"><span class="glyphicon glyphicon-user"></span> Enviar a:</label>
+            <input type="text" class="form-control" id="usrname" placeholder="">
+          </div>
+          <button type="submit" class="btn btn-block">Pagar
+            <span class="glyphicon glyphicon-ok"></span>
+          </button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+          <span class="glyphicon glyphicon-remove"></span> Cancelar
+        </button>
+        <p>Necesita <a href="#">ayuda?</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+<h3>Moda y Joyeria</h3>
+<img src="Joya.jpg" class="img-circle person" alt="Random Name">
+<style>
+/* Add a dark gray background color to the modal header and center text */
+.modal-header, h4, .close {
+  background-color: #333;
+  color: #fff !important;
+  text-align: center;
+  font-size: 30px;
+}
+
+.modal-header, .modal-body {
+  padding: 40px 50px;
+}
+</style>
+
+<!-- Used to open the Modal -->
+<button class="btn" data-toggle="modal" data-target="#myModal">Joya</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4><span class="glyphicon glyphicon-lock"></span> Joyas</h4>
+      </div>
+      <div class="modal-body">
+        <form role="form">
+          <div class="form-group">
+            <label for="psw"><span class="glyphicon glyphicon-shopping-cart"></span> $2000 por Joya</label>
+            <input type="number" class="form-control" id="psw" placeholder="">
+          </div>
+          <div class="form-group">
+            <label for="usrname"><span class="glyphicon glyphicon-user"></span> Enviar a </label>
+            <input type="text" class="form-control" id="usrname" placeholder="">
+          </div>
+          <button type="submit" class="btn btn-block">Comprar
+            <span class="glyphicon glyphicon-ok"></span>
+          </button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+          <span class="glyphicon glyphicon-remove"></span> Cancelar
+        </button>
+        <p>Necesita <a href="#">ayuda?</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+<h3>Libros</h3>
+<img src="Libro.jpg" class="img-circle person" alt="Random Name">
+<style>
+/* Add a dark gray background color to the modal header and center text */
+.modal-header, h4, .close {
+  background-color: #333;
+  color: #fff !important;
+  text-align: center;
+  font-size: 30px;
+}
+
+.modal-header, .modal-body {
+  padding: 40px 50px;
+}
+</style>
+
+<!-- Used to open the Modal -->
+<button class="btn" data-toggle="modal" data-target="#myModal">Libro</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4><span class="glyphicon glyphicon-lock"></span> Libros</h4>
+      </div>
+      <div class="modal-body">
+        <form role="form">
+          <div class="form-group">
+            <label for="psw"><span class="glyphicon glyphicon-shopping-cart"></span> Libro, $200 </label>
+            <input type="number" class="form-control" id="psw" placeholder="">
+          </div>
+          <div class="form-group">
+            <label for="usrname"><span class="glyphicon glyphicon-user"></span> Enviar</label>
+            <input type="text" class="form-control" id="usrname" placeholder="">
+          </div>
+          <button type="submit" class="btn btn-block">Comprar
+            <span class="glyphicon glyphicon-ok"></span>
+          </button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+          <span class="glyphicon glyphicon-remove"></span> Cancelar
+        </button>
+        <p>Necesita Ayuda <a href="#">help?</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h3>Regalos y Navidad</h3>
+<img src="NAvidad.jpg" class="img-circle person" alt="Random Name">
+<style>
+/* Add a dark gray background color to the modal header and center text */
+.modal-header, h4, .close {
+  background-color: #333;
+  color: #fff !important;
+  text-align: center;
+  font-size: 30px;
+}
+
+.modal-header, .modal-body {
+  padding: 40px 50px;
+}
+</style>
+
+<!-- Used to open the Modal -->
+<button class="btn" data-toggle="modal" data-target="#myModal">Regalos</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4><span class="glyphicon glyphicon-lock"></span> Navidad </h4>
+      </div>
+      <div class="modal-body">
+        <form role="form">
+          <div class="form-group">
+            <label for="psw"><span class="glyphicon glyphicon-shopping-cart"></span> $200 por arbol</label>
+            <input type="number" class="form-control" id="psw" placeholder="">
+          </div>
+          <div class="form-group">
+            <label for="usrname"><span class="glyphicon glyphicon-user"></span> Enviar a:</label>
+            <input type="text" class="form-control" id="usrname" placeholder="">
+          </div>
+          <button type="submit" class="btn btn-block">Comprar
+            <span class="glyphicon glyphicon-ok"></span>
+          </button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+          <span class="glyphicon glyphicon-remove"></span> Cancelar
+        </button>
+        <p>Necesita <a href="#">ayuda?</a></p>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 <!-- Modal del Login -->
@@ -349,7 +534,10 @@ footer a:hover {
   <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
     <span class="glyphicon glyphicon-chevron-up"></span>
   </a><br><br>
-  <p>Footer</a></p> 
+  <p>Galeria Brothers es un espacio para presentar y promover artístas en el medio informático, todas las obras expuestas aquí son propiedad de los autores, así como todos sus derechos.</p> 
+  <p>Pagina Hecha por Tito Orozco</p>
+  <p> Emilio Alejandro</p> 
+  <p>Gabriel Alejandro</a></p> 
 </footer>
 
 
