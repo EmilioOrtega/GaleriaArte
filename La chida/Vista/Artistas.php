@@ -174,11 +174,15 @@
         <a class="dropdown-item" href="#">Link 3</a>
       </div>
     </li>
-    <li>
-      <a class="nav-link" href="/GaleriaArte/La%20chida/Vista/Artistas.php">
-        Artistas y sus obras
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        Obras y Artistas
       </a>
-      <button type="button" class="btn btn-outline-primary justify-content-end" data-toggle="modal" href="/GaleriaArte/La%20chida/Vista/Artistas.php">Registrarse</button>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Link 1</a>
+        <a class="dropdown-item" href="#">Link 2</a>
+        <a class="dropdown-item" href="#">Link 3</a>
+      </div>
     </li>
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
@@ -234,99 +238,8 @@
 </div>
 
 <div id="QhdN" class="container-fluid" style="margin-top:10px">
-  <h1>Que hay de nuevo?</h1>
-  <h3>Exhibiciones</h3>
-  <p>
-  	
-  </p>
-  <h3>Eventos</h3>
-  <p>
-  	
-  </p>
-  <h3>Grupo de visitas</h3>
-
-  
-
-<div class="container-fluid" style="margin-top:80px">
-<h1>Visitas</h1>
-</div>
-<div id="Vng">
-	<h3>Nuestras Galerías</h3>
-  <p>
-
-  </p>
-</div>
-
-<div id="Vve">
-<h3>Visitas de escuelas</h3>
-  <p>
-  <div class="row text-center">
-  <div class="col-sm-4">
-    <div class="thumbnail">
-      <img src="C:\Users\Tito\Documents\GitHub\GaleriaArte\La chida\Imagenes\CTonala.jpg" alt="CTonala" style="width: 50%; height: 100%;">
-      <p><strong>Ceti Tonala</strong></p>
-      <p>Visita del 27 Noviembre 2019</p>
-     <!-- <button class="btn">Buy Tickets</button>-->
-    </div>
-  </div>
-  <div class="col-sm-4">
-    <div class="thumbnail">
-      <img src="C:\Users\Tito\Documents\GitHub\GaleriaArte\La chida\Imagenes\CColomos.jpg" alt="CColomos" style="width: 50%; height: 70%;">
-      <p><strong>Ceti Colomos</strong></p>
-      <p>Visita del 30 Febrero 2019</p>
-      <!--<button class="btn">Buy Tickets</button>-->
-    </div>
-  </div>
-  <div class="col-sm-4">
-    <div class="thumbnail">
-      <img src="C:\Users\Tito\Documents\GitHub\GaleriaArte\La chida\Imagenes\TEC.jpg" alt="TEC" style="width: 50%; height: 100%;">
-      <p><strong>TEC de Monterrey</strong></p>
-      <p>Visita del 30 Mayo 2019</p>
-      <!--<button class="btn">Buy Tickets</button>-->
-    </div>
-  </div>
-
-</div>
-  </p>	
-</div>
-  
- <div id="VGv">
-<h3>Grupo de visitas</h3>
-  <p>
- 
-  </p>	
-</div>
-
-<div id="Vf">
- <h3>Familias</h3>
-  <p>
-  	
-  </p>	
-</div>
-  
-<div id="Vfi">
-<h3>Facilidades de investigación</h3>
-  <p>
-  	
-  </p>	
-</div>
- 
-
-<div id = "UyS" class="container-fluid" style="margin-top:80px">
-  <h1>Únete y soporte </h1>
-  <h3>Se un amigo de la galería</h3>
-  <p>
-  	
-  </p>
-  <h3>Voluntarios y donaciones</h3>
-  <p>
-  	
-  </p>
-  <h3>Soporte</h3>
-  <p>
-  	
-  </p>
-</div>
+<h1> Aritistas </h1>
+<h2>Marina Abramovic</h2> 
 
 <div class="container">
   <h3 class="text-center">¡Contactanos!</h3>
