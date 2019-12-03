@@ -213,7 +213,7 @@
       </div>
     </li>
     <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+      <a class="nav-link dropdown-toggle" href="#AP" id="navbardrop" data-toggle="dropdown">
         Políticas de privacidad
       </a>
       <div class="dropdown-menu">
@@ -263,26 +263,23 @@
   <div class="row text-center">
   <div class="col-sm-4">
     <div class="thumbnail">
-      <img src="C:\Users\Tito\Documents\GitHub\GaleriaArte\La chida\Imagenes\CTonala.jpg" alt="CTonala" style="width: 50%; height: 100%;">
+      <img src="Tonala.jpg" alt="CTonala" style="width: 50%; height: 100%;">
       <p><strong>Ceti Tonala</strong></p>
       <p>Visita del 27 Noviembre 2019</p>
-     <!-- <button class="btn">Buy Tickets</button>-->
     </div>
   </div>
   <div class="col-sm-4">
     <div class="thumbnail">
-      <img src="C:\Users\Tito\Documents\GitHub\GaleriaArte\La chida\Imagenes\CColomos.jpg" alt="CColomos" style="width: 50%; height: 70%;">
+      <img src="Colomos.jpg" alt="CColomos" style="width: 50%; height: 70%;">
       <p><strong>Ceti Colomos</strong></p>
       <p>Visita del 30 Febrero 2019</p>
-      <!--<button class="btn">Buy Tickets</button>-->
     </div>
   </div>
   <div class="col-sm-4">
     <div class="thumbnail">
-      <img src="C:\Users\Tito\Documents\GitHub\GaleriaArte\La chida\Imagenes\TEC.jpg" alt="TEC" style="width: 50%; height: 100%;">
+      <img src="tec.jpg" alt="TEC" style="width: 50%; height: 100%;">
       <p><strong>TEC de Monterrey</strong></p>
       <p>Visita del 30 Mayo 2019</p>
-      <!--<button class="btn">Buy Tickets</button>-->
     </div>
   </div>
 
@@ -328,9 +325,42 @@
   </p>
 </div>
 
+<div id = "AP" class="container-fluid" style="margin-top:80px">
+  <h1>Aviso de privacidad </h1>
+  <p>
+    
+De acuerdo a lo Previsto en la “Ley Federal de Protección de Datos Personales”, declara Fervel Asesoría Integral S.C.,
+ser una empresa legalmente constituida de conformidad con las leyes mexicanas, con domicilio en Avenida Fuente de
+Trevi Número 28, Colonia Lomas de Tecamachalco, C.P. 53950, Naucalpan de Juárez en México, Estado de México.; y
+como responsable del tratamiento de sus datos personales, hace de su conocimiento que la información de nuestros
+clientes es tratada de forma estrictamente confidencial por lo que al proporcionar sus datos personales, tales como:
+1. Nombre Completo.
+2. Dirección.
+3. Registro Federal de Contribuyentes.
+4. Teléfonos de Hogar, Oficina y móviles
+5. Correo Electrónico.
+Estos serán utilizados única y exclusivamente para los siguientes fines:
+1. Información y Prestación de Servicios.
+2. Actualización de la Base de Datos.
+3. Cualquier finalidad análoga o compatible con las anteriores.
+En el caso de Datos sensibles, tales como:
+1. Datos Financieros (Ingresos, Estados de Cuenta, y demás relacionados)
+2. Datos Patrimoniales (Bienes Materiales, Inmuebles, y demás relacionados)
+3. Datos Personales (Cónyuge, Estado Civil, Nacionalidad, Educación, Hijos, y demás relacionados).
+4. Referencias familiares y no familiares (Nombre, Dirección, Teléfono, relación, etc.).
+Estos serán utilizados única y exclusivamente para los siguientes fines:
+1. Investigación y/u Obtención de Créditos ante las Instituciones Financieras.
+2. Cualquier finalidad análoga o compatible con la anterior.
+3. Información y Prestación de Servicios
+Para prevenir el acceso no autorizado a sus datos personales y con el fin de asegurar que la información sea utilizada para
+los fines establecidos en este aviso de privacidad, hemos establecido diversos procedimientos con la finalidad de evitar el
+uso o divulgación no autorizados de sus datos, permitiéndonos tratarlos debidamente.
+  </p>
+</div>
+
 <div class="container">
   <h3 class="text-center">¡Contactanos!</h3>
-  <p class="text-center"><em>¿Tienes algina sugerencia?</em></p>
+  <p class="text-center"><em>¿Tienes alguna sugerencia?</em></p>
   <div class="row test">
     <div class="col-md-4">
       <p>¡Deja un Comentario!</p>
@@ -457,7 +487,7 @@ footer a:hover {
   <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
     <span class="glyphicon glyphicon-chevron-up"></span>
   </a><br><br>
-  <p>Footer</a></p> 
+  <p>Galeria Brothers es un espacio para presentar y promover artístas en el medio informático, todas las obras expuestas aquí son propiedad de los autores, así como todos sus derechos</a></p> 
 </footer>
 
 <script>
