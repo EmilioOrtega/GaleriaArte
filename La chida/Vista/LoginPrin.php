@@ -160,21 +160,14 @@
   <ul class="navbar-nav">
 
     <!-- Dropdown -->
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-        Datos de la Galería
-      </a>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">Link 1</a>
-        <a class="dropdown-item" href="#">Link 2</a>
-        <a class="dropdown-item" href="#">Link 3</a>
-      </div>
-    </li>
     <li>
+      <a class="nav-link" href="\GaleriaArte\La%20chida\#Cont">
+        Datos de la Galeria
+      </a>
+    </li>
       <a class="nav-link" href="/GaleriaArte/La%20chida/Vista/Artistas.php">
         Artistas y sus obras
       </a>
-      <button type="button" class="btn btn-outline-primary justify-content-end" data-toggle="modal" href="/GaleriaArte/La%20chida/Vista/Artistas.php">Registrarse</button>
     </li>
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
@@ -198,21 +191,19 @@
         Unete y Soporte
       </a>
     </li>
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+    <li class="nav-item">
+      <a class="nav-link" href="/GaleriaArte/La%20chida/Vista/Tienda.php">
         Tienda
       </a>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">Link 1</a>
-        <a class="dropdown-item" href="#">Link 2</a>
-        <a class="dropdown-item" href="#">Link 3</a>
-      </div>
     </li>
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#AP" id="navbardrop" data-toggle="dropdown">
-        Políticas de privacidad
+    <li class="nav-item">
+      <a class="nav-link" href="\GaleriaArte\La%20chida\#AP">
+        Politicas de Privacidad
       </a>
       </div>
+
+    </li>
+
 
     </li>
     <div class="justify-content-end" style="justify-content: flex-end;">    
@@ -351,7 +342,7 @@ uso o divulgación no autorizados de sus datos, permitiéndonos tratarlos debida
   </p>
 </div>
 
-<div class="container">
+<div id = "Cont" class="container">
   <h3 class="text-center">¡Contactanos!</h3>
   <p class="text-center"><em>¿Tienes alguna sugerencia?</em></p>
   <div class="row test">

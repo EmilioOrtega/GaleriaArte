@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 
 
@@ -153,83 +152,63 @@
 <body data-spy="scroll" data-target=".navbar" data-offset="50" style="height:1500px">
 
 	<div id = "container">
-		<img src="Banner.png" class="img-fluid" alt="Responsive image">
+		<img src="\GaleriaArte\La chida\Banner.png" class="img-fluid" alt="Responsive image">
 	
 </div>
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
   <!-- Brand -->
-  <a class="navbar-brand" href="#">Inicio</a>
+  <a class="navbar-brand" href="\GaleriaArte\La%20chida\#">Inicio</a>
 
   <!-- Links -->
   <ul class="navbar-nav">
 
     <!-- Dropdown -->
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-        Datos de la Galería
+    <li>
+      <a class="nav-link" href="\GaleriaArte\La%20chida\#Cont">
+        Datos de la Galeria
       </a>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">Link 1</a>
-        <a class="dropdown-item" href="#">Link 2</a>
-        <a class="dropdown-item" href="#">Link 3</a>
-      </div>
     </li>
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-        Obras y Artistas
+      <a class="nav-link" href="/GaleriaArte/La%20chida/Vista/Artistas.php">
+        Artistas y sus obras
       </a>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">Link 1</a>
-        <a class="dropdown-item" href="#">Link 2</a>
-        <a class="dropdown-item" href="#">Link 3</a>
-      </div>
     </li>
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
         Visitas
       </a>
       <div class="dropdown-menu">
-        <a class="dropdown-item" href="#Vng">Nuestras Galerías</a>
-        <a class="dropdown-item" href="#Vve">Visitas de escuelas</a>
-        <a class="dropdown-item" href="#VGv">Grupo de visitas</a>
-        <a class="dropdown-item" href="#Vf">Familias</a>
-        <a class="dropdown-item" href="#Vfi">Facilidades de investigación</a>
+        <a class="dropdown-item" href="\GaleriaArte\La%20chida\#Vng">Nuestras Galerías</a>
+        <a class="dropdown-item" href="\GaleriaArte\La%20chida\#Vve">Visitas de escuelas</a>
+        <a class="dropdown-item" href="\GaleriaArte\La%20chida\#VGv">Grupo de visitas</a>
+        <a class="dropdown-item" href="\GaleriaArte\La%20chida\#Vf">Familias</a>
+        <a class="dropdown-item" href="\GaleriaArte\La%20chida\#Vfi">Facilidades de investigación</a>
       </div>
     </li>
    <li class="nav-item">
-      <a class="nav-link" href="#QhdN">
+      <a class="nav-link" href="\GaleriaArte\La%20chida\#QhdN">
         Que hay de nuevo?
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#UyS">
+      <a class="nav-link" href="\GaleriaArte\La%20chida\#UyS">
         Unete y Soporte
       </a>
     </li>
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+    <li class="nav-item">
+      <a class="nav-link" href="/GaleriaArte/La%20chida/Vista/Tienda.php">
         Tienda
       </a>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">Link 1</a>
-        <a class="dropdown-item" href="#">Link 2</a>
-        <a class="dropdown-item" href="#">Link 3</a>
-      </div>
     </li>
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-        Políticas de privacidad
+    <li class="nav-item">
+      <a class="nav-link" href="\GaleriaArte\La%20chida\#AP">
+        Politicas de Privacidad
       </a>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">Link 1</a>
-        <a class="dropdown-item" href="#">Link 2</a>
-        <a class="dropdown-item" href="#">Link 3</a>
-      </div>
+    </li>
 
     </li>
     <div class="justify-content-end" style="justify-content: flex-end;">    
-    	<button type="button" class="btn btn-outline-primary justify-content-end" data-toggle="modal" data-target="#Modal_Signup">Registrarse</button>
-    	<button type="button" class="btn btn-success" data-toggle="modal" data-target="#Modal_login">Iniciar Sesión</button>
+      <button type="button" class="btn btn-outline-primary justify-content-end" data-toggle="modal" data-target="#Modal_Signup">Registrarse</button>
+      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#Modal_login">Iniciar Sesión</button>
 </div>
 
   </ul>
@@ -238,99 +217,8 @@
 </div>
 
 <div id="QhdN" class="container-fluid" style="margin-top:10px">
-  <h1>Que hay de nuevo?</h1>
-  <h3>Exhibiciones</h3>
-  <p>
-  	
-  </p>
-  <h3>Eventos</h3>
-  <p>
-  	
-  </p>
-  <h3>Grupo de visitas</h3>
+<h1> Tienda</h1>
 
-  
-
-<div class="container-fluid" style="margin-top:80px">
-<h1>Visitas</h1>
-</div>
-<div id="Vng">
-	<h3>Nuestras Galerías</h3>
-  <p>
-
-  </p>
-</div>
-
-<div id="Vve">
-<h3>Visitas de escuelas</h3>
-  <p>
-  <div class="row text-center">
-  <div class="col-sm-4">
-    <div class="thumbnail">
-      <img src="C:\Users\Tito\Documents\GitHub\GaleriaArte\La chida\Imagenes\CTonala.jpg" alt="CTonala" style="width: 50%; height: 100%;">
-      <p><strong>Ceti Tonala</strong></p>
-      <p>Visita del 27 Noviembre 2019</p>
-     <!-- <button class="btn">Buy Tickets</button>-->
-    </div>
-  </div>
-  <div class="col-sm-4">
-    <div class="thumbnail">
-      <img src="C:\Users\Tito\Documents\GitHub\GaleriaArte\La chida\Imagenes\CColomos.jpg" alt="CColomos" style="width: 50%; height: 70%;">
-      <p><strong>Ceti Colomos</strong></p>
-      <p>Visita del 30 Febrero 2019</p>
-      <!--<button class="btn">Buy Tickets</button>-->
-    </div>
-  </div>
-  <div class="col-sm-4">
-    <div class="thumbnail">
-      <img src="C:\Users\Tito\Documents\GitHub\GaleriaArte\La chida\Imagenes\TEC.jpg" alt="TEC" style="width: 50%; height: 100%;">
-      <p><strong>TEC de Monterrey</strong></p>
-      <p>Visita del 30 Mayo 2019</p>
-      <!--<button class="btn">Buy Tickets</button>-->
-    </div>
-  </div>
-
-</div>
-  </p>	
-</div>
-  
- <div id="VGv">
-<h3>Grupo de visitas</h3>
-  <p>
- 
-  </p>	
-</div>
-
-<div id="Vf">
- <h3>Familias</h3>
-  <p>
-  	
-  </p>	
-</div>
-  
-<div id="Vfi">
-<h3>Facilidades de investigación</h3>
-  <p>
-  	
-  </p>	
-</div>
- 
-
-<div id = "UyS" class="container-fluid" style="margin-top:80px">
-  <h1>Únete y soporte </h1>
-  <h3>Se un amigo de la galería</h3>
-  <p>
-  	
-  </p>
-  <h3>Voluntarios y donaciones</h3>
-  <p>
-  	
-  </p>
-  <h3>Soporte</h3>
-  <p>
-  	
-  </p>
-</div>
 
 <div class="container">
   <h3 class="text-center">¡Contactanos!</h3>
@@ -394,7 +282,7 @@ footer a:hover {
 					<div class="container">
 						<h2>Galería Brothers</h2>
 						<p>Favor de rellenar los siguientes campos con la información requerida para iniciar sesión</p>
-						<form method="post" id="log_form" action="<?php echo URL ?>user/login" class="was-validated">
+						<form method="post" id="log_form" action="<?php echo URL ?>usuario/log" class="was-validated">
 							<div class="form-group">
 								<label for="log_user">Usuario:</label>
 								<input type="text" class="form-control" id="log_user" placeholder="Enter username" name="user" required>
@@ -430,9 +318,9 @@ footer a:hover {
 					<div class="container">
 						<h2>Galería Brothers</h2>
 						<p>Favor de rellenar los siguientes campos con la información requerida para realizar el registro de usuario</p>
-						<form method="post" id="sign_form" action="http://localhost/GaleriaArte/La%20chida/usuario/registrar" class="was-validated">
+						<form method="post" id="sign_form" action="<?php echo URL ?>usuario/registrar" class="was-validated">
 							<div class="form-group">
-								<label for="sign_name">Nombre de Usuarioaaaa:</label>
+								<label for="sign_name">Nombre de Usuario:</label>
 								<input type="text" class="form-control" id="sign_name" placeholder="Enter username" name="nombre" required>
 								<div class="valid-feedback">Ingresado</div>
 								<div class="invalid-feedback">Favor de llenar este campo</div>
@@ -463,34 +351,6 @@ footer a:hover {
   </a><br><br>
   <p>Footer</a></p> 
 </footer>
-
-<script>
-$(document).ready(function(){
-  // Initialize Tooltip
-  $('[data-toggle="tooltip"]').tooltip(); 
-  
-  // Add smooth scrolling to all links in navbar + footer link
-  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
-
-    // Prevent default anchor click behavior
-    event.preventDefault();
-
-    // Store hash
-    var hash = this.hash;
-
-    // Using jQuery's animate() method to add smooth page scroll
-    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-    $('html, body').animate({
-      scrollTop: $(hash).offset().top
-    }, 900, function(){
-   
-      // Add hash (#) to URL when done scrolling (default click behavior)
-      window.location.hash = hash;
-    });
-  });
-})
-</script>
-
 
 
 </body>
