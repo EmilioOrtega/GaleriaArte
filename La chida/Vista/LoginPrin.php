@@ -217,7 +217,7 @@
       </div>
     </li>
     <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+      <a class="nav-link dropdown-toggle" href="#AP" id="navbardrop" data-toggle="dropdown">
         Políticas de privacidad
       </a>
       <div class="dropdown-menu">
@@ -491,7 +491,7 @@ footer a:hover {
   <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
     <span class="glyphicon glyphicon-chevron-up"></span>
   </a><br><br>
-  <p>Footer</a></p> 
+  <p>Galeria Brothers es un espacio para presentar y promover artístas en el medio informático, todas las obras expuestas aquí son propiedad de los autores, así como todos sus derechos</a></p> 
 </footer>
 
 <script>
