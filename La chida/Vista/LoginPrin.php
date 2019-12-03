@@ -7,10 +7,27 @@
   <title>Galería Brothers</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <!-- jQuery library -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- Popper JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> 
+  <!-- Icons -->
+  <script src="https://kit.fontawesome.com/180eab578a.js"></script>
+  <!-- Alertify -->
+  <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.12.0/build/alertify.min.js"></script>
+  <!-- CSS -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.12.0/build/css/alertify.min.css"/>
+  <!-- Default theme -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.12.0/build/css/themes/default.min.css"/>
+  <!-- JS general -->
+  <script src='public/JS/general.js'></script>
+  <!-- icono -->
+  <link rel="icon" type="image/png" href="<?php echo URL ?>vista/logo_sm.png" sizes="32x32">
+  <script src="http://localhost/galeriaArte/La chida/general.js"></script>
 
   <style>
   
@@ -377,7 +394,7 @@ footer a:hover {
 					<div class="container">
 						<h2>Galería Brothers</h2>
 						<p>Favor de rellenar los siguientes campos con la información requerida para iniciar sesión</p>
-						<form method="post" id="log_form" action="<?php echo URL ?>user/login" class="was-validated">
+						<form method="post" id="log_form" action="<?php echo URL ?>usuario/log" class="was-validated">
 							<div class="form-group">
 								<label for="log_user">Usuario:</label>
 								<input type="text" class="form-control" id="log_user" placeholder="Enter username" name="user" required>

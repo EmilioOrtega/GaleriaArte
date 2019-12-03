@@ -7,9 +7,7 @@ class Home extends Controlador{
 	
 	function index() {
 		$this->cuadros = $this->modelo->getObras();
-		$this->setHeader();
-		$this->setFooter();
-		$this->setVista('home/galeriaArte');	
+		$this->setVista('LoginPrin');	
 	}
 }
 ?>

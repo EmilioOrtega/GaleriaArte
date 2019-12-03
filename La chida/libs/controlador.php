@@ -10,12 +10,8 @@ class Controlador {
 
 	public $modelo;
 
-	function setFooter() {
-		require 'vista/header.php';
-	}
-
-	function setHeader() {
-		require 'vista/footer.php';
+	function setPrincipal(){
+		require 'LoginPrin.php';
 	}
 
 	function setVista($vista) {

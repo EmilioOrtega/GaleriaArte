@@ -17,24 +17,25 @@ class ModeloUsuario extends Modelo {
 		return $usuario;
 	}
 
-	function addUsuario($usuario, $nombre, $password){
-		$sql = "INSERT INTO usuario (id, nombre, contra) 
-		VALUES ('$usuario','{$nombre}', '{$password}')";
+	function addUsuario($nombre, $password){
+		$sql = "INSERT INTO usuario (nombre, contra) 
+		VALUES ('{$nombre}', '{$password}')";
+		echo $sql;
 		mysqli_query($this->conexion,$sql);
 		$this->conexion->close();
 
 	}
 
 	function login($usuario,$contrasena){
-		$productos = array();
-		$sql = "SELECT id FROM usuario WHERE usuario ='{$usuario}' and contra = '{$contrasena}'";
+		$usuario = array();
+		$sql = "SELECT id FROM usuario WHERE nombre ='{$usuario}' and contra = '{$contrasena}'";
 		if ($result = $this->conexion->query($sql)) {
 			while ($obj = mysqli_fetch_array($result)){
-				array_push(	$productos, $obj);}
+				array_push(	$usuario, $obj);
 				var_dump($result);
 			}
 			mysqli_free_result($result);
-			return $productos;
+			return $usuario;
 		}else{
 			return null;
 		}

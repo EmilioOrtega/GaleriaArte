@@ -4,7 +4,7 @@ class ModeloHome extends Modelo {
 		parent::__construct();
 	}
 
-	function getLibros() {
+	function getObras() {
 		$obras = array();
 		$sql = "SELECT id, nombre, id_artista, id_galeria FROM obra";
 		if($result = mysqli_query($this->conexion,$sql)){
