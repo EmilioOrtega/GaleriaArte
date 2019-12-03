@@ -217,30 +217,44 @@
 <div class="row">
   <div class="col-sm-4">
     <p class="text-center"><strong> Marina Abramovic</strong></p><br>
-    <a href="#demo" data-toggle="collapse">
       <img src="Marina.jpg" class="img-circle person" alt="Random Name">
-    </a>
-    <div id="demo" class="collapse">
-      <p>Artista serbia del performance</p>
-      <p>Empezó su carrera a comienzos de los años 1970. Activa durante más de tres décadas</p>
-      <p>Se ha descrito a sí misma como la "Madrina del arte de la performance"</p>
+
+    <div>
+      <div><p align="justify">Marina Abramović (transliteración del serbio cirílico: Марина Абрамовић marǐːna abrǎːmoʋitɕ (Belgrado, Yugoslavia; 30 de noviembre de 1946), artista serbia del performance1 que empezó su carrera a comienzos de los años 1970. Activa durante más de tres décadas, recientemente se ha descrito a sí misma como la "Madrina del arte de la performance".
+
+El trabajo de Abramović explora la relación entre el artista y la audiencia, los límites del cuerpo y las posibilidades de la mente.
+
+</p></div>
+
     </div>
   </div>
   <div class="col-sm-4">
   </div>
   <div class="col-sm-4">
     <p class="text-center"><strong>John de Andrea</strong></p><br>
-    <a href="#demo3" data-toggle="collapse">
       <img src="John.jpg" class="img-circle person" alt="Random Name">
-    </a>
-    <div id="demo3" class="collapse">
-      <p>Denver, Colorado el 24 de noviembre de 1941</p>
-      <p>Escultor Estadounidense.</p>
-      <p>Escuela de arte fotorrealista</p>
+
+     <div>
+      <div><p align="justify">John De Andrea nacido en Denver, Colorado el 24 de noviembre de 1941, es un escultor estadounidense.
+Asociado con la escuela de arte fotorrealista. De Andrea es conocido por sus extremadamente realistas esculturas de polivinilo representando figuras humanas.
+De Andrea es titulado en Artes por la Universidad de Colorado en Boulder y estudió en la Universidad do Nuevo México en Albuquerque entre 1966 y 1968. Vive en Denver.
+
+
+</p></div>
+
+    </div>
     </div>
   </div>
-</div>
-<div class="container">
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>  
+  <br>
+
+  <div class="container">
   <h3 class="text-center">¡Contactanos!</h3>
   <p class="text-center"><em>¿Tienes algina sugerencia?</em></p>
   <div class="row test">
@@ -268,6 +282,8 @@
     </div>
   </div>
 </div>
+</div>
+
 
 <!-- FOOTER -->
 <style>
