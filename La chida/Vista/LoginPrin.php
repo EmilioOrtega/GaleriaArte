@@ -267,26 +267,23 @@
   <div class="row text-center">
   <div class="col-sm-4">
     <div class="thumbnail">
-      <img src="C:\Users\Tito\Documents\GitHub\GaleriaArte\La chida\Imagenes\CTonala.jpg" alt="CTonala" style="width: 50%; height: 100%;">
+      <img src="Tonala.jpg" alt="CTonala" style="width: 50%; height: 100%;">
       <p><strong>Ceti Tonala</strong></p>
       <p>Visita del 27 Noviembre 2019</p>
-     <!-- <button class="btn">Buy Tickets</button>-->
     </div>
   </div>
   <div class="col-sm-4">
     <div class="thumbnail">
-      <img src="C:\Users\Tito\Documents\GitHub\GaleriaArte\La chida\Imagenes\CColomos.jpg" alt="CColomos" style="width: 50%; height: 70%;">
+      <img src="Colomos.jpg" alt="CColomos" style="width: 50%; height: 70%;">
       <p><strong>Ceti Colomos</strong></p>
       <p>Visita del 30 Febrero 2019</p>
-      <!--<button class="btn">Buy Tickets</button>-->
     </div>
   </div>
   <div class="col-sm-4">
     <div class="thumbnail">
-      <img src="C:\Users\Tito\Documents\GitHub\GaleriaArte\La chida\Imagenes\TEC.jpg" alt="TEC" style="width: 50%; height: 100%;">
+      <img src="tec.jpg" alt="TEC" style="width: 50%; height: 100%;">
       <p><strong>TEC de Monterrey</strong></p>
       <p>Visita del 30 Mayo 2019</p>
-      <!--<button class="btn">Buy Tickets</button>-->
     </div>
   </div>
 
