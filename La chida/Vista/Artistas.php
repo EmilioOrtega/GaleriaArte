@@ -153,23 +153,17 @@
 </div>
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
   <!-- Brand -->
-  <a class="navbar-brand" href="#">Inicio</a>
+  <a class="navbar-brand" href="\GaleriaArte\La%20chida\#">Inicio</a>
 
   <!-- Links -->
   <ul class="navbar-nav">
 
     <!-- Dropdown -->
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-        Datos de la Galería
+    <li>
+      <a class="nav-link" href="\GaleriaArte\La%20chida\#Cont">
+        Datos de la Galeria
       </a>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" href="\GaleriaArte\La chida\#">Link 1</a>
-        <a class="dropdown-item" href="#">Link 2</a>
-        <a class="dropdown-item" href="#">Link 3</a>
-      </div>
     </li>
-     <li>
       <a class="nav-link" href="/GaleriaArte/La%20chida/Vista/Artistas.php">
         Artistas y sus obras
       </a>
@@ -180,46 +174,37 @@
       </a>
       <div class="dropdown-menu">
         <a class="dropdown-item" href="\GaleriaArte\La%20chida\#Vng">Nuestras Galerías</a>
-        <a class="dropdown-item" href="#Vve">Visitas de escuelas</a>
-        <a class="dropdown-item" href="#VGv">Grupo de visitas</a>
-        <a class="dropdown-item" href="#Vf">Familias</a>
-        <a class="dropdown-item" href="#Vfi">Facilidades de investigación</a>
+        <a class="dropdown-item" href="\GaleriaArte\La%20chida\#Vve">Visitas de escuelas</a>
+        <a class="dropdown-item" href="\GaleriaArte\La%20chida\#VGv">Grupo de visitas</a>
+        <a class="dropdown-item" href="\GaleriaArte\La%20chida\#Vf">Familias</a>
+        <a class="dropdown-item" href="\GaleriaArte\La%20chida\#Vfi">Facilidades de investigación</a>
       </div>
     </li>
    <li class="nav-item">
-      <a class="nav-link" href="#QhdN">
+      <a class="nav-link" href="\GaleriaArte\La%20chida\#QhdN">
         Que hay de nuevo?
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#UyS">
+      <a class="nav-link" href="\GaleriaArte\La%20chida\#UyS">
         Unete y Soporte
       </a>
     </li>
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+    <li class="nav-item">
+      <a class="nav-link" href="/GaleriaArte/La%20chida/Vista/Tienda.php">
         Tienda
       </a>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">Link 1</a>
-        <a class="dropdown-item" href="#">Link 2</a>
-        <a class="dropdown-item" href="#">Link 3</a>
-      </div>
     </li>
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-        Políticas de privacidad
+    <li class="nav-item">
+      <a class="nav-link" href="\GaleriaArte\La%20chida\#AP">
+        Politicas de Privacidad
       </a>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">Link 1</a>
-        <a class="dropdown-item" href="#">Link 2</a>
-        <a class="dropdown-item" href="#">Link 3</a>
-      </div>
+    </li>
 
     </li>
     <div class="justify-content-end" style="justify-content: flex-end;">    
-    	<button type="button" class="btn btn-outline-primary justify-content-end" data-toggle="modal" data-target="#Modal_Signup">Registrarse</button>
-    	<button type="button" class="btn btn-success" data-toggle="modal" data-target="#Modal_login">Iniciar Sesión</button>
+      <button type="button" class="btn btn-outline-primary justify-content-end" data-toggle="modal" data-target="#Modal_Signup">Registrarse</button>
+      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#Modal_login">Iniciar Sesión</button>
 </div>
 
   </ul>
