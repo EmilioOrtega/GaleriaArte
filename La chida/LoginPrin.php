@@ -31,6 +31,10 @@
 
   <style>
   
+  body {
+    font: 400 15px/1.8 Lato, sans-serif;
+    color: #777;
+  }
   h3, h4 {
     margin: 10px 0 30px 0;
     letter-spacing: 10px;      
@@ -160,14 +164,25 @@
   <ul class="navbar-nav">
 
     <!-- Dropdown -->
-    <li>
-      <a class="nav-link" href="\GaleriaArte\La%20chida\#Cont">
-        Datos de la Galeria
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        Datos de la Galería
       </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Link 1</a>
+        <a class="dropdown-item" href="#">Link 2</a>
+        <a class="dropdown-item" href="#">Link 3</a>
+      </div>
     </li>
-      <a class="nav-link" href="/GaleriaArte/La%20chida/Vista/Artistas.php">
-        Artistas y sus obras
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        Obras y Artistas
       </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Link 1</a>
+        <a class="dropdown-item" href="#">Link 2</a>
+        <a class="dropdown-item" href="#">Link 3</a>
+      </div>
     </li>
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
@@ -191,19 +206,25 @@
         Unete y Soporte
       </a>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/GaleriaArte/La%20chida/Vista/Tienda.php">
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
         Tienda
       </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="\GaleriaArte\La%20chida\#AP">
-        Politicas de Privacidad
-      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Link 1</a>
+        <a class="dropdown-item" href="#">Link 2</a>
+        <a class="dropdown-item" href="#">Link 3</a>
       </div>
-
     </li>
-
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        Políticas de privacidad
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Link 1</a>
+        <a class="dropdown-item" href="#">Link 2</a>
+        <a class="dropdown-item" href="#">Link 3</a>
+      </div>
 
     </li>
     <div class="justify-content-end" style="justify-content: flex-end;">    
@@ -220,41 +241,11 @@
   <h1>Que hay de nuevo?</h1>
   <h3>Exhibiciones</h3>
   <p>
-  	<div class="col-sm-4">
-      <img src="exposicion1.jpg" alt="exposicion1" style="width: 200%; height: 100%;">
-      <p><strong>My country you do not exist en Páramo</strong></p>
-      <p>El mexicano Adrían S. Bará presenta pintura, dibujo, collage, instalación, escultura y video en esta nueva exposición.
-      4/diciembre/2019</p>
-     <!-- <button class="btn">Buy Tickets</button>-->
-    
-  </div>
-  <div class="col-sm-4">
-    <div class="thumbnail">
-      <img src="exposicion2.jpg" alt="exposicion2" style="width: 200%; height: 100%;">
-      <p><strong>MUSA</strong></p>
-      <p>El Museo de las Artes (Musa) de la Universidad de Guadalajara (UdeG) inaugurará a partir de este mes y hasta noviembre del presente año, cinco exposiciones de artistas nacionales y extranjeros.
-      5/diciembre/2019</p>
-     <!-- <button class="btn">Buy Tickets</button>-->
-    </div>
-  </div>
-  <div class="col-sm-4">
-    <div class="thumbnail">
-      <img src="exposicion3.jpg" alt="exposicion3" style="width: 200%; height: 100%;">
-      <p><strong>Karla de Lara muestra algunas piezas que exhibió en Macro</strong></p>
-      <p>Karla de Lara expone en Land Mark, El arte de reinventar arte. Durante la inauguración Bentley presentó su nuevo modelo de automóvil, el Continental GT 2020. Las obras que mostró De Lara son una selección de la muestra L’Anima dell’Arte/ un viaggio attraverso de la vita que la artista llevó en mayo al Macro Asilo, Art in progress, que realizó en el Museo de Arte Contemporánea di Roma 
-      6/diciembre/2019</p>
-     <!-- <button class="btn">Buy Tickets</button>-->
-    </div>
-  </div>
+  	
   </p>
   <h3>Eventos</h3>
   <p>
-  	<div class="thumbnail">
-      <img src="evengto1.jpg" alt="evengtpo1" style="width: 30%; height: 60%;">
-      <p><strong>Diciembre de eventos en CDMX</strong></p>
-      <p>Para que cierres al año con broche de otro, te enlistamos las mejores exposiciones de arte, fotografía, obras de teatro y recitales de danza que podrás disfrutar durante el mes de diciembre.  Prepárate para celebrar Navidad en la CDMX con obras de teatro y el clásico de El cascanueces a cargo de la Compañía Nacional de Danza, también descubre las exposiciones de museos como el MUAC, el Museo de Arte Moderno y el MUNAL. </p>
-     <!-- <button class="btn">Buy Tickets</button>-->
-    </div>
+  	
   </p>
   <h3>Grupo de visitas</h3>
 
@@ -266,12 +257,7 @@
 <div id="Vng">
 	<h3>Nuestras Galerías</h3>
   <p>
-    <div class="thumbnail">
-      <img src="galeria.jpg" alt="galeria" style="width: 30%; height: 60%;">
-      <p><strong>Abstrakto galería.</strong></p>
-      <p>Ubicación: Av. Tepeyac 4943</p>
-     <!-- <button class="btn">Buy Tickets</button>-->
-    </div>
+
   </p>
 </div>
 
@@ -281,23 +267,26 @@
   <div class="row text-center">
   <div class="col-sm-4">
     <div class="thumbnail">
-      <img src="Tonala.jpg" alt="CTonala" style="width: 50%; height: 100%;">
+      <img src="C:\Users\Tito\Documents\GitHub\GaleriaArte\La chida\Imagenes\CTonala.jpg" alt="CTonala" style="width: 50%; height: 100%;">
       <p><strong>Ceti Tonala</strong></p>
       <p>Visita del 27 Noviembre 2019</p>
+     <!-- <button class="btn">Buy Tickets</button>-->
     </div>
   </div>
   <div class="col-sm-4">
     <div class="thumbnail">
-      <img src="Colomos.jpg" alt="CColomos" style="width: 50%; height: 70%;">
+      <img src="C:\Users\Tito\Documents\GitHub\GaleriaArte\La chida\Imagenes\CColomos.jpg" alt="CColomos" style="width: 50%; height: 70%;">
       <p><strong>Ceti Colomos</strong></p>
       <p>Visita del 30 Febrero 2019</p>
+      <!--<button class="btn">Buy Tickets</button>-->
     </div>
   </div>
   <div class="col-sm-4">
     <div class="thumbnail">
-      <img src="tec.jpg" alt="TEC" style="width: 50%; height: 100%;">
+      <img src="C:\Users\Tito\Documents\GitHub\GaleriaArte\La chida\Imagenes\TEC.jpg" alt="TEC" style="width: 50%; height: 100%;">
       <p><strong>TEC de Monterrey</strong></p>
       <p>Visita del 30 Mayo 2019</p>
+      <!--<button class="btn">Buy Tickets</button>-->
     </div>
   </div>
 
@@ -306,15 +295,9 @@
 </div>
   
  <div id="VGv">
-<h3>Facilidades de investigacion</h3>
+<h3>Grupo de visitas</h3>
   <p>
-    <div class="col-sm-4">
-    <div class="thumbnail">
-      <img src="fa1.jpg" alt="fac1" style="width: 100%; height: 100%;">
-      <p><strong>EDS Galería</strong></p>
-      <p>Especializada en las propuestas contemporáneas, este espacio en la Condesa promueve y difunde arte contemporáneo a nivel internacional. Se especializa en discursos conceptuales de creación interdisciplinaria como fotografía, video, instalación, pintura y escultura. Apoya principalmente a artistas jóvenes mexicanos pero da seguimiento a creadores internacionales para incentivar el intercambio cultural.</p>
-    </div>
-  </div>
+ 
   </p>	
 </div>
 
@@ -336,62 +319,22 @@
 <div id = "UyS" class="container-fluid" style="margin-top:80px">
   <h1>Únete y soporte </h1>
   <h3>Se un amigo de la galería</h3>
-  <p>Galería Brothers es una gran comunidad que acepta a cualquier persona con interes y amor por el arte, te invitamos a que participes en nuestros eventos, que te presentes en nuestras galerías que ofrecen esos gustos en común que tenemos. 
-    Aquí te esperamos con las manos abiertas.
+  <p>
   	
   </p>
   <h3>Voluntarios y donaciones</h3>
   <p>
-  	Nuestra galería cada vez crece más por nuestra gran comunidad y se pueden ofrecer mas eventos en distintas ciudades gracias a los participantes y donadores que hacen posibles estos eventos. 
-    Si usted gusta cooperar y ayudar a nuestra comunidad. Le dejamos un celular de contacto para que pueda obtener más información.
-    Cel: 3321212345
+  	
   </p>
   <h3>Soporte</h3>
   <p>
-  	Cualquier duda o aclaración que guste hacer, le ofrecemos nuestros telefonos y correos para que pueda conteactarnos.
-    Tel: 369212324
-    Cel: 3344567890
-    Correo: galeriaBrothers012@gmail.com
+  	
   </p>
 </div>
 
-<div id = "AP" class="container-fluid" style="margin-top:80px">
-  <h1>Aviso de privacidad </h1>
-  <p>
-    
-De acuerdo a lo Previsto en la “Ley Federal de Protección de Datos Personales”, declara Fervel Asesoría Integral S.C.,
-ser una empresa legalmente constituida de conformidad con las leyes mexicanas, con domicilio en Avenida Fuente de
-Trevi Número 28, Colonia Lomas de Tecamachalco, C.P. 53950, Naucalpan de Juárez en México, Estado de México.; y
-como responsable del tratamiento de sus datos personales, hace de su conocimiento que la información de nuestros
-clientes es tratada de forma estrictamente confidencial por lo que al proporcionar sus datos personales, tales como:
-1. Nombre Completo.
-2. Dirección.
-3. Registro Federal de Contribuyentes.
-4. Teléfonos de Hogar, Oficina y móviles
-5. Correo Electrónico.
-Estos serán utilizados única y exclusivamente para los siguientes fines:
-1. Información y Prestación de Servicios.
-2. Actualización de la Base de Datos.
-3. Cualquier finalidad análoga o compatible con las anteriores.
-En el caso de Datos sensibles, tales como:
-1. Datos Financieros (Ingresos, Estados de Cuenta, y demás relacionados)
-2. Datos Patrimoniales (Bienes Materiales, Inmuebles, y demás relacionados)
-3. Datos Personales (Cónyuge, Estado Civil, Nacionalidad, Educación, Hijos, y demás relacionados).
-4. Referencias familiares y no familiares (Nombre, Dirección, Teléfono, relación, etc.).
-Estos serán utilizados única y exclusivamente para los siguientes fines:
-1. Investigación y/u Obtención de Créditos ante las Instituciones Financieras.
-2. Cualquier finalidad análoga o compatible con la anterior.
-3. Información y Prestación de Servicios
-Para prevenir el acceso no autorizado a sus datos personales y con el fin de asegurar que la información sea utilizada para
-los fines establecidos en este aviso de privacidad, hemos establecido diversos procedimientos con la finalidad de evitar el
-uso o divulgación no autorizados de sus datos, permitiéndonos tratarlos debidamente.
-  
-  </p>
-</div>
-
-<div id = "Cont" class="container">
+<div class="container">
   <h3 class="text-center">¡Contactanos!</h3>
-  <p class="text-center"><em>¿Tienes alguna sugerencia?</em></p>
+  <p class="text-center"><em>¿Tienes algina sugerencia?</em></p>
   <div class="row test">
     <div class="col-md-4">
       <p>¡Deja un Comentario!</p>
@@ -451,7 +394,7 @@ footer a:hover {
 					<div class="container">
 						<h2>Galería Brothers</h2>
 						<p>Favor de rellenar los siguientes campos con la información requerida para iniciar sesión</p>
-						<form method="post" id="log_form" action="<?php echo URL ?>usuario/log" class="was-validated">
+						<form method="post" id="log_form" action="<?php echo URL ?>user/login" class="was-validated">
 							<div class="form-group">
 								<label for="log_user">Usuario:</label>
 								<input type="text" class="form-control" id="log_user" placeholder="Enter username" name="user" required>
@@ -475,6 +418,7 @@ footer a:hover {
 	<!-- Modal del Registro -->
 
 
+
 	<div class="modal fade" id="Modal_Signup">
 		<div class="modal-dialog">
 			<div class="modal-content">
@@ -486,9 +430,9 @@ footer a:hover {
 					<div class="container">
 						<h2>Galería Brothers</h2>
 						<p>Favor de rellenar los siguientes campos con la información requerida para realizar el registro de usuario</p>
-						<form method="post" id="sign_form" action="<?php echo URL ?>usuario/registrar" class="was-validated">
+						<form method="post" id="sign_form" action="http://localhost/GaleriaArte/La%20chida/usuario/registrar" class="was-validated">
 							<div class="form-group">
-								<label for="sign_name">Nombre de Usuario:</label>
+								<label for="sign_name">Nombre de Usuarioaaaa:</label>
 								<input type="text" class="form-control" id="sign_name" placeholder="Enter username" name="nombre" required>
 								<div class="valid-feedback">Ingresado</div>
 								<div class="invalid-feedback">Favor de llenar este campo</div>
@@ -517,12 +461,37 @@ footer a:hover {
   <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
     <span class="glyphicon glyphicon-chevron-up"></span>
   </a><br><br>
-  <p>Galeria Brothers es un espacio para presentar y promover artístas en el medio informático, todas las obras expuestas aquí son propiedad de los autores, así como todos sus derechos.
-  Pagina Hecha por Tito Orozco
-                   Emilio Alejandro
-                   Gabriel Alejandro
-  </a></p> 
+  <p>Footer</a></p> 
 </footer>
+
+<script>
+$(document).ready(function(){
+  // Initialize Tooltip
+  $('[data-toggle="tooltip"]').tooltip(); 
+  
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    // Prevent default anchor click behavior
+    event.preventDefault();
+
+    // Store hash
+    var hash = this.hash;
+
+    // Using jQuery's animate() method to add smooth page scroll
+    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+    $('html, body').animate({
+      scrollTop: $(hash).offset().top
+    }, 900, function(){
+   
+      // Add hash (#) to URL when done scrolling (default click behavior)
+      window.location.hash = hash;
+    });
+  });
+})
+</script>
+
+
 
 </body>
 </html>
