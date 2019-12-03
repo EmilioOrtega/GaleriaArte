@@ -178,7 +178,6 @@
       <a class="nav-link" href="/GaleriaArte/La%20chida/Vista/Artistas.php">
         Artistas y sus obras
       </a>
-      <button type="button" class="btn btn-outline-primary justify-content-end" data-toggle="modal" href="/GaleriaArte/La%20chida/Vista/Artistas.php">Registrarse</button>
     </li>
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">

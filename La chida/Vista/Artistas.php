@@ -153,7 +153,7 @@
 <body data-spy="scroll" data-target=".navbar" data-offset="50" style="height:1500px">
 
 	<div id = "container">
-		<img src="Banner.png" class="img-fluid" alt="Responsive image">
+		<img src="\GaleriaArte\La chida\Banner.png" class="img-fluid" alt="Responsive image">
 	
 </div>
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
@@ -169,27 +169,22 @@
         Datos de la Galería
       </a>
       <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">Link 1</a>
+        <a class="dropdown-item" href="\GaleriaArte\La chida\#">Link 1</a>
         <a class="dropdown-item" href="#">Link 2</a>
         <a class="dropdown-item" href="#">Link 3</a>
       </div>
     </li>
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-        Obras y Artistas
+     <li>
+      <a class="nav-link" href="/GaleriaArte/La%20chida/Vista/Artistas.php">
+        Artistas y sus obras
       </a>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">Link 1</a>
-        <a class="dropdown-item" href="#">Link 2</a>
-        <a class="dropdown-item" href="#">Link 3</a>
-      </div>
     </li>
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
         Visitas
       </a>
       <div class="dropdown-menu">
-        <a class="dropdown-item" href="#Vng">Nuestras Galerías</a>
+        <a class="dropdown-item" href="\GaleriaArte\La%20chida\#Vng">Nuestras Galerías</a>
         <a class="dropdown-item" href="#Vve">Visitas de escuelas</a>
         <a class="dropdown-item" href="#VGv">Grupo de visitas</a>
         <a class="dropdown-item" href="#Vf">Familias</a>
@@ -373,32 +368,7 @@ footer a:hover {
   <p>Footer</a></p> 
 </footer>
 
-<script>
-$(document).ready(function(){
-  // Initialize Tooltip
-  $('[data-toggle="tooltip"]').tooltip(); 
-  
-  // Add smooth scrolling to all links in navbar + footer link
-  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
 
-    // Prevent default anchor click behavior
-    event.preventDefault();
-
-    // Store hash
-    var hash = this.hash;
-
-    // Using jQuery's animate() method to add smooth page scroll
-    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-    $('html, body').animate({
-      scrollTop: $(hash).offset().top
-    }, 900, function(){
-   
-      // Add hash (#) to URL when done scrolling (default click behavior)
-      window.location.hash = hash;
-    });
-  });
-})
-</script>
 
 
 
