@@ -153,23 +153,17 @@
 </div>
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
   <!-- Brand -->
-  <a class="navbar-brand" href="#">Inicio</a>
+  <a class="navbar-brand" href="\GaleriaArte\La%20chida\#">Inicio</a>
 
   <!-- Links -->
   <ul class="navbar-nav">
 
     <!-- Dropdown -->
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-        Datos de la Galería
+    <li>
+      <a class="nav-link" href="\GaleriaArte\La%20chida\#Cont">
+        Datos de la Galeria
       </a>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" href="\GaleriaArte\La chida\#">Link 1</a>
-        <a class="dropdown-item" href="#">Link 2</a>
-        <a class="dropdown-item" href="#">Link 3</a>
-      </div>
     </li>
-     <li>
       <a class="nav-link" href="/GaleriaArte/La%20chida/Vista/Artistas.php">
         Artistas y sus obras
       </a>
@@ -180,46 +174,37 @@
       </a>
       <div class="dropdown-menu">
         <a class="dropdown-item" href="\GaleriaArte\La%20chida\#Vng">Nuestras Galerías</a>
-        <a class="dropdown-item" href="#Vve">Visitas de escuelas</a>
-        <a class="dropdown-item" href="#VGv">Grupo de visitas</a>
-        <a class="dropdown-item" href="#Vf">Familias</a>
-        <a class="dropdown-item" href="#Vfi">Facilidades de investigación</a>
+        <a class="dropdown-item" href="\GaleriaArte\La%20chida\#Vve">Visitas de escuelas</a>
+        <a class="dropdown-item" href="\GaleriaArte\La%20chida\#VGv">Grupo de visitas</a>
+        <a class="dropdown-item" href="\GaleriaArte\La%20chida\#Vf">Familias</a>
+        <a class="dropdown-item" href="\GaleriaArte\La%20chida\#Vfi">Facilidades de investigación</a>
       </div>
     </li>
    <li class="nav-item">
-      <a class="nav-link" href="#QhdN">
+      <a class="nav-link" href="\GaleriaArte\La%20chida\#QhdN">
         Que hay de nuevo?
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#UyS">
+      <a class="nav-link" href="\GaleriaArte\La%20chida\#UyS">
         Unete y Soporte
       </a>
     </li>
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+    <li class="nav-item">
+      <a class="nav-link" href="/GaleriaArte/La%20chida/Vista/Tienda.php">
         Tienda
       </a>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">Link 1</a>
-        <a class="dropdown-item" href="#">Link 2</a>
-        <a class="dropdown-item" href="#">Link 3</a>
-      </div>
     </li>
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-        Políticas de privacidad
+    <li class="nav-item">
+      <a class="nav-link" href="\GaleriaArte\La%20chida\#AP">
+        Politicas de Privacidad
       </a>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">Link 1</a>
-        <a class="dropdown-item" href="#">Link 2</a>
-        <a class="dropdown-item" href="#">Link 3</a>
-      </div>
+    </li>
 
     </li>
     <div class="justify-content-end" style="justify-content: flex-end;">    
-    	<button type="button" class="btn btn-outline-primary justify-content-end" data-toggle="modal" data-target="#Modal_Signup">Registrarse</button>
-    	<button type="button" class="btn btn-success" data-toggle="modal" data-target="#Modal_login">Iniciar Sesión</button>
+      <button type="button" class="btn btn-outline-primary justify-content-end" data-toggle="modal" data-target="#Modal_Signup">Registrarse</button>
+      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#Modal_login">Iniciar Sesión</button>
 </div>
 
   </ul>
@@ -232,30 +217,44 @@
 <div class="row">
   <div class="col-sm-4">
     <p class="text-center"><strong> Marina Abramovic</strong></p><br>
-    <a href="#demo" data-toggle="collapse">
       <img src="Marina.jpg" class="img-circle person" alt="Random Name">
-    </a>
-    <div id="demo" class="collapse">
-      <p>Artista serbia del performance</p>
-      <p>Empezó su carrera a comienzos de los años 1970. Activa durante más de tres décadas</p>
-      <p>Se ha descrito a sí misma como la "Madrina del arte de la performance"</p>
+
+    <div>
+      <div><p align="justify">Marina Abramović (transliteración del serbio cirílico: Марина Абрамовић marǐːna abrǎːmoʋitɕ (Belgrado, Yugoslavia; 30 de noviembre de 1946), artista serbia del performance1 que empezó su carrera a comienzos de los años 1970. Activa durante más de tres décadas, recientemente se ha descrito a sí misma como la "Madrina del arte de la performance".
+
+El trabajo de Abramović explora la relación entre el artista y la audiencia, los límites del cuerpo y las posibilidades de la mente.
+
+</p></div>
+
     </div>
   </div>
   <div class="col-sm-4">
   </div>
   <div class="col-sm-4">
     <p class="text-center"><strong>John de Andrea</strong></p><br>
-    <a href="#demo3" data-toggle="collapse">
       <img src="John.jpg" class="img-circle person" alt="Random Name">
-    </a>
-    <div id="demo3" class="collapse">
-      <p>Denver, Colorado el 24 de noviembre de 1941</p>
-      <p>Escultor Estadounidense.</p>
-      <p>Escuela de arte fotorrealista</p>
+
+     <div>
+      <div><p align="justify">John De Andrea nacido en Denver, Colorado el 24 de noviembre de 1941, es un escultor estadounidense.
+Asociado con la escuela de arte fotorrealista. De Andrea es conocido por sus extremadamente realistas esculturas de polivinilo representando figuras humanas.
+De Andrea es titulado en Artes por la Universidad de Colorado en Boulder y estudió en la Universidad do Nuevo México en Albuquerque entre 1966 y 1968. Vive en Denver.
+
+
+</p></div>
+
+    </div>
     </div>
   </div>
-</div>
-<div class="container">
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>  
+  <br>
+
+  <div class="container">
   <h3 class="text-center">¡Contactanos!</h3>
   <p class="text-center"><em>¿Tienes algina sugerencia?</em></p>
   <div class="row test">
@@ -283,6 +282,8 @@
     </div>
   </div>
 </div>
+</div>
+
 
 <!-- FOOTER -->
 <style>
@@ -384,7 +385,11 @@ footer a:hover {
   <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
     <span class="glyphicon glyphicon-chevron-up"></span>
   </a><br><br>
-  <p>Footer</a></p> 
+  <p>Galeria Brothers es un espacio para presentar y promover artístas en el medio informático, todas las obras expuestas aquí son propiedad de los autores, así como todos sus derechos.
+  Pagina Hecha por Tito Orozco
+                   Emilio Alejandro
+                   Gabriel Alejandro
+  </a></p> 
 </footer>
 
 
