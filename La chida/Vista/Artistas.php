@@ -30,11 +30,6 @@
   <script src="http://localhost/galeriaArte/La chida/general.js"></script>
 
   <style>
-  
-  body {
-    font: 400 15px/1.8 Lato, sans-serif;
-    color: #777;
-  }
   h3, h4 {
     margin: 10px 0 30px 0;
     letter-spacing: 10px;      
@@ -239,8 +234,32 @@
 
 <div id="QhdN" class="container-fluid" style="margin-top:10px">
 <h1> Aritistas </h1>
-<h2>Marina Abramovic</h2> 
-
+<div class="row">
+  <div class="col-sm-4">
+    <p class="text-center"><strong> Marina Abramovic</strong></p><br>
+    <a href="#demo" data-toggle="collapse">
+      <img src="Marina.jpg" class="img-circle person" alt="Random Name">
+    </a>
+    <div id="demo" class="collapse">
+      <p>Artista serbia del performance</p>
+      <p>Empezó su carrera a comienzos de los años 1970. Activa durante más de tres décadas</p>
+      <p>Se ha descrito a sí misma como la "Madrina del arte de la performance"</p>
+    </div>
+  </div>
+  <div class="col-sm-4">
+  </div>
+  <div class="col-sm-4">
+    <p class="text-center"><strong>John de Andrea</strong></p><br>
+    <a href="#demo3" data-toggle="collapse">
+      <img src="John.jpg" class="img-circle person" alt="Random Name">
+    </a>
+    <div id="demo3" class="collapse">
+      <p>Denver, Colorado el 24 de noviembre de 1941</p>
+      <p>Escultor Estadounidense.</p>
+      <p>Escuela de arte fotorrealista</p>
+    </div>
+  </div>
+</div>
 <div class="container">
   <h3 class="text-center">¡Contactanos!</h3>
   <p class="text-center"><em>¿Tienes algina sugerencia?</em></p>

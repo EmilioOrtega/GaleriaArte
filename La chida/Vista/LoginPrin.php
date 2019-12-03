@@ -31,10 +31,6 @@
 
   <style>
   
-  body {
-    font: 400 15px/1.8 Lato, sans-serif;
-    color: #777;
-  }
   h3, h4 {
     margin: 10px 0 30px 0;
     letter-spacing: 10px;      
@@ -216,10 +212,6 @@
       <a class="nav-link dropdown-toggle" href="#AP" id="navbardrop" data-toggle="dropdown">
         Políticas de privacidad
       </a>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">Link 1</a>
-        <a class="dropdown-item" href="#">Link 2</a>
-        <a class="dropdown-item" href="#">Link 3</a>
       </div>
 
     </li>
@@ -355,6 +347,7 @@ Estos serán utilizados única y exclusivamente para los siguientes fines:
 Para prevenir el acceso no autorizado a sus datos personales y con el fin de asegurar que la información sea utilizada para
 los fines establecidos en este aviso de privacidad, hemos establecido diversos procedimientos con la finalidad de evitar el
 uso o divulgación no autorizados de sus datos, permitiéndonos tratarlos debidamente.
+  
   </p>
 </div>
 
@@ -444,7 +437,6 @@ footer a:hover {
 	<!-- Modal del Registro -->
 
 
-
 	<div class="modal fade" id="Modal_Signup">
 		<div class="modal-dialog">
 			<div class="modal-content">
@@ -487,7 +479,11 @@ footer a:hover {
   <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
     <span class="glyphicon glyphicon-chevron-up"></span>
   </a><br><br>
-  <p>Galeria Brothers es un espacio para presentar y promover artístas en el medio informático, todas las obras expuestas aquí son propiedad de los autores, así como todos sus derechos</a></p> 
+  <p>Galeria Brothers es un espacio para presentar y promover artístas en el medio informático, todas las obras expuestas aquí son propiedad de los autores, así como todos sus derechos.
+  Pagina Hecha por Tito Orozco
+                   Emilio Alejandro
+                   Gabriel Alejandro
+  </a></p> 
 </footer>
 
 </body>
